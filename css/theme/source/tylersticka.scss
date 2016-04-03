@@ -5,13 +5,13 @@
  * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
 
-
-// Default mixins and settings -----------------
+// Default mixins and settings
+ 
 @import "../template/mixins";
 @import "../template/settings";
-// ---------------------------------------------
 
-// Override theme settings (see ../template/settings.scss)
+// Setting overrides
+
 $backgroundColor: #fff;
 $mainColor: #222;
 $mainFont: "freight-sans-pro", sans-serif;
@@ -25,11 +25,16 @@ $headingTextTransform: none;
 $selectionBackgroundColor: #095175;
 $mainFontSize: 30px;
 
-// Theme template ------------------------------
+// Theme template
+ 
 @import "../template/theme";
-// ---------------------------------------------
 
-// Overrides (not included in settings)
+// Base overrides (not possible via settings)
+ 
 .reveal {
   font-weight: 500;
+}
+
+.reveal h1 {
+  font-weight: 900;
 }
