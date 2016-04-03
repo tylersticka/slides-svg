@@ -1,0 +1,35 @@
+/**
+ * Theme for Tyler Sticka's SVG talk
+ *
+ * This theme is Copyright (C) 2016 Tyler Sticka, http://tylersticka.com
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+$mainColor: #222;
+$mainFont: "freight-sans-pro", sans-serif;
+$linkColor: #12a1e9;
+$linkColorHover: lighten( $linkColor, 20% );
+$headingColor: $mainColor;
+$headingFont: $mainFont;
+$headingFontWeight: 700;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$selectionBackgroundColor: #095175;
+$mainFontSize: 30px;
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// Overrides (not included in settings)
+.reveal {
+  font-weight: 500;
+}

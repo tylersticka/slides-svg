@@ -1,0 +1,51 @@
+/**
+ * Compiled with slight tweaks from:
+ * https://github.com/Dangoo/seti-highlightjs
+ */
+
+.hljs {
+  background: #151718;
+  color: #d4d7d6;
+}
+.hljs-comment {
+  color: #41535b;
+}
+.hljs-keyword,
+.hljs-operator {
+  color: #9fca56;
+}
+.hljs-number {
+  color: #cd3f45;
+}
+.hljs-literal {
+  color: #cd3f45;
+}
+.hljs-title,
+.hljs-built_in {
+  color: #55b5db;
+}
+.hljs-storage {
+  color: #e6cd69;
+}
+.hljs-params {
+  color: #55b5db;
+}
+.hljs-function .hljs-keyword,
+.hljs-class .hljs-keyword {
+  color: #e6cd69;
+}
+.hljs-attribute {
+  color: #9fca56;
+}
+.hljs-value {
+  color: #55b5db;
+}
+.hljs-rule .hljs-attribute {
+  color: #a074c4;
+}
+.hljs-class {
+  color: #9fca56;
+}
+.hljs-id {
+  color: #9fca56;
+}
