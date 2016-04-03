@@ -48,6 +48,12 @@
           </aside>
         </section>
         
+        <section id="gsap-test">
+          <svg width="500" height="500" viewBox="0 0 500 500">
+            <circle id="test" cx="50" cy="250" r="50"/>
+          </svg>
+        </section>
+        
         <section>
           <h2>Thx</h2>
         </section>
@@ -71,14 +77,16 @@
 
 				transition: 'none', // none/fade/slide/convex/concave/zoom
 
-				// Optional reveal.js plugins
 				dependencies: [
+          // Optional reveal.js plugins
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
+					{ src: 'plugin/notes/notes.js', async: true },
+          // Slide content dependencies
+          { src: 'lib/js/TweenMax.min.js' }
 				]
 			});
 
