@@ -48,9 +48,9 @@
           </aside>
         </section>
         
-        <section id="gsap-test">
+        <section data-timeline="test">
           <svg width="500" height="500" viewBox="0 0 500 500">
-            <circle id="test" cx="50" cy="250" r="50"/>
+            <circle id="test-circle" cx="50" cy="250" r="50"/>
           </svg>
         </section>
         
@@ -84,13 +84,14 @@
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true },
-          // Slide content dependencies
-          { src: 'lib/js/TweenMax.min.js' }
+					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
 
 		</script>
+    
+    <script src="lib/js/TweenMax.min.js"></script>
+    <script src="js/slides.js"></script>
 
 	</body>
 </html>
