@@ -3,51 +3,69 @@
  */
 
 var timelines = {};
-var elements = {};
 
 /**
- * Test timeline
+ * Timelines
  */
 
-elements.testCircle = document.getElementById('test-circle');
+timelines.interests = (function () {
+  var timeline = new TimelineMax({
+    paused: true
+  });
+  var interest1 = document.getElementById('interests-art');
+  var interest2 = document.getElementById('interests-tech');
+  var ease = Back.easeInOut.config(1.7);
+  var duration = 0.5;
 
-timelines.test = new TimelineMax({
-  repeat: -1,
-  paused: true,
-  yoyo: true
-});
+  timeline.to(interest1, duration, {
+    attr: {
+      cx: '33.333%',
+      r: '33.333%'
+    },
+    ease: ease
+  });
 
-timelines.test.to(elements.testCircle, 1, {
-  x: '+400',
-  ease: Linear.easeNone
-});
+  timeline.to(interest2, duration, {
+    attr: {
+      cx: '66.666%',
+      r: '33.333%'
+    },
+    ease: ease
+  }, 0);
 
-/** 
- * Initialization 
+  return timeline;
+})();
+
+/**
+ * Initialization
  */
 
-function toggleElementTimeline (element, start) {
-  var key, timeline;
-  
-  if (!element) return;
-  
-  key = element.getAttribute('data-timeline');
-  
-  if (!key || key === '' || !timelines.hasOwnProperty(key)) return;
-  
-  timeline = timelines[key];
-  
-  if (start) {
-    return timeline.restart();
+function timelineElementAction (element, action) {
+  var key;
+  var timeline;
+
+  if (!element || !action) {
+    return;
   }
-  
-  return timeline.kill();
+
+  key = element.getAttribute('data-timeline');
+
+  if (!key || key === '' || !timelines.hasOwnProperty(key)) {
+    return;
+  }
+
+  timeline = timelines[key];
+
+  timeline[action]();
+
+  return timeline;
 }
 
-function timelineSlideEvent (event) {
-  toggleElementTimeline(event.previousSlide, false);
-  toggleElementTimeline(event.currentSlide, true);
-}
+function timelineEventHandler (elementKey, action) {
+  return function (event) {
+    return timelineElementAction(event[elementKey], action);
+  }
+};
 
-Reveal.addEventListener('ready', timelineSlideEvent);
-Reveal.addEventListener('slidechanged', timelineSlideEvent);
+Reveal.addEventListener('fragmentshown', timelineEventHandler('fragment', 'play'));
+Reveal.addEventListener('fragmenthidden', timelineEventHandler('fragment', 'reverse'));

@@ -6,7 +6,7 @@
  */
 
 // Default mixins and settings
- 
+
 @import "../template/mixins";
 @import "../template/settings";
 
@@ -17,7 +17,7 @@ $mainColor: #222;
 $mainFont: "freight-sans-pro", sans-serif;
 $linkColor: #12a1e9;
 $linkColorHover: lighten( $linkColor, 20% );
-$headingColor: $mainColor;
+$headingColor: inherit;
 $headingFont: $mainFont;
 $headingFontWeight: 700;
 $headingTextShadow: none;
@@ -26,11 +26,11 @@ $selectionBackgroundColor: #095175;
 $mainFontSize: 30px;
 
 // Theme template
- 
+
 @import "../template/theme";
 
 // Base overrides (not possible via settings)
- 
+
 .reveal {
   font-weight: 500;
 }
@@ -38,3 +38,41 @@ $mainFontSize: 30px;
 .reveal h1 {
   font-weight: 900;
 }
+
+.reveal section img {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  vertical-align: middle;
+}
+
+.reveal section.dark,
+.reveal section.has-dark-background {
+  color: #fff;
+}
+
+.reveal .meme-heading {
+  color: #fff;
+  font-family: Impact, sans-serif;
+  text-transform: uppercase;
+}
+
+.reveal section svg text {
+  font-family: $mainFont;
+}
+
+// Utilities
+
+.bg-white {
+  background: white;
+}
+
+.blend-multiply {
+  mix-blend-mode: multiply;
+}
+
+.weight-bold {
+  font-weight: bold;
+}
+
+// Slide-specific

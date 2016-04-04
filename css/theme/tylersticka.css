@@ -37,7 +37,7 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #222;
+  color: inherit;
   font-family: "freight-sans-pro", sans-serif;
   font-weight: 700;
   line-height: 1.2;
@@ -287,3 +287,30 @@ body {
 
 .reveal h1 {
   font-weight: 900; }
+
+.reveal section img {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  vertical-align: middle; }
+
+.reveal section.dark,
+.reveal section.has-dark-background {
+  color: #fff; }
+
+.reveal .meme-heading {
+  color: #fff;
+  font-family: Impact, sans-serif;
+  text-transform: uppercase; }
+
+.reveal section svg text {
+  font-family: "freight-sans-pro", sans-serif; }
+
+.bg-white {
+  background: white; }
+
+.blend-multiply {
+  mix-blend-mode: multiply; }
+
+.weight-bold {
+  font-weight: bold; }

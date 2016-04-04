@@ -19,7 +19,7 @@
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/seti.css">
-    
+
     <!-- Typekit -->
     <script src="https://use.typekit.net/dbv6gsy.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -40,23 +40,66 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-          
+
         <section>
           <h1>Title</h1>
           <aside class="notes">
             Testing out some notes :)
           </aside>
         </section>
-        
-        <section data-timeline="test">
+
+				<section data-background="#71C7F2">
+					<img src="/img/me.svg" alt="Face of author" height="400">
+				</section>
+
+				<section data-background="#456BD9">
+					<img src="/img/logo-cloud_four.svg" alt="Cloud Four" width="300">
+				</section>
+
+				<section>
+					<img src="/img/logo-backabit.svg" alt="Backabit" height="300" style="margin-bottom: 60px; margin-right: 150px;">
+					<img src="/img/logo-colorpeek.svg" alt="Colorpeek" height="200" style="margin-left: 150px;">
+				</section>
+
+				<section data-background="/img/young-tyler-drawing.jpg">
+				</section>
+
+				<section>
+					<svg width="800" height="600" viewBox="0 0 640 480">
+						<circle class="blend-multiply" id="interests-art" cx="22%" cy="50%" r="22%" fill="cyan"/>
+						<circle class="blend-multiply" id="interests-tech" cx="78%" cy="50%" r="22%" fill="magenta"/>
+						<text class="blend-multiply weight-bold" x="22%" y="50%" dy="1%" text-anchor="middle" fill="#111">art</text>
+						<text class="blend-multiply weight-bold" x="78%" y="50%" dy="1%" text-anchor="middle" fill="#111">tech</text>
+						<text class="weight-bold" x="50%" y="50%" dy="1%" text-anchor="middle" fill="white">web</text>
+					</svg>
+					<span class="fragment" data-timeline="interests"></span>
+				</section>
+
+				<section data-background="#444">
+					<img src="/img/safari-960.png" alt="Screenshot of 960.gs">
+				</section>
+
+				<section data-background="#444">
+					<img src="/img/safari-rwd.png" alt="Screenshot of Ethan Marcotte's Responsive Web Design article on A List Apart">
+				</section>
+
+				<section class="dark" data-background="/img/beeproll.gif">
+					<h2>Thanks, Ethan</h2>
+				</section>
+
+        <!--
+				<section data-timeline="test">
           <svg width="500" height="500" viewBox="0 0 500 500">
             <circle id="test-circle" cx="50" cy="250" r="50"/>
           </svg>
         </section>
-        
+			  -->
+
+				<!--
         <section>
           <h2>Thx</h2>
         </section>
+				-->
 
 			</div>
 
@@ -76,6 +119,7 @@
 				center: true,
 
 				transition: 'none', // none/fade/slide/convex/concave/zoom
+				backgroundTransition: 'none',
 
 				dependencies: [
           // Optional reveal.js plugins
@@ -89,7 +133,7 @@
 			});
 
 		</script>
-    
+
     <script src="lib/js/TweenMax.min.js"></script>
     <script src="js/slides.js"></script>
 
