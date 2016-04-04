@@ -306,6 +306,16 @@ body {
 .reveal section svg text {
   font-family: "freight-sans-pro", sans-serif; }
 
+.reveal pre,
+.reveal code {
+  font-family: "fira-mono", monospace; }
+
+.reveal .slides section .fragment.grow-4x {
+  opacity: 1;
+  visibility: visible; }
+  .reveal .slides section .fragment.grow-4x.visible {
+    transform: scale(4); }
+
 .bg-white {
   background: white; }
 
@@ -314,3 +324,16 @@ body {
 
 .weight-bold {
   font-weight: bold; }
+
+.device {
+  background: #111;
+  border-radius: 0.25em;
+  display: inline-block; }
+
+.device > * {
+  background-color: #fff !important;
+  display: block !important;
+  margin: 1em 0.5em !important; }
+
+.margin-none {
+  margin: 0 !important; }
