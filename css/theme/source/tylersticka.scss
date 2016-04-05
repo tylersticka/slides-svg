@@ -76,6 +76,15 @@ $mainFontSize: 30px;
   font-family: "fira-mono", monospace;
 }
 
+.reveal pre {
+  box-shadow: none;
+}
+
+.reveal pre code {
+  line-height: 1.4;
+  padding: 1.4em;
+}
+
 .reveal .slides section .fragment.grow-4x {
 	opacity: 1;
   transition: all .4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
@@ -166,3 +175,23 @@ $mainFontSize: 30px;
 .inline-block {
   display: inline-block !important;
 }
+
+.h1 {
+  font-size: $heading1Size !important;
+}
+
+.h2 {
+  font-size: $heading2Size !important;
+}
+
+.h3 {
+  font-size: $heading3Size !important;
+}
+
+.h4 {
+  font-size: $heading4Size !important;
+}
+
+// .text-large {
+//
+// }

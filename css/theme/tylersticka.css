@@ -323,6 +323,13 @@ body {
 .reveal code {
   font-family: "fira-mono", monospace; }
 
+.reveal pre {
+  box-shadow: none; }
+
+.reveal pre code {
+  line-height: 1.4;
+  padding: 1.4em; }
+
 .reveal .slides section .fragment.grow-4x {
   opacity: 1;
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
@@ -391,3 +398,15 @@ body {
 
 .inline-block {
   display: inline-block !important; }
+
+.h1 {
+  font-size: 3.77em !important; }
+
+.h2 {
+  font-size: 2.11em !important; }
+
+.h3 {
+  font-size: 1.55em !important; }
+
+.h4 {
+  font-size: 1em !important; }
