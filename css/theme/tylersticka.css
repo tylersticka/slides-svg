@@ -338,3 +338,12 @@ body {
 
 .margin-none {
   margin: 0 !important; }
+
+.row-between {
+  display: flex;
+  justify-content: space-between; }
+
+.row-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
