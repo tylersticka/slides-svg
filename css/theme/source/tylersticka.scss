@@ -192,6 +192,16 @@ $mainFontSize: 30px;
   font-size: $heading4Size !important;
 }
 
-// .text-large {
-//
-// }
+.pie {
+  background: #ddd;
+  border-radius: 50%;
+  transform: rotate(-90deg);
+}
+
+.pie circle {
+  fill: #ddd;
+  stroke: $linkColor;
+  stroke-dasharray: 0, 158;
+  stroke-width: 50;
+  transition: stroke-dasharray 1s cubic-bezier(0.77, 0, 0.175, 1);
+}

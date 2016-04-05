@@ -36,6 +36,64 @@ timelines.interests = (function () {
   return timeline;
 })();
 
+timelines.supportChart = (function () {
+  var timeline = {};
+  var pie = document.getElementById('pie-support');
+  var total = 158;
+  var perc = 0.9463;
+  var target = 158 * perc;
+
+  timeline.play = function () {
+    pie.style.strokeDasharray = [target, total].join(', ');
+  };
+
+  timeline.reverse = function () {
+    pie.style.strokeDasharray = '';
+  };
+
+  return timeline;
+})();
+
+timelines.blackBox = (function () {
+  var timeline = new TimelineMax({
+    paused: true
+  });
+  var bases = document.querySelectorAll('.blackBox-base');
+  var folds = document.querySelectorAll('.blackBox-fold');
+  var basesAndFolds = document.querySelectorAll('.blackBox-base, .blackBox-fold');
+  var labels = document.querySelectorAll('.blackBox-label');
+
+  timeline.to(basesAndFolds, 0.5, {
+    fill: '#000000',
+    ease: Sine.easeIn
+  });
+
+  timeline.to(labels, 0.5, {
+    fill: '#FFFFFF',
+    ease: Sine.easeIn
+  }, 0);
+
+  timeline.to(folds, 0, {
+    opacity: 0
+  });
+
+  timeline.to(labels, 1, {
+    scale: 0,
+    opacity: 0,
+    ease: Sine.easeOut,
+    transformOrigin: '50% 0'
+  });
+
+  timeline.to(bases, 1, {
+    attr: {
+      points: '0,125 150,25 300,125 300,275 150,375 0,275'
+    },
+    ease: Sine.easeInOut
+  }, '-=1');
+
+  return timeline;
+})();
+
 /**
  * Initialization
  */

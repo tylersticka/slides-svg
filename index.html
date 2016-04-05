@@ -447,6 +447,10 @@
           </div>
         </section>
 
+				<section data-background="#222">
+					<img src="/img/export.png" alt="Screenshot of SVG export selection in Adobe Illustrator">
+				</section>
+
         <section>
           <pre><code class="html h3" data-trim>
 &lt;img src="example.svg" alt="..."&gt;
@@ -457,6 +461,74 @@
 }
           </code></pre>
         </section>
+
+				<section>
+					<div class="row-around">
+						<div>
+							<img class="fragment grow-4x" data-fragment-index="1" src="/img/icon-search@2x.png" alt="Search icon in PNG format" width="48" height="48" style="margin: 84px;">
+							<table class="fragment" data-fragment-index="3">
+								<tr>
+									<th>PNG</th>
+									<td>368 bytes</td>
+								</tr>
+								<tr>
+									<th>gzipped</th>
+									<td>372 bytes</td>
+								</tr>
+							</table>
+						</div>
+						<div>
+							<img class="fragment grow-4x" data-fragment-index="2" src="/img/icon-search.svg" alt="Search icon in SVG format" width="48" height="48" style="margin: 84px;">
+							<table class="fragment" data-fragment-index="3">
+								<tr>
+									<th>SVG</th>
+									<td>256 bytes</td>
+								</tr>
+								<tr>
+									<th>gzipped</th>
+									<td>201 bytes</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h4>SVG (basic support)</h4>
+					<svg class="pie" width="400" height="400" viewBox="0 0 100 100" style="margin: 1em;">
+						<circle id="pie-support" cx="50" cy="50" r="25"/>
+					</svg>
+					<p><small>Global (April 2016) <a href="http://caniuse.com/#search=svg">caniuse.com</a></small></p>
+					<div class="fragment" data-timeline="supportChart"></div>
+				</section>
+
+				<section data-background="/img/wedidit.gif" data-background-size="contain" data-background-color="black">
+				</section>
+
+        <section data-background="#093c75">
+          <h2 class="align-right" style="color: #71C7F2;">&hellip;can we do more?</h2>
+        </section>
+
+				<section>
+					<div class="row-around">
+						<svg width="225" height="300" viewBox="0 0 300 400">
+							<polygon class="blackBox-base" points="0,0 220,0 300,80 300,400 0,400" fill="#ddd"/>
+							<polygon class="blackBox-fold" points="220,0 300,80 220,80" fill="#12A1E9"/>
+							<text class="blackBox-label weight-bold" x="50%" y="75%" text-anchor="middle" fill="#222" font-size="96">jpg</text>
+						</svg>
+						<svg width="225" height="300" viewBox="0 0 300 400">
+							<polygon class="blackBox-base" points="0,0 220,0 300,80 300,400 0,400 0,200" fill="#ddd"/>
+							<polygon class="blackBox-fold" points="220,0 300,80 220,80" fill="#12A1E9"/>
+							<text class="blackBox-label weight-bold" class="weight-bold" x="50%" y="75%" text-anchor="middle" fill="#222" font-size="96">png</text>
+						</svg>
+						<svg width="225" height="300" viewBox="0 0 300 400">
+							<polygon class="blackBox-base" points="0,0 220,0 300,80 300,400 0,400" fill="#ddd"/>
+							<polygon class="blackBox-fold" points="220,0 300,80 220,80" fill="#12A1E9"/>
+							<text class="blackBox-label weight-bold" x="50%" y="75%" text-anchor="middle" fill="#222" font-size="96">swf</text>
+						</svg>
+					</div>
+					<div class="fragment" data-timeline="blackBox"></div>
+				</section>
 
       </div>
 

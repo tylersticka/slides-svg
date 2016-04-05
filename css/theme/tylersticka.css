@@ -410,3 +410,15 @@ body {
 
 .h4 {
   font-size: 1em !important; }
+
+.pie {
+  background: #ddd;
+  border-radius: 50%;
+  transform: rotate(-90deg); }
+
+.pie circle {
+  fill: #ddd;
+  stroke: #12a1e9;
+  stroke-dasharray: 0, 158;
+  stroke-width: 50;
+  transition: stroke-dasharray 1s cubic-bezier(0.77, 0, 0.175, 1); }
