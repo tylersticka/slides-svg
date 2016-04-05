@@ -312,6 +312,7 @@ body {
 
 .reveal .slides section .fragment.grow-4x {
   opacity: 1;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
   visibility: visible; }
   .reveal .slides section .fragment.grow-4x.visible {
     transform: scale(4); }
