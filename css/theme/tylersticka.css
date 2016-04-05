@@ -37,7 +37,7 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: inherit;
+  color: #095175;
   font-family: "freight-sans-pro", sans-serif;
   font-weight: 700;
   line-height: 1.2;
@@ -297,6 +297,19 @@ body {
 .reveal section.dark,
 .reveal section.has-dark-background {
   color: #fff; }
+  .reveal section.dark h1,
+  .reveal section.dark h2,
+  .reveal section.dark h3,
+  .reveal section.dark h4,
+  .reveal section.dark h5,
+  .reveal section.dark h6,
+  .reveal section.has-dark-background h1,
+  .reveal section.has-dark-background h2,
+  .reveal section.has-dark-background h3,
+  .reveal section.has-dark-background h4,
+  .reveal section.has-dark-background h5,
+  .reveal section.has-dark-background h6 {
+    color: inherit; }
 
 .reveal .meme-heading {
   color: #fff;
@@ -338,6 +351,9 @@ body {
 
 .margin-none {
   margin: 0 !important; }
+
+.row {
+  display: flex; }
 
 .row-between {
   display: flex;

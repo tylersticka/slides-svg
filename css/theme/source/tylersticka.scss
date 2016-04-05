@@ -17,7 +17,7 @@ $mainColor: #222;
 $mainFont: "freight-sans-pro", sans-serif;
 $linkColor: #12a1e9;
 $linkColorHover: lighten( $linkColor, 20% );
-$headingColor: inherit;
+$headingColor: #095175;
 $headingFont: $mainFont;
 $headingFontWeight: 700;
 $headingTextShadow: none;
@@ -49,6 +49,15 @@ $mainFontSize: 30px;
 .reveal section.dark,
 .reveal section.has-dark-background {
   color: #fff;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: inherit;
+  }
 }
 
 .reveal .meme-heading {
@@ -104,6 +113,10 @@ $mainFontSize: 30px;
 
 .margin-none {
   margin: 0 !important;
+}
+
+.row {
+  display: flex;
 }
 
 .row-between {
