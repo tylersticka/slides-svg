@@ -17,9 +17,10 @@ $mainColor: #222;
 $mainFont: "freight-sans-pro", sans-serif;
 $linkColor: #12a1e9;
 $linkColorHover: lighten( $linkColor, 20% );
-$headingColor: #095175;
+$headingColor: inherit;
 $headingFont: $mainFont;
 $headingFontWeight: 700;
+$headingLineHeight: 1.1;
 $headingTextShadow: none;
 $headingTextTransform: none;
 $selectionBackgroundColor: #095175;
@@ -85,6 +86,22 @@ $mainFontSize: 30px;
 	}
 }
 
+.reveal .slides section .fragment.highlight-blue.visible {
+  color: $linkColor;
+}
+
+.reveal table th,
+.reveal table td {
+  border-bottom-color: rgba(0,0,0,0.1);
+  border-bottom-width: 3px;
+  padding: 0.5em;
+  vertical-align: middle;
+}
+
+.reveal table tr:last-child th {
+	border-bottom: none;
+}
+
 // Utilities
 
 .bg-white {
@@ -128,4 +145,24 @@ $mainFontSize: 30px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.caps {
+  text-transform: uppercase !important;
+}
+
+.align-left {
+  text-align: left !important;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+.text-shadow {
+  text-shadow: 0.0625em 0.0625em 0 rgba(0,0,0,0.666) !important;
+}
+
+.inline-block {
+  display: inline-block !important;
 }
