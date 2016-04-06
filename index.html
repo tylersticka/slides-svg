@@ -600,6 +600,36 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
           <h1 style="color: #71C7F2;">Content</h1>
         </section>
 
+        <section data-background="#893EA2">
+          <svg width="800" height="240" viewBox="0 0 800 240">
+            <defs>
+              <filter id="outline">
+                <feMorphology operator="dilate" in="SourceAlpha" radius="4"/>
+                <feComposite in="SourceGraphic"/>
+              </filter>
+            </defs>
+            <text id="sfx-text" class="sfx" x="400" y="190" text-anchor="middle"
+              dx="0, -12, -10, -16, -18"
+              dy="0, 5, -10, 5, 0"
+              filter="url(#outline)">Splat!</text>
+          </svg>
+          <div class="fragment" data-timeline="sfxType"></div>
+          <pre><code class="html" data-trim>
+&lt;svg width="800" height="240" viewBox="0 0 800 240"&gt;
+  &lt;defs&gt;
+    &lt;filter id="outline"&gt;
+      &lt;feMorphology operator="dilate" in="SourceAlpha" radius="4"/&gt;
+      &lt;feComposite in="SourceGraphic"/&gt;
+    &lt;/filter&gt;
+  &lt;/defs&gt;
+  &lt;text id="sfx-text" class="sfx" x="400" y="190" text-anchor="middle"
+    dx="0, -12, -10, -16, -18"
+    dy="0, 5, -10, 5, 0"
+    filter="url(#outline)"&gt;Splat!&lt;/text&gt;
+&lt;/svg&gt;
+          </code></pre>
+        </section>
+
       </div>
 
     </div>

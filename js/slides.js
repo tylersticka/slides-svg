@@ -109,6 +109,49 @@ timelines.search3d = (function () {
   return timeline;
 })();
 
+timelines.sfxType = (function () {
+  var timeline = new TimelineMax({
+    paused: true
+  });
+  var element = document.getElementById('sfx-text');
+  var initial = element.textContent;
+  var words = [initial, 'Boom!', 'Wham!'];
+
+  words.forEach(function (word, index) {
+    var length = word.length;
+    var counters = {
+      add: 0,
+      remove: length
+    };
+
+    if (index > 0) {
+      timeline.to(counters, 1, {
+        add: length,
+        ease: Linear.easeNone,
+        onUpdate: function () {
+          var length = Math.ceil(counters.add);
+          var str = word.substr(0, length);
+          element.textContent = str;
+        }
+      });
+    }
+
+    if (index !== words.length - 1) {
+      timeline.to(counters, 1, {
+        remove: 0,
+        ease: Linear.easeNone,
+        onUpdate: function () {
+          var length = Math.floor(counters.remove);
+          var str = word.substr(0, length);
+          element.textContent = str;
+        }
+      }, (index > 0) ? '+=0.5' : null);
+    }
+  });
+
+  return timeline;
+})();
+
 /**
  * Initialization
  */

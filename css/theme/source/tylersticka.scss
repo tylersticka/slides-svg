@@ -192,6 +192,8 @@ $mainFontSize: 30px;
   font-size: $heading4Size !important;
 }
 
+// For specific slides (mostly)
+
 .pie {
   background: #ddd;
   border-radius: 50%;
@@ -248,4 +250,13 @@ $mainFontSize: 30px;
 
 .is-active#search-3d #search-3d-circle {
   transform: rotateX(-15deg) rotateY(-45deg) translateZ(75px);
+}
+
+.sfx {
+  fill: #F1D84F;
+  font-family: "badaboom-pro", $mainFont !important;
+  font-size: 192px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
 }
