@@ -241,6 +241,57 @@ timelines.favePress = (function () {
   return timeline;
 })();
 
+timelines.morphButton = (function () {
+  var timeline = new TimelineMax({
+    paused: true
+  });
+
+  var button = document.getElementById('morph-button');
+  var square = document.getElementById('morph-square');
+  var check = document.getElementById('morph-check');
+  var label = document.getElementById('morph-label');
+
+  var buttonPoints = button.getAttribute('points');
+  var squarePoints = square.getAttribute('points');
+  var checkPoints = check.getAttribute('points');
+
+  var i;
+
+  timeline.to(button, 0.5, {
+    attr: {
+      points: squarePoints
+    },
+    ease: Back.easeIn.config(1.8)
+  });
+
+  timeline.to(label, 0.5, {
+    scale: 0,
+    opacity: 0,
+    transformOrigin: '50% 50%',
+    ease: Back.easeIn.config(1.8)
+  }, '-=0.5');
+
+  for (i = 0; i < 3; i++) {
+    timeline.to(button, 1, {
+      rotation: '+=225',
+      transformOrigin: '50% 50%',
+      ease: Back.easeOut.config(1.8)
+    });
+  }
+
+  timeline.to(button, 1, {
+    x: -30,
+    y: 50,
+    scale: 0.75,
+    attr: {
+      points: checkPoints
+    },
+    ease: Elastic.easeOut.config(1, 0.3)
+  });
+
+  return timeline;
+})();
+
 /**
  * Initialization
  */

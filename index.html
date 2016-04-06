@@ -595,10 +595,6 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
 					</code></pre>
 				</section>
 
-        <section data-background="#093c75">
-          <h1 style="color: #71C7F2;">Content</h1>
-        </section>
-
         <section data-background="#893EA2">
           <img src="/img/splat-expanded.svg" alt="">
           <pre><code class="html" data-trim>
@@ -690,10 +686,6 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
           </code></pre>
         </section>
 
-        <section data-background="#093c75">
-          <h1 style="color: #71C7F2;">Style</h1>
-        </section>
-
         <section data-background="#eee">
           <div>
             <button type="button" class="fave h3">
@@ -739,6 +731,38 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
   visibility: visible;
 }
           </code></pre>
+        </section>
+
+        <section>
+          <pre class="inline-block width-auto h3"><code class="html" data-trim>
+&lt;a href=&quot;foo.html&quot;&gt;
+  &lt;svg&gt;
+    &lt;!-- etc. --&gt;
+  &lt;/svg&gt;
+&lt;/a&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <pre class="inline-block width-auto h3"><code class="html" data-trim>
+&lt;svg&gt;
+  &lt;a xlink:href=&quot;foo.html&quot;&gt;
+    &lt;!-- etc. --&gt;
+  &lt;/a&gt;
+&lt;/svg&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <svg width="640" height="480" viewBox="0 0 640 480">
+            <defs>
+              <polygon id="morph-check" points="305 135 335 135 335 225 545 225 545 255 305 255"/>
+              <polygon id="morph-square" points="305 225 335 225 335 225 335 225 335 255 305 255"/>
+            </defs>
+            <polygon id="morph-button" fill="#12a1e9" points="140 180 500 180 500 180 500 180 500 300 140 300"/>
+            <text id="morph-label" class="weight-bold h2" fill="white" text-anchor="middle" x="320" y="260">Submit</text>
+          </svg>
+          <div class="fragment" data-timeline="morphButton"></div>
         </section>
 
       </div>
