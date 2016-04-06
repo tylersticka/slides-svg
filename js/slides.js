@@ -94,6 +94,21 @@ timelines.blackBox = (function () {
   return timeline;
 })();
 
+timelines.search3d = (function () {
+  var timeline = {};
+  var container = document.getElementById('search-3d');
+
+  timeline.play = function () {
+    container.classList.add('is-active');
+  };
+
+  timeline.reverse = function () {
+    container.classList.remove('is-active');
+  };
+
+  return timeline;
+})();
+
 /**
  * Initialization
  */

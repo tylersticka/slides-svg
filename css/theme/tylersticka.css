@@ -422,3 +422,39 @@ body {
   stroke-dasharray: 0, 158;
   stroke-width: 50;
   transition: stroke-dasharray 1s cubic-bezier(0.77, 0, 0.175, 1); }
+
+#search-3d,
+#search-3d > * {
+  transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+
+#search-3d {
+  position: relative !important;
+  margin: 0 auto !important;
+  width: 192px !important;
+  height: 192px !important;
+  transform-style: preserve-3d; }
+
+#search-3d > * {
+  outline: 4px solid transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  perspective: 600px; }
+
+.is-active#search-3d {
+  transform: scale(1.5) translateY(50%); }
+
+.is-active#search-3d > * {
+  outline: 4px solid rgba(0, 0, 0, 0.2); }
+
+.is-active#search-3d #search-3d-backdrop {
+  background: #ddd;
+  transform: rotateX(-15deg) rotateY(-45deg) translateZ(-75px); }
+
+.is-active#search-3d #search-3d-line {
+  transform: rotateX(-15deg) rotateY(-45deg); }
+
+.is-active#search-3d #search-3d-circle {
+  transform: rotateX(-15deg) rotateY(-45deg) translateZ(75px); }
