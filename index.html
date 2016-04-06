@@ -682,11 +682,62 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
             <circle class="chart-marker" cx="580" cy="205" r="10" fill="#ffdc00" stroke="currentColor" stroke-width="4"/>
             <circle class="chart-marker" cx="730" cy="360" r="10" fill="#ff4136" stroke="currentColor" stroke-width="4"/>
           </svg>
-          <pre><code class="html h3" data-trim>
+          <pre class="inline-block width-auto"><code class="html h3" data-trim>
 &lt;polyline points="130 250 280 130 …"/&gt;
 &lt;circle cx="130" cy="250"/&gt;
 &lt;circle cx="280" cy="130"/&gt;
 &lt;!-- etc. --&gt;
+          </code></pre>
+        </section>
+
+        <section data-background="#093c75">
+          <h1 style="color: #71C7F2;">Style</h1>
+        </section>
+
+        <section data-background="#eee">
+          <div>
+            <button type="button" class="fave h3">
+              <svg class="fave-icon-dumb" viewBox="-2 -2 52 44">
+                <path d="M48,11.15C48,6.33,43.5.52,36,.52S24,7.6,24,7.6,19.5,0.52,12,.52,0,6.33,0,11.15s-0.94,11,24,28.34C48.93,22.1,48,16,48,11.15Z"/>
+              </svg>
+              <span class="fave-text">Favorite</span>
+            </button>
+          </div>
+          <pre class="inline-block width-auto"><code class="css h3" data-trim>
+.fave-icon {
+  fill: currentColor;
+}
+          </code></pre>
+        </section>
+
+        <section data-background="#eee">
+          <button type="button" id="fave" class="fave h3" aria-pressed="false">
+            <svg class="fave-icon" viewBox="-2 -2 52 44">
+              <path class="fave-icon-base" d="M48,11.15C48,6.33,43.5.52,36,.52S24,7.6,24,7.6,19.5,0.52,12,.52,0,6.33,0,11.15s-0.94,11,24,28.34C48.93,22.1,48,16,48,11.15Z" stroke-width="4"/>
+              <g class="fave-icon-highlight">
+                <path d="M43.12,12.61c1.13-3.11-.93-6.7-4.59-8S31,4.7,29.86,7.81s1.15,5.78,4.81,7.1S42,15.72,43.12,12.61Z"/>
+                <circle cx="33.81" cy="19.43" r="2.2"/>
+              </g>
+            </svg>
+            <span class="fave-text">Favorite</span>
+          </button>
+          <div class="fragment" data-timeline="favePress"></div>
+          <pre class="inline-block width-auto"><code class="css" data-trim>
+.fave-icon-base {
+  fill: none; stroke: currentColor;
+}
+
+.fave[aria-pressed="true"] .fave-icon-base {
+  fill: #E041B0; stroke: none;
+}
+
+.fave-icon-highlight {
+  fill: #F995D1; visibility: hidden;
+}
+
+.fave[aria-pressed="true"] .fave-icon-highlight {
+  visibility: visible;
+}
           </code></pre>
         </section>
 

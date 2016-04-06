@@ -192,6 +192,10 @@ $mainFontSize: 30px;
   font-size: $heading4Size !important;
 }
 
+.width-auto {
+  width: auto !important;
+}
+
 // For specific slides (mostly)
 
 .pie {
@@ -259,4 +263,69 @@ $mainFontSize: 30px;
   font-style: italic;
   font-weight: 400;
   line-height: 1;
+}
+
+.fave {
+  background: #E041B0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0.125em;
+  border-radius: 0.375em;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  align-items: center;
+  line-height: 1;
+  margin: 0;
+  padding: 0.5em 1em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+
+  &[aria-pressed="true"] {
+    background: #fff;
+    border-color: #ccc;
+    color: #E041B0;
+  }
+}
+
+.fave-icon,
+.fave-icon-dumb {
+  height: 1.5em;
+  margin-right: 0.5em;
+  width: 1.5em;
+}
+
+.fave-icon-base {
+  fill: none;
+  stroke: currentColor;
+
+  .fave[aria-pressed="true"] & {
+    fill: #E041B0;
+    stroke: none;
+  }
+}
+
+.fave-icon-dumb {
+  fill: currentColor;
+}
+
+.fave-icon-highlight {
+  fill: #F995D1;
+  visibility: hidden;
+
+  .fave[aria-pressed="true"] & {
+    visibility: visible;
+  }
+}
+
+.fave-text {
+  line-height: 1;
+
+  .fave[aria-pressed="true"] &:after {
+    content: "d";
+  }
 }

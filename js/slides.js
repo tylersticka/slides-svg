@@ -217,6 +217,30 @@ timelines.chart = (function () {
   return timeline;
 })();
 
+timelines.favePress = (function () {
+  var timeline = new TimelineMax({
+    paused: true
+  });
+  var fave = document.getElementById('fave');
+
+  timeline.to(fave, 0.5, {
+    scale: 0.8,
+    onComplete: function () {
+      fave.setAttribute('aria-pressed', 'true');
+    }
+  });
+
+  timeline.to(fave, 2, {
+    scale: 1,
+    ease: Elastic.easeOut.config(3, 0.3),
+    onReverseComplete: function () {
+      fave.setAttribute('aria-pressed', 'false');
+    }
+  });
+
+  return timeline;
+})();
+
 /**
  * Initialization
  */
@@ -264,7 +288,7 @@ Reveal.addEventListener('fragmentshown',
   timelineEventHandler('fragment', 'play'));
 Reveal.addEventListener('fragmenthidden',
   timelineEventHandler('fragment', 'reverse'));
-Reveal.addEventListener('slidechanged', 
+Reveal.addEventListener('slidechanged',
   timelineEventHandler('previousSlide', 'kill', 'currentSlide', 'restart'));
 Reveal.addEventListener('ready',
   timelineEventHandler('currentSlide', 'restart'));
