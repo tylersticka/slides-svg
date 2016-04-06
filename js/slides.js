@@ -152,6 +152,71 @@ timelines.sfxType = (function () {
   return timeline;
 })();
 
+timelines.chart = (function () {
+  var timeline = new TimelineMax({
+    repeat: -1,
+    yoyo: true,
+    paused: true
+  });
+  var line = document.getElementById('chart-line');
+  var markers = document.querySelectorAll('.chart-marker');
+  var valueSets = [
+    [0.49, 0.62, 0.79, 0.75, 0.86], // Tomb Raider
+    [0.97, 0.87, 0.97, 0.84, 0.93], // Mario
+    [0.54, 0.78, 0.77, 0.63, 0.38], // THPS
+    [0.83, 0.69, 0.81, 0.72, 0.32]  // Sonic
+  ];
+  var min = 20;
+  var max = 520;
+  var ease = Sine.easeInOut;
+  var duration = 0.75;
+  var delay = '+=0.25';
+
+  var yFromRatio = function (ratio) {
+    return (max - min) * (1 - ratio) + min;
+  };
+
+  valueSets.forEach(function (set, setIndex) {
+    var label = 'set' + setIndex;
+    var points = [];
+    timeline.addLabel(label, delay);
+
+    set.forEach(function (value, index) {
+      var marker = markers[index];
+      var cx = marker.getAttribute('cx');
+      var cy = yFromRatio(value);
+      var color;
+
+      points.push(cx, cy);
+
+      if (value > .75) {
+        color = '#2ecc40';
+      } else if (value > .5) {
+        color = '#ffdc00';
+      } else {
+        color = '#ff4136';
+      }
+
+      timeline.to(marker, duration, {
+        attr: {
+          cy: cy,
+          fill: color
+        },
+        ease: ease
+      }, label);
+    });
+
+    timeline.to(line, duration, {
+      attr: {
+        points: points.join(' ')
+      },
+      ease: ease
+    }, label);
+  });
+
+  return timeline;
+})();
+
 /**
  * Initialization
  */
@@ -177,11 +242,29 @@ function timelineElementAction (element, action) {
   return timeline;
 }
 
-function timelineEventHandler (elementKey, action) {
-  return function (event) {
-    return timelineElementAction(event[elementKey], action);
+function timelineEventHandler () {
+  var pairs = {};
+  var i = 0;
+
+  for (; i < arguments.length; i+=2) {
+    pairs[arguments[i]] = arguments[i + 1];
   }
+
+  return function (event) {
+    var key;
+    for (key in pairs) {
+      if (pairs.hasOwnProperty(key)) {
+        timelineElementAction(event[key], pairs[key]);
+      }
+    }
+  };
 };
 
-Reveal.addEventListener('fragmentshown', timelineEventHandler('fragment', 'play'));
-Reveal.addEventListener('fragmenthidden', timelineEventHandler('fragment', 'reverse'));
+Reveal.addEventListener('fragmentshown',
+  timelineEventHandler('fragment', 'play'));
+Reveal.addEventListener('fragmenthidden',
+  timelineEventHandler('fragment', 'reverse'));
+Reveal.addEventListener('slidechanged', 
+  timelineEventHandler('previousSlide', 'kill', 'currentSlide', 'restart'));
+Reveal.addEventListener('ready',
+  timelineEventHandler('currentSlide', 'restart'));
