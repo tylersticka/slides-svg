@@ -693,24 +693,31 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
         </section>
 
         <section data-background="#222">
-          <pre><code class="html" data-trim>
-&lt;object class=&quot;logo&quot; data=&quot;logo.svg&quot; type=&quot;image/svg+xml&quot;&gt;
+          <pre><code class="html h3" data-trim>
+&lt;object class=&quot;logo&quot; data=&quot;logo.svg&quot;
+  type=&quot;image/svg+xml&quot;&gt;
   &lt;!-- fallback content --&gt;
 &lt;/object&gt;
           </code></pre>
-          <pre><code class="html" data-trim>
-&lt;svg &hellip; width="140" height="192" viewBox="0 0 140 192"&gt;
-  &lt;defs&gt;
-    &lt;style&gt;
-      #wide { visibility: hidden; }
+          <pre><code class="css h3" data-trim>
+.logo {
+  height: 192px;
+  max-height: 40%;
+  width: 100%;
+}
+          </code></pre>
+        </section>
 
-      @media (min-width: 370px) {
-        #wide { visibility: visible; }
-        #tall { visibility: hidden; }
-      }
-    &lt;/style&gt;
-    &lt;!-- logo components --&gt;
-  &lt;/defs&gt;
+        <section data-background="#222">
+          <pre class="inline-block width-auto"><code class="html h3" data-trim>
+&lt;svg &hellip; width="140" height="192" viewBox="0 0 140 192"&gt;
+  &lt;style&gt;
+    #wide { visibility: hidden; }
+    @media (min-width: 370px) {
+      #wide { visibility: visible; }
+      #tall { visibility: hidden; }
+    }
+  &lt;/style&gt;
   &lt;g id=&quot;wide&quot;&gt; &lt;!-- wide composition --&gt; &lt;/g&gt;
   &lt;g id=&quot;tall&quot;&gt; &lt;!-- tall composition --&gt; &lt;/g&gt;
 &lt;/svg&gt;
