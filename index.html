@@ -947,6 +947,55 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
           <h1 style="color: #71C7F2;">Essentials</h1>
         </section>
 
+        <section>
+          <pre class="inline-block width-auto"><code class="html h1" data-trim>
+&lt;svg&gt;
+
+&lt;/svg&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <div class="row-around">
+            <pre class="inline-block width-auto"><code class="html h2" data-trim>
+&lt;svg viewBox="0 0 100 100"&gt;
+
+&lt;/svg&gt;
+            </code></pre>
+            <ol class="fragment">
+              <li class="nowrap">Leftmost point</li>
+              <li class="nowrap">Topmost point</li>
+              <li>Width</li>
+              <li>Height</li>
+            </ol>
+          </div>
+        </section>
+
+        <section data-timeline="viewBoxDemo">
+          <svg width="200" height="200" viewBox="0 0 100 100" class="frame" id="viewBox-demo">
+            <circle cx="50" cy="50" r="50" fill="#12a1e9"/>
+          </svg>
+          <pre><code class="hljs h2" id="viewBox-demo-code"></code></pre>
+        </section>
+
+        <section>
+          <pre><code class="html h3" data-trim>
+&lt;img src=&quot;foo.svg&quot; alt=&quot;&hellip;&quot;&gt;
+
+&lt;object data=&quot;foo.svg&quot; type=&quot;image/svg+xml&quot;&gt;
+  &lt;!-- fallback --&gt;
+&lt;/object&gt;
+
+&lt;svg&gt; &lt;!-- etc. --&gt; &lt;/svg&gt;
+          </code></pre>
+          <pre><code class="css h3" data-trim>
+.foo {
+  background-image: url(&quot;foo.svg&quot;);
+  /* etc. */
+}
+          </code></pre>
+				</section>
+
       </div>
 
     </div>

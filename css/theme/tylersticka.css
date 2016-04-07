@@ -434,6 +434,12 @@ body {
 .blink {
   animation: blink 1s steps(3, start) infinite; }
 
+.nowrap {
+  white-space: nowrap; }
+
+.frame {
+  outline: 0.25em solid rgba(0, 0, 0, 0.5); }
+
 .pie {
   background: #ddd;
   border-radius: 50%;

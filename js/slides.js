@@ -461,6 +461,42 @@ timelines.lovefest = (function () {
   return timeline;
 })();
 
+timelines.viewBoxDemo = (function () {
+  var timeline = new TimelineMax({
+    paused: true,
+    repeat: -1
+  });
+
+  var demo = document.getElementById('viewBox-demo');
+  var code = document.getElementById('viewBox-demo-code');
+
+  var viewBoxes = [
+    demo.getAttribute('viewBox'),
+    '0 0 200 200',
+    '0 0 50 50',
+    '-50 -50 100 100',
+    '-25 50 75 50'];
+
+  var i, fromBox, toBox;
+
+  for (i = 0; i < viewBoxes.length; i++) {
+    fromBox = viewBoxes[i];
+    toBox = viewBoxes[i + 1] || viewBoxes[0];
+    timeline.fromTo(demo, 0.5, {
+      attr: { viewBox: fromBox }
+    }, {
+      attr: { viewBox: toBox },
+      onStartParams: [ toBox ],
+      onStart: function (toBox) {
+        code.innerHTML = '&lt;svg viewBox="' + toBox + '"&gt;';
+      },
+      ease: Sine.easeInOut
+    }, '+=1');
+  }
+
+  return timeline;
+})();
+
 /**
  * Initialization
  */

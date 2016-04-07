@@ -225,6 +225,14 @@ $mainFontSize: 30px;
   animation: blink 1s steps(3, start) infinite;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
+.frame {
+  outline: 0.25em solid rgba(0,0,0,0.5);
+}
+
 // For specific slides (mostly)
 
 .pie {
