@@ -324,6 +324,108 @@ timelines.rotateDevice2 = (function () {
   return timeline;
 })();
 
+timelines.navExpand = (function () {
+  var timeline = new TimelineMax({
+    paused: true
+  });
+
+  var toggle = document.getElementById('nav-toggle');
+  var toggleBase = document.getElementById('nav-toggle-base');
+  var toggleIcon = document.getElementById('nav-toggle-icon');
+  var toggleIconTop = document.getElementById('nav-toggle-icon-top');
+  var toggleIconMiddle = document.getElementById('nav-toggle-icon-middle');
+  var toggleIconBottom = document.getElementById('nav-toggle-icon-bottom');
+
+  var childE = document.getElementById('nav-e');
+  var childSE = document.getElementById('nav-se');
+  var childS = document.getElementById('nav-s');
+
+  timeline.to(toggle, 0.5, {
+    scale: 0.8,
+    transformOrigin: '50% 50%',
+    ease: Sine.easeOut
+  });
+
+  timeline.addLabel('pressed');
+
+  timeline.to(toggle, 1, {
+    scale: 1,
+    ease: Elastic.easeOut.config(1.2, 0.3)
+  });
+
+  timeline.to(toggleBase, 0.5, {
+    fill: '#ddd'
+  }, 'pressed');
+
+  timeline.to(toggleIcon, 0.5, {
+    stroke: '#222'
+  }, 'pressed');
+
+  timeline.to(toggleIconTop, 0.1, {
+    y: '+=8',
+    ease: Sine.easeIn
+  }, 'pressed');
+
+  timeline.to(toggleIconBottom, 0.1, {
+    y: '-=8',
+    ease: Sine.easeIn
+  }, 'pressed');
+
+  timeline.addLabel('toX', 'pressed+=0.1');
+
+  timeline.to(toggleIconMiddle, 0, {
+    opacity: 0
+  }, 'toX');
+
+  timeline.to(toggleIconTop, 0.1, {
+    rotation: 45,
+    transformOrigin: '50% 50%',
+    ease: Sine.easeOut
+  }, 'toX');
+
+  timeline.to(toggleIconBottom, 0.1, {
+    rotation: -45,
+    transformOrigin: '50% 50%',
+    ease: Sine.easeOut
+  }, 'toX');
+
+  timeline.fromTo(childE, 1, {
+    opacity: 1,
+    scale: 0.5,
+    transformOrigin: '50% 50%'
+  }, {
+    opacity: 1,
+    scale: 1,
+    x: '+=90',
+    ease: Elastic.easeOut.config(1, 0.5)
+  }, 'pressed');
+
+  timeline.fromTo(childSE, 1, {
+    opacity: 1,
+    scale: 0.5,
+    transformOrigin: '50% 50%'
+  }, {
+    opacity: 1,
+    scale: 1,
+    x: '+=65',
+    y: '+=65',
+    ease: Elastic.easeOut.config(1, 0.5)
+  }, 'pressed+=0.1');
+
+  timeline.fromTo(childS, 1, {
+    opacity: 1,
+    scale: 0.5,
+    transformOrigin: '50% 50%'
+  }, {
+    opacity: 1,
+    scale: 1,
+    y: '+=90',
+    ease: Elastic.easeOut.config(1, 0.5)
+  }, 'pressed+=0.2');
+
+  return timeline;
+})();
+
 /**
  * Initialization
  */
