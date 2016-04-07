@@ -292,6 +292,33 @@ timelines.morphButton = (function () {
   return timeline;
 })();
 
+timelines.rotateDeviceOnce = (function () {
+  var container = document.getElementById('backabit-device-1');
+  var iframe = container.getElementsByTagName('iframe')[0];
+
+  var timeline = new TimelineMax({
+    paused: true,
+    onStart: function () {
+      container.classList.add('is-rotated');
+    }
+  });
+
+  timeline.to(iframe, 0.5, {
+    width: 480,
+    height: 320
+  });
+
+  return {
+    play: function () {
+      timeline.play();
+    },
+    reverse: function () {
+      container.classList.remove('is-rotated');
+      timeline.reverse();
+    }
+  };
+})();
+
 /**
  * Initialization
  */
