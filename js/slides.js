@@ -426,6 +426,41 @@ timelines.navExpand = (function () {
   return timeline;
 })();
 
+timelines.lovefest = (function () {
+  var timeline = new TimelineMax({
+    paused: true,
+    repeat: -1
+  });
+
+  var group = document.getElementById('lovefest');
+  var heart = document.getElementById('lovefest-heart');
+  var nodes = group.querySelectorAll('g');
+
+  timeline.fromTo(heart, (5 / 4), {
+    rotation: -15,
+    svgOrigin: '480 300'
+  }, {
+    rotation: 15,
+    repeat: 3,
+    yoyo: true,
+    ease: Sine.easeInOut
+  });
+
+  timeline.to(group, 5, {
+    rotation: 360,
+    svgOrigin: '480 300',
+    ease: Linear.easeNone
+  }, 0);
+
+  timeline.to(nodes, 5, {
+    rotation: -360,
+    transformOrigin: '50% 50%',
+    ease: Linear.easeNone
+  }, 0);
+
+  return timeline;
+})();
+
 /**
  * Initialization
  */
