@@ -427,6 +427,13 @@ body {
 .width-auto {
   width: auto !important; }
 
+@keyframes blink {
+  to {
+    visibility: hidden; } }
+
+.blink {
+  animation: blink 1s steps(3, start) infinite; }
+
 .pie {
   background: #ddd;
   border-radius: 50%;

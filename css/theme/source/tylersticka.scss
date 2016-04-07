@@ -215,6 +215,16 @@ $mainFontSize: 30px;
   width: auto !important;
 }
 
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.blink {
+  animation: blink 1s steps(3, start) infinite;
+}
+
 // For specific slides (mostly)
 
 .pie {
