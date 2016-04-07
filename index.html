@@ -114,9 +114,7 @@
         </section>
 
         <section data-background="#222">
-          <div class="device">
-            <img data-src="/img/prototype-w2g-cart.gif" alt="Prototype of cart interactions for Walmart To Go">
-          </div>
+          <img class="device" data-src="/img/prototype-w2g-cart.gif" alt="Prototype of cart interactions for Walmart To Go">
         </section>
 
         <section>
@@ -687,10 +685,44 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
         </section>
 
         <section data-background="#222">
-          <div class="device" id="backabit-device-1" style="position: fixed; left: 50%; top: 100%; transform: translate(-50%, -50%)">
-            <iframe data-src="http://tylersticka.com" style="width:320px; height:480px;"></iframe>
+          <div class="device device-fixed" id="backabit-device-1">
+            <object class="backabit-logo-dumb" data="/img/backabit-logo.svg" type="image/svg+xml"></object>
+            <img class="backabit-photo" src="/img/photo-lotsablocks.jpg" alt="">
           </div>
-          <div class="fragment" data-timeline="rotateDeviceOnce"></div>
+          <div class="fragment" data-timeline="rotateDevice1"></div>
+        </section>
+
+        <section data-background="#222">
+          <pre><code class="html" data-trim>
+&lt;object class=&quot;logo&quot; data=&quot;logo.svg&quot; type=&quot;image/svg+xml&quot;&gt;
+  &lt;!-- fallback content --&gt;
+&lt;/object&gt;
+          </code></pre>
+          <pre><code class="html" data-trim>
+&lt;svg &hellip; width="140" height="192" viewBox="0 0 140 192"&gt;
+  &lt;defs&gt;
+    &lt;style&gt;
+      #wide { visibility: hidden; }
+
+      @media (min-width: 370px) {
+        #wide { visibility: visible; }
+        #tall { visibility: hidden; }
+      }
+    &lt;/style&gt;
+    &lt;!-- logo components --&gt;
+  &lt;/defs&gt;
+  &lt;g id=&quot;wide&quot;&gt; &lt;!-- wide composition --&gt; &lt;/g&gt;
+  &lt;g id=&quot;tall&quot;&gt; &lt;!-- tall composition --&gt; &lt;/g&gt;
+&lt;/svg&gt;
+          </code></pre>
+        </section>
+
+        <section data-background="#222">
+          <div class="device device-fixed" id="backabit-device-2">
+            <object class="backabit-logo-smart" data="/img/backabit-logo.svg" type="image/svg+xml"></object>
+            <img class="backabit-photo" src="/img/photo-lotsablocks.jpg" alt="">
+          </div>
+          <div class="fragment" data-timeline="rotateDevice2"></div>
         </section>
 
         <section data-background="#eee">

@@ -292,31 +292,36 @@ timelines.morphButton = (function () {
   return timeline;
 })();
 
-timelines.rotateDeviceOnce = (function () {
-  var container = document.getElementById('backabit-device-1');
-  var iframe = container.getElementsByTagName('iframe')[0];
+timelines.rotateDevice1 = (function () {
+  var timeline = {};
+  var element = document.getElementById('backabit-device-1');
+  var className = 'is-rotated';
 
-  var timeline = new TimelineMax({
-    paused: true,
-    onStart: function () {
-      container.classList.add('is-rotated');
-    }
-  });
-
-  timeline.to(iframe, 0.5, {
-    width: 480,
-    height: 320
-  });
-
-  return {
-    play: function () {
-      timeline.play();
-    },
-    reverse: function () {
-      container.classList.remove('is-rotated');
-      timeline.reverse();
-    }
+  timeline.play = function () {
+    element.classList.add(className);
   };
+
+  timeline.reverse = function () {
+    element.classList.remove(className);
+  };
+
+  return timeline;
+})();
+
+timelines.rotateDevice2 = (function () {
+  var timeline = {};
+  var element = document.getElementById('backabit-device-2');
+  var className = 'is-rotated';
+
+  timeline.play = function () {
+    element.classList.add(className);
+  };
+
+  timeline.reverse = function () {
+    element.classList.remove(className);
+  };
+
+  return timeline;
 })();
 
 /**

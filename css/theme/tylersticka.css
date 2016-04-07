@@ -360,20 +360,27 @@ body {
   font-weight: bold; }
 
 .device {
-  background: #111;
-  border-radius: 0.25em;
-  display: inline-block; }
-
-.device > * {
-  background-color: #fff !important;
-  display: block !important;
-  margin: 1em 0.5em !important;
-  max-height: none !important;
+  background: #fff !important;
+  border: solid #111 !important;
+  border-width: 1em 0.5em !important;
+  border-radius: 0.25em !important;
+  display: inline-block !important;
+  margin: 0 !important;
   max-width: none !important;
-  transition: all 0.2s ease; }
+  max-height: none !important;
+  transition: all 0.5s ease; }
+  .device.is-rotated {
+    border-width: 0.5em 1em !important; }
 
-.device.is-rotated > * {
-  margin: 0.5em 1em !important; }
+.device-fixed {
+  height: 480px !important;
+  overflow: hidden;
+  width: 320px !important;
+  position: fixed;
+  transform: translate(-50%, -50%); }
+  .device-fixed.is-rotated {
+    height: 320px !important;
+    width: 480px !important; }
 
 .margin-none {
   margin: 0 !important; }
@@ -526,3 +533,17 @@ body {
   line-height: 1; }
   .fave[aria-pressed="true"] .fave-text:after {
     content: "d"; }
+
+.backabit-logo-dumb,
+.backabit-logo-smart {
+  display: block;
+  margin: 1em auto !important; }
+
+.backabit-logo-smart {
+  height: 192px;
+  max-height: 40%;
+  width: 100%; }
+
+.backabit-photo {
+  max-width: none !important;
+  width: 100%; }
