@@ -501,6 +501,18 @@ timelines.halfTones = (function () {
   return timeline;
 })();
 
+timelines.spinner = (function () {
+  var spinner = document.getElementById('spinner-gsap');
+
+  return TweenMax.to(spinner, 1.3, {
+    paused: true,
+    repeat: -1,
+    transformOrigin: '50% 50%',
+    rotation: 180,
+    ease: Back.easeOut.config(1.8)
+  });
+})();
+
 /**
  * Initialization
  */

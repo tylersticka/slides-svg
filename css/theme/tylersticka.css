@@ -569,3 +569,17 @@ body {
 .backabit-photo {
   max-width: none !important;
   width: 100%; }
+
+.spinner {
+  fill: none;
+  stroke: white;
+  stroke-width: 10px;
+  stroke-dasharray: 10 15;
+  transform-origin: 50px 50px; }
+
+@keyframes spin {
+  to {
+    transform: rotate(180deg); } }
+
+.spinner-animated {
+  animation: spin 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite; }
