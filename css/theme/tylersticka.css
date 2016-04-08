@@ -328,7 +328,7 @@ body {
 
 .reveal pre code {
   line-height: 1.4;
-  padding: 1.4em; }
+  padding: 1em; }
 
 .reveal .slides section .fragment.grow-4x {
   opacity: 1;
