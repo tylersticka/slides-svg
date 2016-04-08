@@ -233,6 +233,16 @@ $mainFontSize: 30px;
   outline: 0.25em solid rgba(0,0,0,0.5);
 }
 
+.icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 1.375em;
+  width: 1.375em;
+  vertical-align: middle;
+  position: relative;
+  top: -0.0625em;
+}
+
 // For specific slides (mostly)
 
 .pie {
