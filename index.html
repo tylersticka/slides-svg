@@ -1232,11 +1232,11 @@ I make stuff at
                 	c30.6,0,57.9-12.8,75.2-32.5c10.2,4.5,21.3,6.6,32.4,6.1c20.6,1.1,40.7-7.2,55.8-22.9C402.3,295.2,400,210.3,400,210.3z"/>
               </mask>
             </defs>
-            <image xlink:href="/img/sara.jpg" mask="url(#cloud-mask)" width="400" height="400"/>
-            <image xlink:href="/img/gerardo.jpg" mask="url(#cloud-mask)" transform="translate(600 0)" width="400" height="400"/>
-            <image xlink:href="/img/megan.jpg" mask="url(#cloud-mask)" transform="translate(1200 0)" width="400" height="400"/>
+            <image xlink:href="/img/sara.jpg" class="cloud-mask-image" width="400" height="400"/>
+            <image xlink:href="/img/gerardo.jpg" class="cloud-mask-image" transform="translate(600 0)" width="400" height="400"/>
+            <image xlink:href="/img/megan.jpg" class="cloud-mask-image" transform="translate(1200 0)" width="400" height="400"/>
           </svg>
-          <pre><code class="html h3" data-trim>
+          <pre class="fragment" data-timeline="cloudMasks"><code class="html h3" data-trim>
 &lt;svg&gt;
   &lt;defs&gt;
     &lt;mask id=&quot;cloud&quot;&gt;
@@ -1320,11 +1320,12 @@ I make stuff at
                 <feComposite operator="in" in2="SourceGraphic"/>
               </filter>
             </defs>
-            <image xlink:href="/img/nicole.jpg" filter="url(#half-tone)" width="200" height="200"/>
-            <image xlink:href="/img/erik.jpg" filter="url(#half-tone)" x="300" width="200" height="200"/>
-            <image xlink:href="/img/aileen.jpg" filter="url(#half-tone)" x="600" width="200" height="200"/>
+            <image xlink:href="/img/nicole.jpg" class="half-tone-image" width="200" height="200"/>
+            <image xlink:href="/img/erik.jpg" class="half-tone-image" x="300" width="200" height="200"/>
+            <image xlink:href="/img/aileen.jpg" class="half-tone-image" x="600" width="200" height="200"/>
           </svg>
-          <pre><code class="html h3" data-trim>
+          <div class="fragment" data-timeline="halfTones">
+            <pre><code class="html h3" data-trim>
 &lt;svg&gt;
   &lt;defs&gt;
     &lt;filter id=&quot;half-tone&quot;&gt;
@@ -1334,10 +1335,11 @@ I make stuff at
   &lt;image xlink:href=&quot;foo.jpg&quot; filter=&quot;url(#half-tone)&quot;
     width=&quot;200&quot; height=&quot;200&quot;/&gt;
 &lt;/svg&gt;
-          </code></pre>
-          <p>
-            Half-tone filter by <a href="http://codepen.io/mullany/">Michael Mullany</a>
-          </p>
+            </code></pre>
+            <p>
+              Half-tone filter by <a href="http://codepen.io/mullany/">Michael Mullany</a>
+            </p>
+          </div>
         </section>
 
         <!-- <section>

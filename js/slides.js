@@ -461,6 +461,46 @@ timelines.lovefest = (function () {
   return timeline;
 })();
 
+timelines.cloudMasks = (function () {
+  var timeline = {};
+  var images = document.querySelectorAll('.cloud-mask-image');
+
+  timeline.play = function () {
+    for (var i = 0; i < images.length; i++) {
+      images[i].setAttribute('mask', 'url(#cloud-mask)');
+      console.log(images[i]);
+    }
+  };
+
+  timeline.reverse = function () {
+    for (var i = 0; i < images.length; i++) {
+      images[i].setAttribute('mask', '');
+    }
+  };
+
+  return timeline;
+})();
+
+timelines.halfTones = (function () {
+  var timeline = {};
+  var images = document.querySelectorAll('.half-tone-image');
+
+  timeline.play = function () {
+    for (var i = 0; i < images.length; i++) {
+      images[i].setAttribute('filter', 'url(#half-tone)');
+      console.log(images[i]);
+    }
+  };
+
+  timeline.reverse = function () {
+    for (var i = 0; i < images.length; i++) {
+      images[i].setAttribute('filter', '');
+    }
+  };
+
+  return timeline;
+})();
+
 /**
  * Initialization
  */
