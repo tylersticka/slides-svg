@@ -257,6 +257,10 @@ timelines.morphButton = (function () {
 
   var i;
 
+  timeline.set(label, {
+    transformOrigin: '25% 8%' // I'm not sure why??
+  });
+
   timeline.to(button, 0.5, {
     attr: {
       points: squarePoints
@@ -267,7 +271,6 @@ timelines.morphButton = (function () {
   timeline.to(label, 0.5, {
     scale: 0,
     opacity: 0,
-    transformOrigin: '50% 50%',
     ease: Back.easeIn.config(1.8)
   }, '-=0.5');
 

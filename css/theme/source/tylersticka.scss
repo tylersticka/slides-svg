@@ -147,8 +147,8 @@ $mainFontSize: 30px;
   width: 320px !important;
 
   // hack to fix reveal.js centering on animate
-  position: fixed;
-  transform: translate(-50%, -50%);
+  // position: fixed;
+  // transform: translate(-50%, -50%);
 
   &.is-rotated {
     height: 320px !important;

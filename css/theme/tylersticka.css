@@ -375,9 +375,7 @@ body {
 .device-fixed {
   height: 480px !important;
   overflow: hidden;
-  width: 320px !important;
-  position: fixed;
-  transform: translate(-50%, -50%); }
+  width: 320px !important; }
   .device-fixed.is-rotated {
     height: 320px !important;
     width: 480px !important; }
