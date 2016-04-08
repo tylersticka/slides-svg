@@ -374,11 +374,24 @@ body {
 
 .device-fixed {
   height: 480px !important;
-  overflow: hidden;
   width: 320px !important; }
   .device-fixed.is-rotated {
     height: 320px !important;
     width: 480px !important; }
+
+.device-rotation-container {
+  display: inline-block;
+  height: 540px !important;
+  position: relative;
+  width: 540px !important; }
+
+.device-rotation-container > * {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto !important; }
 
 .margin-none {
   margin: 0 !important; }
@@ -446,6 +459,9 @@ body {
   vertical-align: middle;
   position: relative;
   top: -0.0625em; }
+
+.hidden {
+  display: none !important; }
 
 .pie {
   background: #ddd;
@@ -561,8 +577,8 @@ body {
 
 .backabit-logo-smart {
   height: 192px;
-  max-height: 40%;
-  width: 100%; }
+  width: 100%;
+  max-height: 40%; }
 
 .backabit-photo {
   max-width: none !important;

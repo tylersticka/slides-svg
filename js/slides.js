@@ -295,37 +295,23 @@ timelines.morphButton = (function () {
   return timeline;
 })();
 
-timelines.rotateDevice1 = (function () {
+var makeToggleClassTimeline = function (elementId, className) {
   var timeline = {};
-  var element = document.getElementById('backabit-device-1');
-  var className = 'is-rotated';
+  var device = document.getElementById(elementId);
 
   timeline.play = function () {
-    element.classList.add(className);
+    device.classList.add(className);
   };
 
   timeline.reverse = function () {
-    element.classList.remove(className);
+    device.classList.remove(className);
   };
 
   return timeline;
-})();
+};
 
-timelines.rotateDevice2 = (function () {
-  var timeline = {};
-  var element = document.getElementById('backabit-device-2');
-  var className = 'is-rotated';
-
-  timeline.play = function () {
-    element.classList.add(className);
-  };
-
-  timeline.reverse = function () {
-    element.classList.remove(className);
-  };
-
-  return timeline;
-})();
+timelines.rotateDevice1 = makeToggleClassTimeline('backabit-device-1', 'is-rotated');
+timelines.rotateDevice2 = makeToggleClassTimeline('backabit-device-2', 'is-rotated');
 
 timelines.navExpand = (function () {
   var timeline = new TimelineMax({
