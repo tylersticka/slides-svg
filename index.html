@@ -1213,6 +1213,32 @@ I make stuff at
           </code></pre>
         </section>
 
+        <section>
+          <svg width="800" height="200" viewBox="0 0 1600 400">
+            <defs>
+              <mask id="cloud-mask">
+                <path fill="white" d="M400,210.3c0-91.4-80.2-101.2-80.2-101.2c-8.6-16.8-20.9-30.9-35.7-40.9c0,0-22.5-17.5-54.2-22.3c-10.4-1.9-20.8-2.9-31.3-3
+                	c-116.7,0-127.8,93-127.8,93S0,160.1,0,232.3c0,103.3,114,108.3,114,108.3c0.2,0,0.4,0,0.6,0c15.8,10.4,35.5,16.6,56.8,16.6
+                	c30.6,0,57.9-12.8,75.2-32.5c10.2,4.5,21.3,6.6,32.4,6.1c20.6,1.1,40.7-7.2,55.8-22.9C402.3,295.2,400,210.3,400,210.3z"/>
+              </mask>
+            </defs>
+            <image xlink:href="/img/nicole.jpg" mask="url(#cloud-mask)" width="400" height="400"/>
+            <image xlink:href="/img/gerardo.jpg" mask="url(#cloud-mask)" transform="translate(600 0)" width="400" height="400"/>
+            <image xlink:href="/img/megan.jpg" mask="url(#cloud-mask)" transform="translate(1200 0)" width="400" height="400"/>
+          </svg>
+          <pre><code class="html h3" data-trim>
+&lt;svg&gt;
+  &lt;defs&gt;
+    &lt;mask id=&quot;cloud&quot;&gt;
+      &lt;path fill=&quot;white&quot; d=&quot;&hellip;&quot;/&gt;
+    &lt;/mask&gt;
+  &lt;/defs&gt;
+  &lt;image xlink:href=&quot;foo.jpg&quot; mask=&quot;url(#cloud)&quot;
+    width=&quot;200&quot; height=&quot;200&quot;/&gt;
+&lt;/svg&gt;
+          </code></pre>
+        </section>
+
         <!-- <section>
           <pre><code class="html h3" data-trim>
 &lt;img src=&quot;foo.svg&quot; alt=&quot;&hellip;&quot;&gt;
