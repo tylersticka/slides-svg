@@ -950,6 +950,59 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
         </section>
 
         <section>
+          <h3 style="margin-bottom: 0.75em;">
+            <svg width="48" height="48" viewBox="-6 -6 36 36" style="margin-bottom: -0.0625em;">
+              <polyline fill="none" stroke="#2ECC40" stroke-width="6" points="0,15 9,24 24,6" stroke-linecap="round"/>
+            </svg>
+            A vector image format
+          </h3>
+          <pre><code class="html h3" data-trim>
+&lt;img src=&quot;foo.svg&quot; alt=&quot;&hellip;&quot;&gt;
+          </code></pre>
+          <pre><code class="css h3" data-trim>
+.foo {
+  background-image: url(&quot;foo.svg&quot;);
+  /* etc. */
+}
+          </code></pre>
+          <p>Acts like an image would (nothing fancy)</p>
+        </section>
+
+        <section>
+          <h3 style="margin-bottom: 0.75em;">
+            <svg width="48" height="48" viewBox="-6 -6 36 36" style="margin-bottom: -0.0625em;">
+              <polyline fill="none" stroke="#2ECC40" stroke-width="6" points="0,15 9,24 24,6" stroke-linecap="round"/>
+            </svg>
+            An XML-based document format
+          </h3>
+          <pre><code class="html h3" data-trim>
+&lt;object data=&quot;foo.svg&quot; type=&quot;image/svg+xml&quot;&gt;
+  &lt;!-- Fallback content --&gt;
+&lt;/object&gt;
+          </code></pre>
+          <p>Interactive, accessible, cacheable, animatable, scriptable</p>
+        </section>
+
+        <section>
+          <h3 style="margin-bottom: 0.75em;">
+            <svg width="48" height="48" viewBox="-6 -6 36 36" style="margin-bottom: -0.0625em;">
+              <polyline fill="none" stroke="#2ECC40" stroke-width="6" points="0,15 9,24 24,6" stroke-linecap="round"/>
+            </svg>
+            A subset of HTML5
+          </h3>
+          <pre><code class="html h3" data-trim>
+&lt;p&gt;
+  There&apos;s an inline SVG right after this paragraph.
+&lt;/p&gt;
+
+&lt;svg&gt;
+  &lt;!-- etc. --&gt;
+&lt;/svg&gt;
+          </code></pre>
+          <p>Able to inherit in-page styles (<code>currentColor</code> and a lot more)</p>
+        </section>
+
+        <section>
           <pre class="inline-block width-auto"><code class="html h1" data-trim>
 &lt;svg&gt;
 
@@ -1377,24 +1430,6 @@ TweenMax.to(element, 1.3, {
             </code></pre>
           </div>
         </section>
-
-        <!-- <section>
-          <pre><code class="html h3" data-trim>
-&lt;img src=&quot;foo.svg&quot; alt=&quot;&hellip;&quot;&gt;
-
-&lt;object data=&quot;foo.svg&quot; type=&quot;image/svg+xml&quot;&gt;
-  &lt;!-- fallback --&gt;
-&lt;/object&gt;
-
-&lt;svg&gt; &lt;!-- etc. --&gt; &lt;/svg&gt;
-          </code></pre>
-          <pre><code class="css h3" data-trim>
-.foo {
-  background-image: url(&quot;foo.svg&quot;);
-  /* etc. */
-}
-          </code></pre>
-				</section> -->
 
       </div>
 
