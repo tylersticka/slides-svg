@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="700" viewBox="0 0 1800 700">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ddd;
+      }
+
+      .cls-2 {
+        fill: #095175;
+      }
+
+      .cls-3 {
+        fill: #3185af;
+      }
+
+      .cls-4 {
+        fill: #71c7f2;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>iceberg</title>
+  <rect id="sky" class="cls-1" width="1800" height="700"/>
+  <rect id="water" class="cls-2" y="170" width="1800" height="530"/>
+  <polygon id="below" class="cls-3" points="720 190 1081 190 1102 239.96 1133 271.93 1133 341.93 1104 352.93 1107 435.93 1050 487.93 1030 597.92 984 606.92 982 622.92 932 636.96 926.5 667 860 667 845 594.96 758 565.94 721 490.94 697 466.93 686 420.93 711 393.93 700 336.93 674 317.93 660 277.93 713 237.96 720 190"/>
+  <rect id="surface" class="cls-4" y="150" width="1800" height="40"/>
+  <polygon id="above" class="cls-5" points="725 170 1075 170 1046.09 101.92 971.88 89.37 950 60.44 872.66 33.08 799.94 90.89 753 108.85 753 136.97 732.75 141.77 725 170"/>
+</svg>
