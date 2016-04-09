@@ -366,6 +366,26 @@ body {
 .reveal table tr:last-child th {
   border-bottom: none; }
 
+.reveal blockquote {
+  background: transparent;
+  box-shadow: none;
+  display: inline-flex;
+  align-items: flex-start;
+  font-style: normal;
+  text-align: left;
+  width: 85%; }
+  .reveal blockquote:before, .reveal blockquote:after {
+    font-size: 4em;
+    line-height: 1;
+    margin-top: 0.1em;
+    opacity: 0.5; }
+  .reveal blockquote:before {
+    content: "\201C";
+    margin-right: 0.25em; }
+  .reveal blockquote:after {
+    content: "\201D";
+    margin-left: 0.25em; }
+
 .bg-white {
   background: white; }
 

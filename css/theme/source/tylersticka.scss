@@ -129,6 +129,34 @@ $mainFontSize: 30px;
 	border-bottom: none;
 }
 
+.reveal blockquote {
+  background: transparent;
+  box-shadow: none;
+  display: inline-flex;
+  align-items: flex-start;
+  font-style: normal;
+  text-align: left;
+  width: 85%;
+
+  &:before,
+  &:after {
+    font-size: 4em;
+    line-height: 1;
+    margin-top: 0.1em;
+    opacity: 0.5;
+  }
+
+  &:before {
+    content: "\201C";
+    margin-right: 0.25em;
+  }
+
+  &:after {
+    content: "\201D";
+    margin-left: 0.25em;
+  }
+}
+
 // Utilities
 
 .bg-white {
