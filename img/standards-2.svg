@@ -10,7 +10,7 @@
       }
 
       .cls-4 {
-        fill: #1a1a1a;
+        fill: #111;
       }
 
       .cls-5 {
@@ -22,7 +22,7 @@
       }
 
       .cls-7 {
-        opacity: 0.1;
+        opacity: 0.15;
       }
 
       .cls-8 {
