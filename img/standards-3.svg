@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="700" viewBox="0 0 960 700">
+  <defs>
+    <style>
+      .cls-2 {
+        fill: #4d4d4d;
+      }
+
+      .cls-3 {
+        fill: #e6e6e6;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>standards</title>
+  <g>
+    <path class="cls-2" d="M395,369.13c0-52.71,40.77-85,92.5-74.94V248.06H365V477.19l30-8v-100Z"/>
+    <polygon class="cls-2" points="695 549.57 665 557.61 665 257.61 695 249.57 695 549.57"/>
+    <polygon class="cls-3" points="665 257.61 265 150.43 295 142.39 695 249.57 665 257.61"/>
+    <path class="cls-4" d="M265,150.43v300l100,26.79V377.31c0-55.23,44.77-88,100-73.21S565,375.67,565,430.9v99.92l100,26.79v-300Z"/>
+  </g>
+</svg>
