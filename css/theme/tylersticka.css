@@ -354,6 +354,15 @@ body {
   padding: 0.5em;
   vertical-align: middle; }
 
+.reveal .dark table th,
+.reveal .dark table td,
+.reveal .has-dark-background table th,
+.reveal .has-dark-background table td {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  border-bottom-width: 3px;
+  padding: 0.5em;
+  vertical-align: middle; }
+
 .reveal table tr:last-child th {
   border-bottom: none; }
 

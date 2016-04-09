@@ -1437,7 +1437,7 @@ TweenMax.to(element, 1.3, {
         </section>
 
         <section data-background="#222">
-          <img src="/img/safari-mdn-svg.png" alt="Screenshot of Mozilla Developer Network's SVG reference">
+          <img data-src="/img/safari-mdn-svg.png" alt="Screenshot of Mozilla Developer Network's SVG reference">
         </section>
 
         <section data-background="/img/iceberg.svg">
@@ -1448,6 +1448,81 @@ TweenMax.to(element, 1.3, {
 
         <section class="dark" data-background="/img/roads.gif">
           <h1 class="text-shadow">The future&hellip;</h1>
+        </section>
+
+        <section>
+          <h3>CSS Shapes</h3>
+          <p>W3C Candidate Recommendation (<a href="https://www.w3.org/TR/css-shapes-1/">March 2014</a>)</p>
+          <pre><code class="css h3" data-trim>
+.float {
+  shape-outside: polygon(10px 10px, 90px 50px, 40px 50px, 90px 90px, 10px 90px);
+  shape-margin: 10px;
+}
+          </code></pre>
+          <ul class="fragment">
+            <li>
+               <a href="http://caniuse.com/#feat=css-shapes">Supported</a> in Chrome, Safari and Opera
+            </li>
+            <li>
+              <a href="http://status.modern.ie/shapes">Under Consideration</a> for Edge
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>CSS Masking</h3>
+          <p>W3C Candidate Recommendation (<a href="https://www.w3.org/TR/css-masking/">August 2014</a>)</p>
+          <pre><code class="css h3" data-trim>
+.masked {
+  clip-path: polygon(15px 99px, 30px 87px, 65px 99px, 85px 55px, 122px 57px, 184px 73px, 198px 105px, 199px 150px, 145px 159px, 155px 139px, 126px 120px, 112px 138px, 80px 128px, 39px 126px, 24px 104px);
+}
+          </code></pre>
+          <ul class="fragment">
+            <li>
+              <a href="http://caniuse.com/#feat=css-masks">Partially supported</a> in Firefox, Chrome, Safari and Opera
+            </li>
+            <li>
+              <a href="http://status.modern.ie/masks">Under Consideration</a> for Edge
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>CSS Filter Effects</h3>
+          <p>W3C Working Draft (<a href="https://www.w3.org/TR/filter-effects/">November 2014</a>)</p>
+          <pre><code class="css h3" data-trim>
+.filtered {
+  filter: contrast(175%) brightness(3%);
+}
+          </code></pre>
+          <ul class="fragment">
+            <li>
+              <a href="http://caniuse.com/#feat=css-filters">Varying support</a> in Edge, Firefox, Chrome, Safari and Opera
+            </li>
+          </ul>
+        </section>
+
+        <section data-background="#222">
+          <img data-src="/img/safari-w3c-web_animations.png" alt="Screenshot of W3C Web Animations Working Draft">
+        </section>
+
+        <section data-background="#222">
+          <img data-src="/img/safari-w3c-svg2.png" alt="Screenshot of W3C SVG 2 Working Draft">
+        </section>
+
+        <section>
+          <div class="row-around">
+            <img data-src="/img/svg-export-big.png" alt="Traditional SVG export in Illustrator" height="600">
+            <div>
+              <svg width="96" height="96" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 5 22 12 15 19"/>
+                  <line x1="20" y1="12" x2="2" y2="12"/>
+                </g>
+              </svg>
+            </div>
+            <img data-src="/img/svg-export-small.png" alt="Nicer SVG export in Illustrator">
+          </div>
         </section>
 
       </div>
