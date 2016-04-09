@@ -36,12 +36,11 @@ timelines.interests = (function () {
   return timeline;
 })();
 
-timelines.supportChart = (function () {
+var makePieChartTimeline = function (elementId, ratio) {
   var timeline = {};
-  var pie = document.getElementById('pie-support');
+  var pie = document.getElementById(elementId);
   var total = 158;
-  var perc = 0.9463;
-  var target = 158 * perc;
+  var target = total * ratio;
 
   timeline.play = function () {
     pie.style.strokeDasharray = [target, total].join(', ');
@@ -52,7 +51,10 @@ timelines.supportChart = (function () {
   };
 
   return timeline;
-})();
+};
+
+timelines.supportChart = makePieChartTimeline('pie-support', 0.9463);
+timelines.fontFaceChart = makePieChartTimeline('pie-font-face', 0.9052);
 
 timelines.blackBox = (function () {
   var timeline = new TimelineMax({
