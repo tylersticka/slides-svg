@@ -1550,6 +1550,167 @@ TweenMax.to(element, 1.3, {
         <section data-background="/img/standards-3.svg" data-background-size="contain" data-background-color="#222">
         </section>
 
+        <section data-background-color="#222">
+          <div class="align-left">
+            <svg width="480" height="480" viewBox="0 0 480 480">
+              <path fill="white" d="M240,0C91.39,0,0,104.2,0,232.73c0,62.34,21.5,119,60.61,160.74-9.42,11-26.08,28.67-42.42,37.81,0,0,31.4,10.46,70.66-12.55,39.28,29.34,90.44,46.73,151.15,46.73,148.61,0,240-104.2,240-232.73S388.61,0,240,0Z"/>
+              <text class="weight-bold" x="90" y="220" font-size="80" fill="#12a1e9">But SVG</text>
+              <text class="weight-bold" x="90" y="300" font-size="80" fill="#12a1e9">is hard&hellip;</text>
+            </svg>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="align-right"><span style="color: #12a1e9;">Change</span> is hard</h2>
+        </section>
+
+        <section>
+          <h3>Icon Fonts</h3>
+          <div class="row-between">
+            <div class="fragment" data-fragment-index="0">
+              <img data-src="/img/file-stack.svg" width="275" height="275"/>
+              <p>SVG Files<br>&nbsp;</p>
+            </div>
+            <svg class="fragment" data-fragment-index="1" width="60" height="60" viewBox="0 0 24 24">
+              <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 5 22 12 15 19"/>
+                <line x1="20" y1="12" x2="2" y2="12"/>
+              </g>
+            </svg>
+            <div class="fragment" data-fragment-index="1">
+              <p>Unicode<br>Characters</p>
+            </div>
+            <svg class="fragment" data-fragment-index="2" width="60" height="60" viewBox="0 0 24 24">
+              <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 5 22 12 15 19"/>
+                <line x1="20" y1="12" x2="2" y2="12"/>
+              </g>
+            </svg>
+            <div class="fragment" data-fragment-index="2">
+              <img data-src="/img/file-stack.svg" width="275" height="275"/>
+              <p>WOFF, WOFF2, EOT,<br>TTF, OTF and/or SVG</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <pre><code class="css h3" data-trim>
+@font-face {
+  font-family: "IconFont";
+  src: url("iconfont.eot");
+  src: url("iconfont.eot#iefix") format("embedded-opentype"),
+    url("iconfont.woff2") format("woff2"),
+    url("iconfont.woff") format("woff"),
+    url("iconfont.ttf") format("truetype"),
+    url("iconfont.svg#iconfontregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+          </code></pre>
+        </section>
+
+        <section>
+          <pre><code class="css h3" data-trim>
+.icon {
+  display: inline-block;
+  font: normal normal normal 16px/1 IconFont;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+          </code></pre>
+        </section>
+
+        <section>
+          <div class="row">
+            <pre><code class="css" data-trim>
+.icon-add:before {
+  content: "\f000";
+}
+.icon-arrow-up:before {
+  content: "\f001";
+}
+.icon-arrow-down:before {
+  content: "\f002";
+}
+.icon-arrow-right:before {
+  content: "\f003";
+}
+.icon-arrow-left:before {
+  content: "\f004";
+}
+            </code></pre>
+            <pre><code class="css" data-trim>
+.icon-bookmark:before {
+  content: "\f005";
+}
+.icon-caret:before {
+  content: "\f006";
+}
+.icon-cog:before {
+  content: "\f007";
+}
+.icon-envelope:before {
+  content: "\f008";
+}
+.icon-headphones:before {
+  content: "\f009";
+}
+            </code></pre>
+            <pre><code class="css" data-trim>
+.icon-heart:before {
+  content: "\f00a";
+}
+.icon-home:before {
+  content: "\f00b";
+}
+.icon-power:before {
+  content: "\f00c";
+}
+.icon-search:before {
+  content: "\f00d";
+}
+.icon-x:before {
+  content: "\f00e";
+}
+            </code></pre>
+          </div>
+          <p class="fragment h3">
+            (and so on)
+          </p>
+        </section>
+
+        <section>
+          <pre><code class="html h3" data-trim>
+&lt;span class=&quot;icon icon-foo&quot;&gt;&lt;/span&gt;
+          </code></pre>
+          <p class="fragment h3">
+            (not accessible yet)
+          </p>
+        </section>
+
+        <section data-background="/img/closeenough.gif" data-background-color="black" data-background-size="contain">
+        </section>
+
+        <section>
+          <h3>SVG Icons</h3>
+          <pre class="fragment"><code class="html h2" data-trim>
+&lt;img src=&quot;my-icon.svg&quot; alt=&quot;An icon!&quot;&gt;
+          </code></pre>
+          <div class="fragment">
+            <p class="h3">or</p>
+            <pre><code class="html h2" data-trim>
+&lt;svg&gt;
+  &lt;!-- icon data or reference --&gt;
+&lt;/svg&gt;
+            </code></pre>
+          </div>
+        </section>
+
+        <section data-background="/img/bam.gif" data-background-color="black" data-background-size="contain">
+        </section>
+
       </div>
 
     </div>

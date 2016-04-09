@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="450" height="550" viewBox="0 0 450 550">
+  <defs>
+    <g id="file">
+      <polygon points="0,0 220,0 300,80 300,400 0,400 0,200" fill="#ddd"/>
+      <polygon points="220,0 300,80 220,80" fill="#12A1E9"/>
+    </g>
+    <filter id="file-dim">
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="0.75"/>
+        <feFuncG type="linear" slope="0.75"/>
+        <feFuncB type="linear" slope="0.75"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="file-dim-more">
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="0.6"/>
+        <feFuncG type="linear" slope="0.6"/>
+        <feFuncB type="linear" slope="0.6"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  <use xlink:href="#file" x="0" y="0" filter="url(#file-dim-more)"/>
+  <use xlink:href="#file" x="80" y="80" filter="url(#file-dim)"/>
+  <use xlink:href="#file" x="150" y="150"/>
+</svg>
