@@ -62,12 +62,15 @@
             <p>Tyler Sticka</p>
           </div>
           <aside class="notes">
-            Testing out some notes :)
+            Intro
           </aside>
         </section>
 
         <section data-background="#456BD9">
           <img src="/img/logo-cloud_four.svg" alt="Cloud Four" width="300">
+          <aside class="notes">
+            My role at Cloud Four
+          </aside>
         </section>
 
         <section>
@@ -75,9 +78,15 @@
             <img src="/img/logo-backabit.svg" alt="Backabit" height="300" style="margin-bottom: 60px;">
             <img src="/img/logo-colorpeek.svg" alt="Colorpeek" height="200">
           </div>
+          <aside class="notes">
+            Backabit, Colorpeek
+          </aside>
         </section>
 
         <section data-background="/img/photo-young_tyler.jpg" data-background-size="contain" data-background-color="#000">
+          <aside class="notes">
+            Ever since I was a kid: Art + Computers
+          </aside>
         </section>
 
         <section>
@@ -89,6 +98,9 @@
             <text class="weight-bold" x="50%" y="50%" dy="1%" text-anchor="middle" fill="white">web</text>
           </svg>
           <span class="fragment" data-timeline="interests"></span>
+          <aside class="notes">
+            Intersection of interests brought me to the web
+          </aside>
         </section>
 
         <section>
@@ -96,21 +108,36 @@
             <img src="/img/blip-004.gif" alt="">
             <img src="/img/blip-005.gif" alt="">
           </div>
+          <aside class="notes">
+            Though I started out making experimental webcomics
+          </aside>
         </section>
 
         <section data-background="#222">
           <img src="/img/safari-960.png" alt="Screenshot of 960.gs">
+          <aside class="notes">
+            Professional experience eventually led me to the same rut we were all in (fixed-width)
+          </aside>
         </section>
 
         <section data-background="#222">
           <img src="/img/safari-rwd.png" alt="Screenshot of Ethan Marcotte's Responsive Web Design article on A List Apart">
+          <aside class="notes">
+            Introduction of media queries
+          </aside>
         </section>
 
         <section data-background="/img/slide-lukew-continuum.png" data-background-size="contain">
+          <aside class="notes">
+            A means of addressing this expanding continuum
+          </aside>
         </section>
 
         <section data-background-video="/img/sasquatch-devices.mp4" data-background-video-loop data-background-color="#000">
           <h1 class="text-shadow">2011</h1>
+          <aside class="notes">
+            My team at the time were fairly early adopters (Sasquatch)
+          </aside>
         </section>
 
         <section>
@@ -124,31 +151,52 @@
               <h3 class="fragment align-left blink">= 66 PSD files</h3>
             </div>
           </div>
+          <aside class="notes">
+            Our existing process scaled poorly, monopolized project timeline
+          </aside>
         </section>
 
         <section data-background="/img/beeproll.gif" data-background-color="black" data-background-size="contain">
           <h2 class="text-shadow">Thanks, Ethan</h2>
+          <aside class="notes">
+            Responsive uprooted our process in a fundamental way
+          </aside>
         </section>
 
         <section data-background="/img/slide-stephen_hay-text.jpg" data-background-size="contain" data-background-color="#2d0639">
           <p class="source">Stephen Hay</p>
-        </section>
-
-        <section data-background="#222">
-          <img src="/img/safari-responsive_deliverables.png" alt="Screenshot of Dave Rupert's Responsive Deliverables article">
+          <aside class="notes">
+            Gradually, we got an inkling that breaking out of our usual design tools might help
+          </aside>
         </section>
 
         <section data-background="/img/slide-brad_frost-atomic.png" data-background-size="contain" data-background-color="#F3F3DB">
           <p class="source">Brad Frost</p>
+          <aside class="notes">
+            Allowing us to think in atomic, component-based ways
+          </aside>
+        </section>
+
+        <section data-background="#222">
+          <img src="/img/safari-responsive_deliverables.png" alt="Screenshot of Dave Rupert's Responsive Deliverables article">
+          <aside class="notes">
+            And delivering solutions well-suited for a fluid web
+          </aside>
         </section>
 
         <section data-background="/img/lifefindsaway.gif" data-background-color="black" data-background-size="contain">
+          <aside class="notes">
+            Life finds a way
+          </aside>
         </section>
 
         <section data-background="/img/photo-stickies.jpg">
           <div class="cloud-four-bubble">
             <img src="/img/logo-cloud_four.svg" alt="Cloud Four" width="200">
           </div>
+          <aside class="notes">
+            Like some of our peers, at Cloud Four we moved to a process with lots of sketching and paper prototyping of design problems
+          </aside>
         </section>
 
         <section data-background="#222">
@@ -158,14 +206,23 @@
               Source: <a href="http://blog.cloudfour.com/the-power-of-responsive-design-sprints/">Cloud Four Blog</a>
             </small>
           </p>
+          <aside class="notes">
+            Followed by rapid, transparent iteration in the browser
+          </aside>
         </section>
 
         <section data-background="#093c75">
           <h2 class="align-right" style="color: #71C7F2;">And yet&hellip;</h2>
+          <aside class="notes">
+            For all our newfound responsive know-how, one element of our work remains frustratingly rigid
+          </aside>
         </section>
 
         <section>
           <img src="/img/broken-img.png" alt="Broken img in Netscape">
+          <aside class="notes">
+            Images! These inflexible boxes have vexed many a web developer
+          </aside>
         </section>
 
         <section data-background="/img/slide-grigs-art_direction.jpg" data-background-color="black" data-background-size="75%">
@@ -1960,6 +2017,7 @@ TweenMax.to(element, 1.3, {
 
         transition: 'none', // none/fade/slide/convex/concave/zoom
         backgroundTransition: 'none',
+        maxScale: 1,
 
         dependencies: [
           // Optional reveal.js plugins
