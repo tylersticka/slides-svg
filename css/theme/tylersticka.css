@@ -347,6 +347,9 @@ body {
 .reveal .slides section .fragment.highlight-blue.visible {
   color: #12a1e9; }
 
+.reveal .slides section .fragment.highlight-green.visible {
+  color: #2ECC40; }
+
 .reveal table th,
 .reveal table td {
   border-bottom-color: rgba(0, 0, 0, 0.1);

@@ -309,7 +309,7 @@ timelines.morphButton = (function () {
   var i;
 
   timeline.set(label, {
-    transformOrigin: '25% 8%' // I'm not sure why??
+    transformOrigin: '50% 50%' // I'm not sure why??
   });
 
   timeline.to(button, 0.5, {
@@ -380,9 +380,23 @@ timelines.navExpand = (function () {
   var childSE = document.getElementById('nav-se');
   var childS = document.getElementById('nav-s');
 
+  var children = [childE, childSE, childS];
+  var everything = [
+    toggle, toggleBase, toggleIcon, toggleIconTop, toggleIconMiddle,
+    toggleIconBottom, childE, childSE, childS
+  ];
+
+  timeline.set(everything, {
+    transformOrigin: '50% 50%'
+  });
+
+  timeline.set(children, {
+    visibility: 'hidden',
+    scale: 0.2
+  });
+
   timeline.to(toggle, 0.5, {
     scale: 0.8,
-    transformOrigin: '50% 50%',
     ease: Sine.easeOut
   });
 
@@ -393,11 +407,11 @@ timelines.navExpand = (function () {
     ease: Elastic.easeOut.config(1.2, 0.3)
   });
 
-  timeline.to(toggleBase, 0.5, {
+  timeline.to(toggleBase, 0.1, {
     fill: '#ddd'
   }, 'pressed');
 
-  timeline.to(toggleIcon, 0.5, {
+  timeline.to(toggleIcon, 0.1, {
     stroke: '#222'
   }, 'pressed');
 
@@ -413,51 +427,38 @@ timelines.navExpand = (function () {
 
   timeline.addLabel('toX', 'pressed+=0.1');
 
-  timeline.to(toggleIconMiddle, 0, {
-    opacity: 0
+  timeline.set(toggleIconMiddle, {
+    visibility: 'hidden'
   }, 'toX');
 
   timeline.to(toggleIconTop, 0.1, {
     rotation: 45,
-    transformOrigin: '50% 50%',
     ease: Sine.easeOut
   }, 'toX');
 
   timeline.to(toggleIconBottom, 0.1, {
     rotation: -45,
-    transformOrigin: '50% 50%',
     ease: Sine.easeOut
   }, 'toX');
 
-  timeline.fromTo(childE, 1, {
-    opacity: 1,
-    scale: 0.5,
-    transformOrigin: '50% 50%'
-  }, {
-    opacity: 1,
+  timeline.set(children, {
+    visibility: 'visible'
+  }, 'pressed');
+
+  timeline.to(childE, 1, {
     scale: 1,
     x: '+=90',
     ease: Elastic.easeOut.config(1, 0.5)
   }, 'pressed');
 
-  timeline.fromTo(childSE, 1, {
-    opacity: 1,
-    scale: 0.5,
-    transformOrigin: '50% 50%'
-  }, {
-    opacity: 1,
+  timeline.to(childSE, 1, {
     scale: 1,
     x: '+=65',
     y: '+=65',
     ease: Elastic.easeOut.config(1, 0.5)
   }, 'pressed+=0.1');
 
-  timeline.fromTo(childS, 1, {
-    opacity: 1,
-    scale: 0.5,
-    transformOrigin: '50% 50%'
-  }, {
-    opacity: 1,
+  timeline.to(childS, 1, {
     scale: 1,
     y: '+=90',
     ease: Elastic.easeOut.config(1, 0.5)

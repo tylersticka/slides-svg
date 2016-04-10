@@ -107,6 +107,10 @@ $mainFontSize: 30px;
   color: $linkColor;
 }
 
+.reveal .slides section .fragment.highlight-green.visible {
+  color: #2ECC40;
+}
+
 .reveal table th,
 .reveal table td {
   border-bottom-color: rgba(0,0,0,0.1);
