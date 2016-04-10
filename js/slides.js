@@ -8,6 +8,55 @@ var timelines = {};
  * Timelines
  */
 
+timelines.titleText = (function () {
+  var timeline = new TimelineMax({
+    paused: true,
+    repeat: -1,
+    repeatDelay: 2
+  });
+  var so = document.getElementById('title-so');
+  var very = document.getElementById('title-very');
+  var good = document.getElementById('title-good');
+
+  timeline.set([so, very, good], {
+    scale: 0,
+    visibility: 'visible',
+    transformOrigin: '50% 50%'
+  });
+
+  timeline.to(so, 1, {
+    scale: 1,
+    ease: Elastic.easeOut.config(1.2, 0.5)
+  });
+
+  timeline.to(so, 0.5, {
+    scale: 0,
+    ease: Back.easeIn.config(1.7)
+  });
+
+  timeline.to(very, 1, {
+    scale: 1,
+    ease: Elastic.easeOut.config(1.2, 0.5)
+  }, '-=0.2');
+
+  timeline.to(very, 0.5, {
+    scale: 0,
+    ease: Back.easeIn.config(1.7)
+  });
+
+  timeline.to(good, 1, {
+    scale: 1,
+    ease: Elastic.easeOut.config(1.2, 0.5)
+  }, '-=0.2');
+
+  timeline.to(good, 0.5, {
+    scale: 0,
+    ease: Back.easeIn.config(1.7)
+  });
+
+  return timeline;
+})();
+
 timelines.interests = (function () {
   var timeline = new TimelineMax({
     paused: true

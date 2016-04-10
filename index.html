@@ -41,8 +41,26 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
 
-        <section>
-          <h1>Title</h1>
+        <section data-background="#093c75" data-timeline="titleText">
+          <svg width="800" height="600" viewBox="0 0 800 400" style="margin-top: -50px; margin-bottom: -75px;">
+            <text font-size="180" fill="#12a1e9" text-anchor="middle" x="400" y="260" font-weight="800">SVG</text>
+            <g id="title-so" style="visibility: hidden;">
+              <circle cx="280" cy="200" r="180" fill="#12a1e9"/>
+              <text font-size="100" fill="#FFF" text-anchor="middle" x="280" y="235" font-weight="700">SO</text>
+            </g>
+            <g id="title-very" style="visibility: hidden;">
+              <circle cx="400" cy="200" r="180" fill="#12a1e9"/>
+              <text font-size="100" fill="#FFF" text-anchor="middle" x="400" y="235" font-weight="700">VERY</text>
+            </g>
+            <g id="title-good" style="visibility: hidden;">
+              <circle cx="520" cy="200" r="180" fill="#12a1e9"/>
+              <text font-size="100" fill="#FFF" text-anchor="middle" x="520" y="235" font-weight="700">GOOD</text>
+            </g>
+          </svg>
+          <div class="row">
+            <img src="/img/me.svg" alt="Face of author" height="80" style="margin-right: 0.5em;">
+            <p>Tyler Sticka</p>
+          </div>
           <aside class="notes">
             Testing out some notes :)
           </aside>
@@ -227,7 +245,6 @@
 
         <section>
           <h2 class="align-right">&hellip;and it&rsquo;s not even very new</h2>
-        </section>
         </section>
 
         <section class="dark" data-background="/img/eileen.gif">
