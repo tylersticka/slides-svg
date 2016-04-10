@@ -591,8 +591,8 @@ timelines.fun = (function () {
   });
 
   timeline.to(after, 1, {
-    scale: 1,
-    ease: Elastic.easeOut.config(2, 0.4)
+    scale: 1.25,
+    ease: Elastic.easeOut.config(1.5, 0.4)
   });
 
   return timeline;
