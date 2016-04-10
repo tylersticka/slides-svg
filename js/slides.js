@@ -504,6 +504,50 @@ timelines.spinner = (function () {
   });
 })();
 
+timelines.fun = (function () {
+  var timeline = new TimelineMax({
+    paused: true
+  });
+  var before = document.getElementById('fun-before');
+  var after = document.getElementById('fun-after');
+
+  timeline.set([before, after], {
+    svgOrigin: '230 200'
+  });
+
+  timeline.set(after, {
+    scale: 0.2,
+    visibility: 'hidden'
+  });
+
+  timeline.to(before, 0.5, {
+    scale: 0.2,
+    ease: RoughEase.ease.config({
+      template: Linear.easeNone,
+      strength: 1,
+      points: 20,
+      taper: 'in',
+      randomize: true,
+      clamp: false
+    })
+  });
+
+  timeline.set(before, {
+    visibility: 'hidden'
+  });
+
+  timeline.set(after, {
+    visibility: 'visible'
+  });
+
+  timeline.to(after, 1, {
+    scale: 1,
+    ease: Elastic.easeOut.config(2, 0.4)
+  });
+
+  return timeline;
+})();
+
 /**
  * Initialization
  */
