@@ -502,6 +502,14 @@ body {
 .hidden {
   display: none !important; }
 
+.source {
+  background: rgba(17, 17, 17, 0.9);
+  border-radius: 0.25em;
+  color: #fff;
+  display: inline-block;
+  margin: 60% 0 0 0 !important;
+  padding: 0.5em 1em 0.6em !important; }
+
 .pie {
   background: #ddd;
   border-radius: 50%;
@@ -636,3 +644,17 @@ body {
 
 .spinner-animated {
   animation: spin 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite; }
+
+.cloud-four-bubble {
+  background: rgba(69, 107, 217, 0.9);
+  display: inline-block;
+  height: 300px;
+  position: relative;
+  width: 300px; }
+  .cloud-four-bubble > img {
+    position: absolute;
+    margin: auto !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }

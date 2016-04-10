@@ -307,6 +307,15 @@ $mainFontSize: 30px;
   display: none !important;
 }
 
+.source {
+  background: rgba(17, 17, 17, 0.9);
+  border-radius: 0.25em;
+  color: #fff;
+  display: inline-block;
+  margin: 60% 0 0 0 !important;
+  padding: 0.5em 1em 0.6em !important;
+}
+
 // For specific slides (mostly)
 
 .pie {
@@ -474,4 +483,22 @@ $mainFontSize: 30px;
 
 .spinner-animated {
   animation: spin 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite; // Back.easeOut
+}
+
+.cloud-four-bubble {
+  background: rgba(#456BD9, 0.9);
+  // border-radius: 50%;
+  display: inline-block;
+  height: 300px;
+  position: relative;
+  width: 300px;
+
+  > img {
+    position: absolute;
+    margin: auto !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }

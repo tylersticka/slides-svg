@@ -12,7 +12,7 @@ timelines.titleText = (function () {
   var timeline = new TimelineMax({
     paused: true,
     repeat: -1,
-    repeatDelay: 2
+    repeatDelay: 1
   });
   var so = document.getElementById('title-so');
   var very = document.getElementById('title-very');
@@ -27,7 +27,7 @@ timelines.titleText = (function () {
   timeline.to(so, 1, {
     scale: 1,
     ease: Elastic.easeOut.config(1.2, 0.5)
-  });
+  }, 1);
 
   timeline.to(so, 0.5, {
     scale: 0,
