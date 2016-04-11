@@ -493,6 +493,26 @@ body {
 .frame {
   outline: 0.25em solid rgba(0, 0, 0, 0.5); }
 
+.showGrid-20 {
+  background-image: linear-gradient(to right, transparent 19px, rgba(0, 0, 0, 0.5) 19px, transparent 20px), linear-gradient(to bottom, transparent 19px, rgba(0, 0, 0, 0.5) 19px, transparent 20px);
+  background-size: 20px 20px;
+  background-repeat: repeat; }
+
+.showGrid-20-40 {
+  background-image: linear-gradient(to right, transparent 19px, rgba(0, 0, 0, 0.5) 19px, transparent 20px), linear-gradient(to bottom, transparent 39px, rgba(0, 0, 0, 0.5) 39px, transparent 40px);
+  background-size: 20px 40px;
+  background-repeat: repeat; }
+
+.showGrid-40 {
+  background-image: linear-gradient(to right, transparent 39px, rgba(0, 0, 0, 0.5) 39px, transparent 40px), linear-gradient(to bottom, transparent 39px, rgba(0, 0, 0, 0.5) 39px, transparent 40px);
+  background-size: 40px 40px;
+  background-repeat: repeat; }
+
+.showGrid-80 {
+  background-image: linear-gradient(to right, transparent 79px, rgba(0, 0, 0, 0.5) 79px, transparent 80px), linear-gradient(to bottom, transparent 79px, rgba(0, 0, 0, 0.5) 79px, transparent 80px);
+  background-size: 80px 80px;
+  background-repeat: repeat; }
+
 .icon {
   display: inline-block;
   fill: currentColor;

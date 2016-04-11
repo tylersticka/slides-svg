@@ -1625,82 +1625,7 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
         </section>
 
         <section>
-          <svg width="200" height="200" viewBox="0 0 100 100" class="frame">
-            <circle cx="50" cy="50" r="50" fill="#12a1e9"/>
-          </svg>
-          <pre><code class="hljs html h2" data-trim>
-&lt;svg viewBox=&quot;0 0 100 100&quot;&gt;
-          </code></pre>
-          <aside class="notes">
-            <ul>
-              <li>You'll almost always want a viewBox</li>
-              <li>Defines the visible canvas of your image</li>
-              <li>Leftmost point, topmost point, width and height</li>
-              <li>Here we have a circle taking up the whole viewBox</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section>
-          <svg width="200" height="200" viewBox="0 0 200 200" class="frame">
-            <circle cx="50" cy="50" r="50" fill="#12a1e9"/>
-          </svg>
-          <pre><code class="hljs html h2" data-trim>
-&lt;svg viewBox=&quot;0 0 200 200&quot;&gt;
-          </code></pre>
-          <aside class="notes">
-            <ul>
-              <li>If we double the width and height</li>
-              <li>It only takes up a quarter</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section>
-          <svg width="200" height="200" viewBox="0 0 50 50" class="frame">
-            <circle cx="50" cy="50" r="50" fill="#12a1e9"/>
-          </svg>
-          <pre><code class="hljs html h2" data-trim>
-&lt;svg viewBox=&quot;0 0 50 50&quot;&gt;
-          </code></pre>
-          <aside class="notes">
-            <ul>
-              <li>If we make the viewBox smaller</li>
-              <li>It crops the circle</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section>
-          <svg width="200" height="200" viewBox="-50 -50 100 100" class="frame">
-            <circle cx="50" cy="50" r="50" fill="#12a1e9"/>
-          </svg>
-          <pre><code class="hljs html h2" data-trim>
-&lt;svg viewBox=&quot;-50 -50 100 100&quot;&gt;
-          </code></pre>
-          <aside class="notes">
-            <ul>
-              <li>You can also use negative coordinates</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section>
-          <svg width="200" height="200" viewBox="-25 50 75 50" class="frame">
-            <circle cx="50" cy="50" r="50" fill="#12a1e9"/>
-          </svg>
-          <pre><code class="hljs html h2" data-trim>
-&lt;svg viewBox=&quot;-25 50 75 50&quot;&gt;
-          </code></pre>
-          <aside class="notes">
-            <ul>
-              <li>Mix and match the values however you'd like</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section>
-          <svg width="200" height="200" viewBox="0 0 100 100" class="frame">
+          <svg width="200" height="200" viewBox="0 0 100 100" class="frame showGrid-20">
             <circle cx="50" cy="50" r="50" fill="#12a1e9"/>
           </svg>
           <pre><code class="hljs html h2" data-trim>
@@ -1709,84 +1634,151 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
           </code></pre>
           <aside class="notes">
             <ul>
-              <li>If you want your asset to have natural dimensions</li>
-              <li>You can specify width and height attributes</li>
+              <li>Dimension attributes</li>
+              <li>Width and height = "natural" dimensions (pixels)</li>
+              <li>Viewbox represents coordinates of image, regardless of display size</li>
+              <li>Leftmost, topmost, width and height</li>
             </ul>
           </aside>
         </section>
 
         <section>
-          <svg width="400" height="200" viewBox="0 0 100 100" class="frame">
+          <svg width="400" height="400" viewBox="0 0 100 100" class="frame showGrid-40">
             <circle cx="50" cy="50" r="50" fill="#12a1e9"/>
           </svg>
           <pre><code class="hljs html h2" data-trim>
 &lt;svg viewBox=&quot;0 0 100 100&quot;
-  width=&quot;200&quot; height=&quot;100&quot;&gt;
+  width=&quot;200&quot; height=&quot;200&quot;&gt;
           </code></pre>
           <aside class="notes">
             <ul>
-              <li>By default, if your dimensions differ from your viewBox</li>
-              <li>The SVG will contain and center the image within the container</li>
+              <li>If I double the width and height but leave the viewBox unchanged</li>
+              <li>Those 100 "points" of the SVG are stretched across the container</li>
             </ul>
           </aside>
         </section>
 
         <section>
-          <svg width="400" height="200" viewBox="0 0 100 100"  preserveAspectRatio="none" class="frame">
+          <svg width="400" height="400" viewBox="0 0 200 200" class="frame showGrid-20">
+            <circle cx="50" cy="50" r="50" fill="#12a1e9"/>
+          </svg>
+          <pre><code class="hljs html h2" data-trim>
+&lt;svg viewBox=&quot;0 0 200 200&quot;
+  width=&quot;200&quot; height=&quot;200&quot;&gt;
+          </code></pre>
+          <aside class="notes">
+            <ul>
+              <li>It's only if I increase the size of the viewBox</li>
+              <li>So that more SVG points are shown</li>
+              <li>That the circle returns its original size</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <svg width="400" height="400" viewBox="0 0 50 50" class="frame showGrid-80">
+            <circle cx="50" cy="50" r="50" fill="#12a1e9"/>
+          </svg>
+          <pre><code class="hljs html h2" data-trim>
+&lt;svg viewBox=&quot;0 0 50 50&quot;
+  width=&quot;200&quot; height=&quot;200&quot;&gt;
+          </code></pre>
+          <aside class="notes">
+            <ul>
+              <li>If I decrease the width and height of the viewBox, it has the opposite effect</li>
+              <li>The 50-point viewBox stretches to fill the container, showing only the corner of the circle</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <svg width="400" height="400" viewBox="-50 0 100 100" class="frame showGrid-40">
+            <circle cx="50" cy="50" r="50" fill="#12a1e9"/>
+          </svg>
+          <pre><code class="hljs html h2" data-trim>
+&lt;svg viewBox=&quot;-50 0 100 100&quot;
+  width=&quot;200&quot; height=&quot;200&quot;&gt;
+          </code></pre>
+          <aside class="notes">
+            <ul>
+              <li>Though you'll often use "zero" for the first two points, you don't have to</li>
+              <li>A negative value will start the visible content that many points to the left</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <svg width="200" height="400" viewBox="0 0 100 100" class="frame showGrid-20">
             <circle cx="50" cy="50" r="50" fill="#12a1e9"/>
           </svg>
           <pre><code class="hljs html h2" data-trim>
 &lt;svg viewBox=&quot;0 0 100 100&quot;
-  width=&quot;200&quot; height=&quot;100&quot;
+  width=&quot;100&quot; height=&quot;200&quot;&gt;
+          </code></pre>
+          <aside class="notes">
+            <ul>
+              <li>If the aspect ratio of the container differs from the viewBox</li>
+              <li>The image is scaled and centered, with more content visible above and below</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <svg width="200" height="400" viewBox="0 0 100 100" preserveAspectRatio="none" class="frame showGrid-20-40">
+            <circle cx="50" cy="50" r="50" fill="#12a1e9"/>
+          </svg>
+          <pre><code class="hljs html h2" data-trim>
+&lt;svg viewBox=&quot;0 0 100 100&quot;
+  width=&quot;100&quot; height=&quot;200&quot;
   preserveAspectRatio=&quot;none&quot;&gt;
           </code></pre>
           <aside class="notes">
             <ul>
-              <li>You can override this with preserveAspectRatio</li>
-              <li>Setting it to "none" makes the image stretch</li>
+              <li>We can override this behavior with the preserveAspectRatio attribute</li>
+              <li>Setting it to "none" stretches the image</li>
             </ul>
           </aside>
         </section>
 
         <section>
-          <svg width="400" height="200" viewBox="0 0 100 100"  preserveAspectRatio="xMinYMid" class="frame">
+          <svg width="200" height="400" viewBox="0 0 100 100" preserveAspectRatio="xMidYMin" class="frame showGrid-20">
             <circle cx="50" cy="50" r="50" fill="#12a1e9"/>
           </svg>
           <pre><code class="hljs html h2" data-trim>
 &lt;svg viewBox=&quot;0 0 100 100&quot;
-  width=&quot;200&quot; height=&quot;100&quot;
-  preserveAspectRatio=&quot;xMinYMid&quot;&gt;
+  width=&quot;100&quot; height=&quot;200&quot;
+  preserveAspectRatio=&quot;xMidYMin&quot;&gt;
           </code></pre>
           <aside class="notes">
             <ul>
-              <li>But other values allow it to fix to a specific side or corner</li>
+              <li>But we can also fix the image to a particular edge</li>
             </ul>
           </aside>
         </section>
 
         <section>
-          <svg width="400" height="200" viewBox="0 0 100 100"  preserveAspectRatio="xMaxYMid" class="frame">
+          <svg width="200" height="400" viewBox="0 0 100 100" preserveAspectRatio="xMidYMax" class="frame showGrid-20">
             <circle cx="50" cy="50" r="50" fill="#12a1e9"/>
           </svg>
           <pre><code class="hljs html h2" data-trim>
 &lt;svg viewBox=&quot;0 0 100 100&quot;
-  width=&quot;200&quot; height=&quot;100&quot;
-  preserveAspectRatio=&quot;xMaxYMid&quot;&gt;
+  width=&quot;100&quot; height=&quot;200&quot;
+  preserveAspectRatio=&quot;xMidYMax&quot;&gt;
           </code></pre>
         </section>
 
         <section>
-          <svg width="400" height="200" viewBox="0 0 100 100"  preserveAspectRatio="xMidYMid slice" class="frame">
+          <svg width="200" height="400" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" class="frame showGrid-40">
             <circle cx="50" cy="50" r="50" fill="#12a1e9"/>
           </svg>
           <pre><code class="hljs html h2" data-trim>
 &lt;svg viewBox=&quot;0 0 100 100&quot;
-  width=&quot;200&quot; height=&quot;100&quot;
+  width=&quot;100&quot; height=&quot;200&quot;
   preserveAspectRatio=&quot;xMidYMid slice&quot;&gt;
           </code></pre>
           <aside class="notes">
             <ul>
-              <li>You can even choose to fill the container by adding "slice"</li>
+              <li>Or even "slice" it to fill the entire container</li>
             </ul>
           </aside>
         </section>
