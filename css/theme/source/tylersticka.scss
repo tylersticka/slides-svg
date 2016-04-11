@@ -510,3 +510,16 @@ $mainFontSize: 30px;
     left: 0;
   }
 }
+
+.mpaa {
+  margin: 0.75em auto !important;
+  text-shadow: 0 0.25em 1em rgba(0,0,0,0.5);
+  text-transform: uppercase;
+
+  > b {
+    display: inline-block;
+    font-size: 1.5em;
+    margin: -0.25em 0.25em 0;
+    vertical-align: middle;
+  }
+}
