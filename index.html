@@ -70,6 +70,12 @@
           <p class="mpaa">The following <b>slide deck</b> was assembled using</p>
           <p class="mpaa"><b>reveal.js</b> and actual <b>SVG</b></p>
           <p class="mpaa">by the guy standing and talking right now</p>
+          <aside class="notes">
+            <ul>
+              <li>I want to point out that this deck is running in Chrome</li>
+              <li>Any animations and examples are actual SVG</li>
+            </ul>
+          </aside>
         </section>
 
         <section data-background="/img/photo-young_tyler.jpg" data-background-size="contain" data-background-color="#000">
@@ -1168,20 +1174,18 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
         <section data-background="#893EA2">
           <img data-src="/img/splat-expanded.svg" alt="">
           <pre><code class="html" data-trim>
-&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="240" viewBox="0 0 800 240"&gt;
-  &lt;defs&gt;
-    &lt;g id="splat"&gt;
-      &lt;path d="M271.29,90.68q-6,2.25-14.25,5.44L243,101.56q0-8.81-4.87-8.81-6.94,0-13.87,7.87-4.88,5.81-4.12,11.25,0.56,3.56,7.13,3.56a51.82,51.82,0,0,0,9.38-1.12,70.55,70.55,0,0,1,14.25-1.69q15.75,0,18.38,10.88a32.9,32.9,0,0,1,.75,7.13q0,12-9,25.88-11.63,18.19-32.62,30.56-11.07,6.56-21.75,6.56a37.72,37.72,0,0,1-19.12-5.44q4.68-11.25,15-33.19a22.12,22.12,0,0,0,12.75,4.13,21.83,21.83,0,0,0,6.19-.94,49.62,49.62,0,0,0,11.06-4.31q7.5-4.12,7.5-8.44,0-4.68-7.69-4.69A79.33,79.33,0,0,0,217,142.9a79.23,79.23,0,0,1-15.28,2.16q-6.94,0-10.69-2.62-7.31-4.87-6-15.19,2.44-20.81,26.81-48.19,24.93-28.13,42.94-29.44,17.44-1.12,17.44,26.25A132.7,132.7,0,0,1,271.29,90.68Z"/&gt;
-      &lt;path d="M277.85,62.31q29.06-8.81,47.63-8.81,25.31,0,24.94,17.63-0.56,35.44-59.62,73.31-4.13,22.88-6,42.38L255,195.06q0.56-4.12,4.5-25.12l8.25-44.44Q278.79,64.18,277.85,62.31Zm23.63,30q-1.31,5.25-2.44,10.5L297,113.12q17.44-8.62,22.5-18.19a5.86,5.86,0,0,0,.75-2.44q0-3.19-4.69-3.19Q311,89.31,301.47,92.31Z"/&gt;
-      &lt;path d="M347.16,51.5l32.25-6q-13.5,51.94-20.81,95.81l33-5.06-2.81,34.88q-25.5,2.25-64.69,12.94Z"/&gt;
-      &lt;path d="M370.91,193.31A1214.06,1214.06,0,0,0,415.54,57.75l57-9.56q-9.75,56.81-8.81,134.44L424,191.81l2.81-23.44-12.56,2.44-3.94,16.5Zm58.89-50.16,8.61-70.78h-0.19L420.6,144.93Z"/&gt;
-      &lt;path d="M546.91,50.62L545.79,85.5q-13.13.75-24.94,1.88-12.37,51.94-16.69,95.44l-31.69,8.25,17.25-99.75q-5.06.75-10.12,1.69l-9.94,1.88-2.25-35.06Z"/&gt;
-      &lt;path d="M554.79,161.31a18.06,18.06,0,0,1,11.63,1.88q6,3,6,9.38,0,8.63-9.19,15.75a31.52,31.52,0,0,1-15.56,6.75,19.56,19.56,0,0,1-11.62-1.5,9.9,9.9,0,0,1-5.81-9.37q0-8.62,8.81-15.94A30.87,30.87,0,0,1,554.79,161.31ZM576,44.68l39.19,6.56Q599.6,79.19,592.29,94.93a370.06,370.06,0,0,0-17.62,46.69L548.6,140.5Z"/&gt;
-    &lt;/g&gt;
-  &lt;/defs&gt;
-  &lt;use xlink:href="#splat" fill="black" stroke="black" stroke-width="8"/&gt;
-  &lt;use xlink:href="#splat" fill="#f1d84f"/&gt;
-&lt;/svg&gt;
+&lt;defs&gt;
+  &lt;g id="splat"&gt;
+    &lt;path d="M271.29,90.68q-6,2.25-14.25,5.44L243,101.56q0-8.81-4.87-8.81-6.94,0-13.87,7.87-4.88,5.81-4.12,11.25,0.56,3.56,7.13,3.56a51.82,51.82,0,0,0,9.38-1.12,70.55,70.55,0,0,1,14.25-1.69q15.75,0,18.38,10.88a32.9,32.9,0,0,1,.75,7.13q0,12-9,25.88-11.63,18.19-32.62,30.56-11.07,6.56-21.75,6.56a37.72,37.72,0,0,1-19.12-5.44q4.68-11.25,15-33.19a22.12,22.12,0,0,0,12.75,4.13,21.83,21.83,0,0,0,6.19-.94,49.62,49.62,0,0,0,11.06-4.31q7.5-4.12,7.5-8.44,0-4.68-7.69-4.69A79.33,79.33,0,0,0,217,142.9a79.23,79.23,0,0,1-15.28,2.16q-6.94,0-10.69-2.62-7.31-4.87-6-15.19,2.44-20.81,26.81-48.19,24.93-28.13,42.94-29.44,17.44-1.12,17.44,26.25A132.7,132.7,0,0,1,271.29,90.68Z"/&gt;
+    &lt;path d="M277.85,62.31q29.06-8.81,47.63-8.81,25.31,0,24.94,17.63-0.56,35.44-59.62,73.31-4.13,22.88-6,42.38L255,195.06q0.56-4.12,4.5-25.12l8.25-44.44Q278.79,64.18,277.85,62.31Zm23.63,30q-1.31,5.25-2.44,10.5L297,113.12q17.44-8.62,22.5-18.19a5.86,5.86,0,0,0,.75-2.44q0-3.19-4.69-3.19Q311,89.31,301.47,92.31Z"/&gt;
+    &lt;path d="M347.16,51.5l32.25-6q-13.5,51.94-20.81,95.81l33-5.06-2.81,34.88q-25.5,2.25-64.69,12.94Z"/&gt;
+    &lt;path d="M370.91,193.31A1214.06,1214.06,0,0,0,415.54,57.75l57-9.56q-9.75,56.81-8.81,134.44L424,191.81l2.81-23.44-12.56,2.44-3.94,16.5Zm58.89-50.16,8.61-70.78h-0.19L420.6,144.93Z"/&gt;
+    &lt;path d="M546.91,50.62L545.79,85.5q-13.13.75-24.94,1.88-12.37,51.94-16.69,95.44l-31.69,8.25,17.25-99.75q-5.06.75-10.12,1.69l-9.94,1.88-2.25-35.06Z"/&gt;
+    &lt;path d="M554.79,161.31a18.06,18.06,0,0,1,11.63,1.88q6,3,6,9.38,0,8.63-9.19,15.75a31.52,31.52,0,0,1-15.56,6.75,19.56,19.56,0,0,1-11.62-1.5,9.9,9.9,0,0,1-5.81-9.37q0-8.62,8.81-15.94A30.87,30.87,0,0,1,554.79,161.31ZM576,44.68l39.19,6.56Q599.6,79.19,592.29,94.93a370.06,370.06,0,0,0-17.62,46.69L548.6,140.5Z"/&gt;
+  &lt;/g&gt;
+&lt;/defs&gt;
+&lt;use xlink:href="#splat" fill="black" stroke="black" stroke-width="8"/&gt;
+&lt;use xlink:href="#splat" fill="#f1d84f"/&gt;
           </code></pre>
           <aside class="notes">
             <ul>
@@ -1206,19 +1210,16 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
               filter="url(#outline)">Splat!</text>
           </svg>
           <div class="fragment" data-timeline="sfxType"></div>
-          <pre><code class="html" data-trim>
-&lt;svg xmlns="http://www.w3.org/2000/svg" width="800" height="240" viewBox="0 0 800 240"&gt;
-  &lt;defs&gt;
-    &lt;filter id="outline"&gt;
-      &lt;feMorphology operator="dilate" in="SourceAlpha" radius="4"/&gt;
-      &lt;feComposite in="SourceGraphic"/&gt;
-    &lt;/filter&gt;
-  &lt;/defs&gt;
-  &lt;text class="sfx" x="400" y="190" text-anchor="middle"
-    dx="0, -12, -10, -16, -18"
-    dy="0, 5, -10, 5, 0"
-    filter="url(#outline)"&gt;Splat!&lt;/text&gt;
-&lt;/svg&gt;
+          <pre><code class="html" data-trim style="font-size: 1.25em;">
+&lt;defs&gt;
+  &lt;filter id="outline"&gt;
+    &lt;feMorphology operator="dilate" in="SourceAlpha" radius="4"/&gt;
+    &lt;feComposite in="SourceGraphic"/&gt;
+  &lt;/filter&gt;
+&lt;/defs&gt;
+&lt;text class="sfx" x="400" y="190" text-anchor="middle"
+  dx="0, -12, -10, -16, -18" dy="0, 5, -10, 5, 0"
+  filter="url(#outline)"&gt;Splat!&lt;/text&gt;
           </code></pre>
           <p>
             Source: <a style="color: inherit; text-decoration: underline;" href="http://thenewcode.com/633/Boom-Wham-Pow-Comic-Book-FX-Lettering-with-SVG-Filters">Dudley Storey</a>
@@ -1226,8 +1227,8 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
           <aside class="notes">
             <ul>
               <li>What if we use text instead?</li>
-              <li>Leaving the content accessible</li>
-              <li>Or even dynamic and reusable?</li>
+              <li>With fine-tuned but dynamic control of style and kerning</li>
+              <li>Leaving the content accessible, reusable</li>
             </ul>
           </aside>
         </section>
