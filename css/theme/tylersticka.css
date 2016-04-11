@@ -513,6 +513,9 @@ body {
   margin: 60% 0 0 0 !important;
   padding: 0.5em 1em 0.6em !important; }
 
+.source-alt {
+  background: rgba(9, 60, 117, 0.9); }
+
 .pie {
   background: #ddd;
   border-radius: 50%;
