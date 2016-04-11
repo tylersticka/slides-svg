@@ -1517,7 +1517,7 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
 
         <section>
           <h3>
-            SVG Image Embedding
+            Basic SVG Embeds
           </h3>
           <pre><code class="html h3" data-trim>
 &lt;img src=&quot;foo.svg&quot; alt=&quot;&hellip;&quot;&gt;
@@ -1540,7 +1540,7 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
 
         <section>
           <h3 style="margin-bottom: 0.75em;">
-            Interactive SVG Embedding
+            Interactive SVG Embed
           </h3>
           <pre><code class="html h3" data-trim>
 &lt;object data=&quot;foo.svg&quot; type=&quot;image/svg+xml&quot;&gt;
@@ -1832,26 +1832,6 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
         </section>
 
         <section>
-          <svg width="720" height="390" viewBox="0 0 720 390">
-            <image xlink:href="/img/darthgrigsby2.jpg" x="0" y="0" width="720" height="390"/>
-            <text x="40" y="360" font-size="32" fill="white" style="text-shadow: 2px 2px 4px black">&ldquo;I find your lack of responsive images disturbing.&rdquo;</text>
-          </svg>
-          <pre><code class="html h3" data-trim>
-&lt;image xlink:href=&quot;darthgrigsby.jpg&quot; x=&quot;0&quot; y=&quot;0&quot;
-  width=&quot;720&quot; height=&quot;390&quot;/&gt;
-
-&lt;text x=&quot;40&quot; y=&quot;360&quot;&gt;&ldquo;I find your&hellip;&rdquo;&lt;/text&gt;
-          </code></pre>
-          <aside class="notes">
-            <ul>
-              <li>There are also some fancy elements</li>
-              <li>You can add text with the text element</li>
-              <li>Images with the image element</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section>
           <svg width="200" height="200" viewBox="0 0 100 100">
             <circle cx="50" cy="50" r="48" fill="#71C7F2" stroke="#093c75" stroke-width="4"/>
           </svg>
@@ -1977,6 +1957,27 @@ I make stuff at
               <li>An alternative to "defs" is to define a "symbol"</li>
               <li>Similar to "defs" but includes its own viewBox</li>
               <li>Useful for concisely repeating assets across an HTML document (icons!)</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <svg width="720" height="390" viewBox="0 0 720 390">
+            <image xlink:href="/img/darthgrigsby2.jpg" x="0" y="0" width="720" height="390"/>
+            <text class="fragment" data-fragment-index="1" x="40" y="360" font-size="32" fill="white" style="text-shadow: 2px 2px 4px black">&ldquo;I find your lack of responsive images disturbing.&rdquo;</text>
+          </svg>
+          <pre><code class="html h3" data-trim>
+&lt;image xlink:href=&quot;darthgrigsby.jpg&quot; x=&quot;0&quot; y=&quot;0&quot;
+  width=&quot;720&quot; height=&quot;390&quot;/&gt;
+          </code></pre>
+          <pre class="fragment" data-fragment-index="1"><code class="html h3" data-trim>
+&lt;text x=&quot;40&quot; y=&quot;360&quot;&gt;&ldquo;I find your&hellip;&rdquo;&lt;/text&gt;
+          </code></pre>
+          <aside class="notes">
+            <ul>
+              <li>There are also some fancy elements</li>
+              <li>You can add text with the text element</li>
+              <li>Images with the image element</li>
             </ul>
           </aside>
         </section>
