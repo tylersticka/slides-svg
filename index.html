@@ -2154,11 +2154,19 @@ TweenMax.to(element, 1.3, {
           </aside>
         </section>
 
+        <section data-background="/img/beginning.gif" data-background-color="#000" data-background-size="contain">
+          <aside class="notes">
+            <ul>
+              <li>This is just the beginning</li>
+            </ul>
+          </aside>
+        </section>
+
         <section data-background="#222">
           <img data-src="/img/safari-mdn-svg.png" alt="Screenshot of Mozilla Developer Network's SVG reference">
           <aside class="notes">
             <ul>
-              <li>It's important to remember that SVG is its own document standard</li>
+              <li>SVG is its own document standard</li>
               <li>Just as with HTML, every element has its own attributes, behavior, etc.</li>
             </ul>
           </aside>
@@ -2193,6 +2201,55 @@ TweenMax.to(element, 1.3, {
         </section>
 
         <section>
+          <div class="row-around">
+            <img data-src="/img/svg-export-big.png" alt="Traditional SVG export in Illustrator" height="600">
+            <div>
+              <svg width="96" height="96" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 5 22 12 15 19"/>
+                  <line x1="20" y1="12" x2="2" y2="12"/>
+                </g>
+              </svg>
+            </div>
+            <img data-src="/img/svg-export-small.png" alt="Nicer SVG export in Illustrator">
+          </div>
+          <aside class="notes">
+            <ul>
+              <li>Our existing design tools seem committed to SVG</li>
+              <li>Illustrator and Sketch both improved SVG export in recent updates</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section data-background="#222">
+          <img data-src="/img/safari-bodymovin.png" alt="Screenshot of Gravit design tool">
+          <aside class="notes">
+            <ul>
+              <li>In the animation world, plugins have emerged to export from After Effects and Animate CC (formerly Flash) to SVG</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section data-background="#222">
+          <img data-src="/img/safari-gravit.png" alt="Screenshot of Gravit design tool">
+          <aside class="notes">
+            <ul>
+              <li>New tools are emerging for SVG creation</li>
+              <li>Gravit is an entirely browser-based vector design tool</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section data-background="#222">
+          <img data-src="/img/firefox-dev-animation.png" alt="Screenshot of Mozilla's Dev Tools Challenger">
+          <aside class="notes">
+            <ul>
+              <li>Firefox and Chrome introducing more and more animation-related tools (bezier curve adjustments, timeline control, etc.) to their developer tools</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
           <h3>CSS Shapes</h3>
           <p>W3C Candidate Recommendation (<a href="https://www.w3.org/TR/css-shapes-1/">March 2014</a>)</p>
           <pre><code class="css h3" data-trim>
@@ -2201,7 +2258,7 @@ TweenMax.to(element, 1.3, {
   shape-margin: 10px;
 }
           </code></pre>
-          <ul class="fragment">
+          <ul>
             <li>
                <a href="http://caniuse.com/#feat=css-shapes">Supported</a> in Chrome, Safari and Opera
             </li>
@@ -2226,7 +2283,7 @@ TweenMax.to(element, 1.3, {
   clip-path: polygon(15px 99px, 30px 87px, 65px 99px, 85px 55px, 122px 57px, 184px 73px, 198px 105px, 199px 150px, 145px 159px, 155px 139px, 126px 120px, 112px 138px, 80px 128px, 39px 126px, 24px 104px);
 }
           </code></pre>
-          <ul class="fragment">
+          <ul>
             <li>
               <a href="http://caniuse.com/#feat=css-masks">Partially supported</a> in Firefox, Chrome, Safari and Opera
             </li>
@@ -2249,7 +2306,7 @@ TweenMax.to(element, 1.3, {
   filter: contrast(175%) brightness(3%);
 }
           </code></pre>
-          <ul class="fragment">
+          <ul>
             <li>
               <a href="http://caniuse.com/#feat=css-filters">Varying support</a> in Edge, Firefox, Chrome, Safari and Opera
             </li>
@@ -2282,55 +2339,6 @@ TweenMax.to(element, 1.3, {
           </aside>
         </section>
 
-        <section>
-          <div class="row-around">
-            <img data-src="/img/svg-export-big.png" alt="Traditional SVG export in Illustrator" height="600">
-            <div>
-              <svg width="96" height="96" viewBox="0 0 24 24">
-                <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="15 5 22 12 15 19"/>
-                  <line x1="20" y1="12" x2="2" y2="12"/>
-                </g>
-              </svg>
-            </div>
-            <img data-src="/img/svg-export-small.png" alt="Nicer SVG export in Illustrator">
-          </div>
-          <aside class="notes">
-            <ul>
-              <li>Our existing design tools seem committed to SVG</li>
-              <li>Illustrator and Sketch both improved SVG export in recent updates</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="#222">
-          <img data-src="/img/safari-gravit.png" alt="Screenshot of Gravit design tool">
-          <aside class="notes">
-            <ul>
-              <li>New tools are emerging for SVG creation</li>
-              <li>Gravit is an entirely browser-based vector design tool</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="#222">
-          <img data-src="/img/safari-bodymovin.png" alt="Screenshot of Gravit design tool">
-          <aside class="notes">
-            <ul>
-              <li>In the animation world, plugins have emerged to export from After Effects and Animate CC (formerly Flash) to SVG</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="#222">
-          <img data-src="/img/firefox-dev-animation.png" alt="Screenshot of Mozilla's Dev Tools Challenger">
-          <aside class="notes">
-            <ul>
-              <li>Though they have their work cut out for them as Firefox and Chrome introduce more and more animation-related tools (bezier curve adjustments, timeline control, etc.) to their developer tools</li>
-            </ul>
-          </aside>
-        </section>
-
         <section class="dark" data-background="/img/point.gif">
           <h1 class="text-shadow">The Point</h1>
           <aside class="notes">
@@ -2342,7 +2350,7 @@ TweenMax.to(element, 1.3, {
         </section>
 
         <section data-background="/img/standards-1.svg" data-background-size="contain" data-background-color="#222">
-          <p class="fragment" style="margin-bottom: 60%;">Lack of vector images</p>
+          <p style="margin-bottom: 60%;">Lack of vector images</p>
           <aside class="notes">
             <ul>
               <li>Our design intent encounters an obstacle</li>
@@ -2351,7 +2359,7 @@ TweenMax.to(element, 1.3, {
         </section>
 
         <section data-background="/img/standards-2.svg" data-background-size="contain" data-background-color="#222">
-          <p class="fragment" style="margin-bottom: 60%;">Icon fonts, Flash, crazy CSS shapes, etc.</p>
+          <p style="margin-bottom: 60%;">Icon fonts, Flash, crazy CSS shapes, etc.</p>
           <aside class="notes">
             <ul>
               <li>We hack our way around that through any number of open or proprietary solutions</li>
@@ -2360,7 +2368,7 @@ TweenMax.to(element, 1.3, {
         </section>
 
         <section data-background="/img/standards-3.svg" data-background-size="contain" data-background-color="#222">
-          <p class="fragment h3" style="margin-bottom: 60%;">SVG!</p>
+          <p style="margin-bottom: 60%;">SVG!</p>
           <aside class="notes">
             <ul>
               <li>Until a more robust, performant and predictable solution is standardized</li>
@@ -2563,16 +2571,27 @@ TweenMax.to(element, 1.3, {
 
         <section>
           <h3>SVG Icons</h3>
-          <pre class="fragment"><code class="html h2" data-trim>
-&lt;img src=&quot;my-icon.svg&quot; alt=&quot;An icon!&quot;&gt;
-          </code></pre>
-          <div class="fragment">
-            <p class="h3">or</p>
-            <pre><code class="html h2" data-trim>
+          <div class="row-between">
+            <div class="fragment" data-fragment-index="0">
+              <img data-src="/img/file-stack.svg" width="200" height="200"/>
+              <p>SVG Files</p>
+            </div>
+            <svg class="fragment" data-fragment-index="1" width="60" height="60" viewBox="0 0 24 24">
+              <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 5 22 12 15 19"/>
+                <line x1="20" y1="12" x2="2" y2="12"/>
+              </g>
+            </svg>
+            <div class="fragment" data-fragment-index="1">
+              <pre style="margin-left: 0; margin-right: 0; width: 100%;"><code class="html h3" data-trim>
+&lt;img src=&quot;my-icon.svg&quot; alt=&quot;&hellip;&quot;&gt;
+              </code></pre>
+              <pre style="margin-left: 0; margin-right: 0; width: 100%;"><code class="html h3" data-trim>
 &lt;svg&gt;
   &lt;!-- icon data or reference --&gt;
 &lt;/svg&gt;
-            </code></pre>
+              </code></pre>
+            </div>
           </div>
           <aside class="notes">
             <ul>
