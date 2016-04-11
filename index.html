@@ -1794,14 +1794,16 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
         <section>
           <svg width="800" height="200" viewBox="0 0 400 100">
             <rect fill="#12a1e9" x="0" y="0" width="100" height="100"/>
-            <circle fill="#12a1e9" cx="200" cy="50" r="50"/>
-            <line x1="310" y1="90" x2="390" y2="10" stroke="#12a1e9" stroke-width="10" stroke-linecap="round"/>
+            <circle class="fragment" data-fragment-index="1" fill="#12a1e9" cx="200" cy="50" r="50"/>
+            <line class="fragment" data-fragment-index="2" x1="310" y1="90" x2="390" y2="10" stroke="#12a1e9" stroke-width="10" stroke-linecap="round"/>
           </svg>
           <pre><code class="html h3" data-trim>
 &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;100&quot; height=&quot;100&quot;/&gt;
-
+          </code></pre>
+          <pre class="fragment" data-fragment-index="1"><code class="html h3" data-trim>
 &lt;circle cx=&quot;240&quot; cy=&quot;50&quot; r=&quot;50&quot;/&gt;
-
+          </code></pre>
+          <pre class="fragment" data-fragment-index="2"><code class="html h3" data-trim>
 &lt;line x1=&quot;390&quot; y1=&quot;90&quot; x2=&quot;470&quot; y2=&quot;10&quot;/&gt;
           </code></pre>
           <aside class="notes">
@@ -1814,14 +1816,16 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
         <section>
           <svg width="800" height="200" viewBox="0 0 400 100">
             <polyline points="50 5 25 50 75 50 50 95" fill="none" stroke="#12a1e9" stroke-width="10" stroke-linecap="round"/>
-            <polygon points="200 0 245 25 245 75 200 100 155 75 155 25" fill="#12a1e9"/>
-            <path d="M 295 85 c 0 -100 100 -100 100 0 z" fill="#12a1e9"/>
+            <polygon class="fragment" data-fragment-index="1" points="200 0 245 25 245 75 200 100 155 75 155 25" fill="#12a1e9"/>
+            <path class="fragment" data-fragment-index="2" d="M 295 85 c 0 -100 100 -100 100 0 z" fill="#12a1e9"/>
           </svg>
           <pre><code class="html h3" data-trim>
 &lt;polyline points=&quot;50 5 25 50 75 50 50 95&quot;/&gt;
-
+          </code></pre>
+          <pre class="fragment" data-fragment-index="1"><code class="html h3" data-trim>
 &lt;polygon points=&quot;200 0 245 25 245 75 200 100 155 75 155 25&quot;/&gt;
-
+          </code></pre>
+          <pre class="fragment" data-fragment-index="2"><code class="html h3" data-trim>
 &lt;path d=&quot;M 295 85 c 0 -100 100 -100 100 0 z&quot;/&gt;
           </code></pre>
           <aside class="notes">
@@ -1878,14 +1882,18 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
               <path d="M24,13c0-4.91-4.81-5.44-4.81-5.44a6.11,6.11,0,0,0-2.14-2.2c-0.43,1.53-1.54,5.61-1.6,6.38h1.68s0.27,0,.2.33c-0.16.75-.58,2.58-1.48,2.64l-1.18.07c-0.33,1.35-.68,2.76-0.93,3.78a4.7,4.7,0,0,0,3,.91,4.59,4.59,0,0,0,3.35-1.23C24.14,17.56,24,13,24,13Z"/>
               <path d="M13.89,6.86A42.33,42.33,0,0,0,8.9,12l3.61-.14c0.74-2.08,1.38-3.93,1.66-4.74A0.3,0.3,0,0,0,13.89,6.86Z"/>
             </g>
-            <use xlink:href="#use-demo-cloud_four" x="36"/>
-            <use xlink:href="#use-demo-cloud_four" x="72"/>
+            <use class="fragment" data-fragment-index="1" xlink:href="#use-demo-cloud_four" x="36"/>
+            <use class="fragment" data-fragment-index="2" xlink:href="#use-demo-cloud_four" x="72"/>
           </svg>
           <pre><code class="html h3" data-trim>
 &lt;g id=&quot;logo&quot; fill=&quot;#456BD9&quot;&gt;
   &lt;!-- paths and stuff --&gt;
 &lt;/g&gt;
+          </code></pre>
+          <pre class="fragment" data-fragment-index="1"><code class="html h3" data-trim>
 &lt;use xlink:href=&quot;#logo&quot; x=&quot;36&quot;/&gt;
+          </code></pre>
+          <pre class="fragment" data-fragment-index="2"><code class="html h3" data-trim>
 &lt;use xlink:href=&quot;#logo&quot; x=&quot;72&quot;/&gt;
           </code></pre>
           <aside class="notes">
@@ -1905,9 +1913,9 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
                 <path d="M13.89,6.86A42.33,42.33,0,0,0,8.9,12l3.61-.14c0.74-2.08,1.38-3.93,1.66-4.74A0.3,0.3,0,0,0,13.89,6.86Z"/>
               </g>
             </defs>
-            <use xlink:href="#defs-demo-cloud_four" fill="#0F1C3F"/>
-            <use xlink:href="#defs-demo-cloud_four" x="36" fill="#456BD9"/>
-            <use xlink:href="#defs-demo-cloud_four" x="72" fill="#F26941"/>
+            <use class="fragment" data-fragment-index="1" xlink:href="#defs-demo-cloud_four" fill="#0F1C3F"/>
+            <use class="fragment" data-fragment-index="1" xlink:href="#defs-demo-cloud_four" x="36" fill="#456BD9"/>
+            <use class="fragment" data-fragment-index="1" xlink:href="#defs-demo-cloud_four" x="72" fill="#F26941"/>
           </svg>
           <pre><code class="html h3" data-trim>
 &lt;defs&gt;
@@ -1915,6 +1923,8 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
     &lt;!-- paths and stuff --&gt;
   &lt;/g&gt;
 &lt;/defs&gt;
+          </code></pre>
+          <pre class="fragment" data-fragment-index="1"><code class="html h3" data-trim>
 &lt;use xlink:href=&quot;#logo&quot; fill=&quot;#0F1C3F&quot;/&gt;
 &lt;use xlink:href=&quot;#logo&quot; x=&quot;36&quot; fill=&quot;#456BD9&quot;/&gt;
 &lt;use xlink:href=&quot;#logo&quot; x=&quot;72&quot; fill=&quot;#F26941&quot;/&gt;
@@ -1935,19 +1945,20 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
               <path d="M13.89,6.86A42.33,42.33,0,0,0,8.9,12l3.61-.14c0.74-2.08,1.38-3.93,1.66-4.74A0.3,0.3,0,0,0,13.89,6.86Z"/>
             </symbol>
           </svg>
-          <p class="h2">
+          <p class="h2 fragment" data-fragment-index="1">
             I make stuff at
             <svg class="icon">
               <use xlink:href="#symbol-demo-cloud_four"/>
             </svg>
           </p>
-          <pre class="inline-block width-auto"><code class="html h3" data-trim>
+          <pre><code class="html h3" data-trim>
 &lt;svg&gt;
   &lt;symbol viewBox=&quot;0 0 24 24&quot; id=&quot;cloud_four-icon&quot;&gt;
     &lt;!-- paths and stuff --&gt;
   &lt;/symbol&gt;
 &lt;/svg&gt;
-
+          </code></pre>
+          <pre class="fragment" data-fragment-index="1"><code class="html h3" data-trim>
 I make stuff at
 &lt;svg class=&quot;icon&quot;&gt;
   &lt;use xlink:href=&quot;#cloud_four-icon&quot;/&gt;
