@@ -62,31 +62,68 @@
   }
 
   /**
+   * Attempt to parse JSON w/o going crazy.
+   *
+   * See: https://github.com/rajgoel/reveal.js-plugins/blob/master/anything/anything.js
+   */
+
+  function parseJSON (str) {
+    var json;
+
+    try {
+      str = str.replace(/(\r\n|\n|\r|\t)/gm, '');
+      json = JSON.parse(str);
+    } catch (e) {
+      return null;
+    }
+
+    return json;
+  }
+
+  /**
    * Plugin
    */
 
   var RevealHandlers;
   var cache = {};
-  var defaults = { attrName: 'data-handler' };
+  var defaults = {
+    handlerAttr: 'data-handler',
+    optionsAttr: 'data-handler-options'
+  };
   var options = assign({}, defaults, Reveal.getConfig().handlers);
 
-  function elementToHandlers (element) {
+  function getElementHandlers (element) {
     if (isNil(element)) {
       return;
     }
 
-    var name = element.getAttribute(options.attrName);
-    var handler;
+    var name = element.getAttribute(options.handlerAttr);
+    var handlers;
 
     if (!isNil(name) && has(cache, name)) {
-      handler = cache[name];
+      handlers = cache[name];
     }
 
-    return handler;
+    return handlers;
+  }
+
+  function getElementOptions (element) {
+    if (isNil(element)) {
+      return;
+    }
+
+    var opts = element.getAttribute(options.optionsAttr);
+
+    if (typeof opts === 'string') {
+      opts = parseJSON(opts);
+    }
+
+    return opts;
   }
 
   function triggerHandlers (element, events, event) {
-    var handlers = elementToHandlers(element);
+    var handlers = getElementHandlers(element);
+    var opts = getElementOptions(element);
     var index, index2, handler;
 
     if (isNil(handlers) || !events.length) {
@@ -98,7 +135,7 @@
 
       for (index2 = 0; index2 < handler.events.length; index2++) {
         if (events.indexOf(handler.events[index2]) !== -1) {
-          handler.action(element, event);
+          handler.action(element, event, opts);
         }
       }
     }
@@ -152,11 +189,11 @@
 
 }));
 
-RevealHandlers.add('mpaa', {
-  'ready slideshown': function () {
-    console.log('mpaa on');
+RevealHandlers.add('test', {
+  'ready slideshown': function (element, event, options) {
+    console.log('test shown', options);
   },
-  'slidehidden': function () {
-    console.log('mpaa off');
+  'slidehidden': function (element, event, options) {
+    console.log('test hidden', options);
   }
 });
