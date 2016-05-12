@@ -160,6 +160,25 @@
     }
   }
 
+  function mapHandlers (name, handlers, map) {
+    var mapped = {};
+    var func, key;
+
+    for (key in map) {
+      if (has(map, key) && has(handlers, map[key])) {
+        mapped[key] = handlers[map[key]];
+      }
+    }
+
+    addHandlers(name, mapped);
+  }
+
+  function curryMapHandlers (map) {
+    return function (name, handlers) {
+      return mapHandlers(name, handlers, map);
+    }
+  }
+
   /**
    * Event listeners
    */
@@ -182,18 +201,37 @@
   });
 
   RevealHandlers = {
-    add: addHandlers
+    add: addHandlers,
+    map: curryMapHandlers
   };
 
   return RevealHandlers;
 
 }));
 
-RevealHandlers.add('test', {
-  'ready slideshown': function (element, event, options) {
-    console.log('test shown', options);
-  },
-  'slidehidden': function (element, event, options) {
-    console.log('test hidden', options);
-  }
+RevealHandlers.map({
+  'ready slideshown': 'restart',
+  'slidehidden': 'kill'
+})('test', {
+  restart: function (element, event, options) { console.log('restart', options); },
+  kill: function (element, event, options) { console.log('kill', options); }
 });
+
+// RevealHandlers.map('test', (function () {
+//   return {
+//     restart: function () { console.log('restart'); },
+//     reverse: function () { console.log('reverse'); }
+//   };
+// }()), {
+//   'ready slideshown': 'restart',
+//   'slidehidden': 'reverse'
+// });
+
+// RevealHandlers.add('test', {
+//   'ready slideshown': function (element, event, options) {
+//     console.log('test shown', options);
+//   },
+//   'slidehidden': function (element, event, options) {
+//     console.log('test hidden', options);
+//   }
+// });
