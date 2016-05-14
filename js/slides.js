@@ -4,11 +4,21 @@
 
 var timelines = {};
 
+var slideTimeline = RevealHooks.map({
+  'ready slideshown': 'restart',
+  'slidehidden': 'kill'
+});
+
+var fragmentTimeline = RevealHooks.map({
+  'fragmentshown': 'play',
+  'fragmenthidden': 'reverse'
+});
+
 /**
  * Timelines
  */
 
-timelines.titleText = (function () {
+slideTimeline('titleText', (function () {
   var timeline = new TimelineMax({
     paused: true,
     repeat: -1,
@@ -55,7 +65,7 @@ timelines.titleText = (function () {
   });
 
   return timeline;
-})();
+}()));
 
 timelines.interests = (function () {
   var timeline = new TimelineMax({

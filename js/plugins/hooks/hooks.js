@@ -79,6 +79,19 @@
 
     return json;
   }
+  
+  /**
+   * Return a new function that calls the specified function with a particular context.
+   */
+  
+  function proxy (fn, context) {
+    var args = Array.prototype.slice.call(arguments, 2);
+    
+    return function () {
+      return fn.apply(context || this, args.concat(Array.prototype.slice.call(arguments)));
+    };
+  }
+  
 
   /**
    * Plugin
@@ -165,8 +178,8 @@
     var func, key;
 
     for (key in map) {
-      if (has(map, key) && has(hooks, map[key])) {
-        mapped[key] = hooks[map[key]];
+      if (has(map, key) && hooks[map[key]]) {
+        mapped[key] = proxy(hooks[map[key]], hooks);
       }
     }
 
@@ -209,13 +222,13 @@
 
 }));
 
-RevealHooks.map({
-  'ready slideshown': 'restart',
-  'slidehidden': 'kill'
-})('test', {
-  restart: function (element, event, options) { console.log('restart', options); },
-  kill: function (element, event, options) { console.log('kill', options); }
-});
+// RevealHooks.map({
+//   'ready slideshown': 'restart',
+//   'slidehidden': 'kill'
+// })('test', {
+//   restart: function (element, event, options) { console.log('restart', options); },
+//   kill: function (element, event, options) { console.log('kill', options); }
+// });
 
 // RevealHooks.map('test', (function () {
 //   return {
