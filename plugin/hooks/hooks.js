@@ -9,7 +9,7 @@
   } else if (typeof module === 'object' && module.exports) {
     module.exports = factory(require('reveal.js'));
   } else {
-    root.RevealHandlers = factory(root.Reveal);
+    root.RevealHooks = factory(root.Reveal);
   }
 
 }(this, function (Reveal) {
@@ -84,27 +84,27 @@
    * Plugin
    */
 
-  var RevealHandlers;
+  var RevealHooks;
   var cache = {};
   var defaults = {
-    handlerAttr: 'data-handler',
-    optionsAttr: 'data-handler-options'
+    hookAttr: 'data-hook',
+    optionsAttr: 'data-hook-options'
   };
-  var options = assign({}, defaults, Reveal.getConfig().handlers);
+  var options = assign({}, defaults, Reveal.getConfig().hooks);
 
-  function getElementHandlers (element) {
+  function getElementHooks (element) {
     if (isNil(element)) {
       return;
     }
 
-    var name = element.getAttribute(options.handlerAttr);
-    var handlers;
+    var name = element.getAttribute(options.hookAttr);
+    var hooks;
 
     if (!isNil(name) && has(cache, name)) {
-      handlers = cache[name];
+      hooks = cache[name];
     }
 
-    return handlers;
+    return hooks;
   }
 
   function getElementOptions (element) {
@@ -121,27 +121,27 @@
     return opts;
   }
 
-  function triggerHandlers (element, events, event) {
-    var handlers = getElementHandlers(element);
+  function triggerHooks (element, events, event) {
+    var hooks = getElementHooks(element);
     var opts = getElementOptions(element);
-    var index, index2, handler;
+    var index, index2, hook;
 
-    if (isNil(handlers) || !events.length) {
+    if (isNil(hooks) || !events.length) {
       return;
     }
 
-    for (index = 0; index < handlers.length; index++) {
-      handler = handlers[index];
+    for (index = 0; index < hooks.length; index++) {
+      hook = hooks[index];
 
-      for (index2 = 0; index2 < handler.events.length; index2++) {
-        if (events.indexOf(handler.events[index2]) !== -1) {
-          handler.action(element, event, opts);
+      for (index2 = 0; index2 < hook.events.length; index2++) {
+        if (events.indexOf(hook.events[index2]) !== -1) {
+          hook.action(element, event, opts);
         }
       }
     }
   }
 
-  function addHandler (name, events, action) {
+  function addHook (name, events, action) {
     if (!has(cache, name)) {
       cache[name] = [];
     }
@@ -152,30 +152,30 @@
     });
   }
 
-  function addHandlers (name, handlers) {
-    for (var key in handlers) {
-      if (has(handlers, key)) {
-        addHandler(name, key.split(' '), handlers[key]);
+  function addHooks (name, hooks) {
+    for (var key in hooks) {
+      if (has(hooks, key)) {
+        addHook(name, key.split(' '), hooks[key]);
       }
     }
   }
 
-  function mapHandlers (name, handlers, map) {
+  function mapHooks (name, hooks, map) {
     var mapped = {};
     var func, key;
 
     for (key in map) {
-      if (has(map, key) && has(handlers, map[key])) {
-        mapped[key] = handlers[map[key]];
+      if (has(map, key) && has(hooks, map[key])) {
+        mapped[key] = hooks[map[key]];
       }
     }
 
-    addHandlers(name, mapped);
+    addHooks(name, mapped);
   }
 
-  function curryMapHandlers (map) {
-    return function (name, handlers) {
-      return mapHandlers(name, handlers, map);
+  function curryMapHooks (map) {
+    return function (name, hooks) {
+      return mapHooks(name, hooks, map);
     }
   }
 
@@ -184,32 +184,32 @@
    */
 
   Reveal.addEventListener('slidechanged', function (event) {
-    triggerHandlers(event.currentSlide, ['slidechanged', 'slideshown'], event);
-    triggerHandlers(event.previousSlide, ['slidechanged', 'slidehidden'], event);
+    triggerHooks(event.currentSlide, ['slidechanged', 'slideshown'], event);
+    triggerHooks(event.previousSlide, ['slidechanged', 'slidehidden'], event);
   });
 
   Reveal.addEventListener('fragmentshown', function (event) {
-    triggerHandlers(event.fragment, ['fragmentshown'], event);
+    triggerHooks(event.fragment, ['fragmentshown'], event);
   });
 
   Reveal.addEventListener('fragmenthidden', function (event) {
-    triggerHandlers(event.fragment, ['fragmenthidden'], event);
+    triggerHooks(event.fragment, ['fragmenthidden'], event);
   });
 
   Reveal.addEventListener('ready', function (event) {
-    triggerHandlers(event.currentSlide, ['ready'], event);
+    triggerHooks(event.currentSlide, ['ready'], event);
   });
 
-  RevealHandlers = {
-    add: addHandlers,
-    map: curryMapHandlers
+  RevealHooks = {
+    add: addHooks,
+    map: curryMapHooks
   };
 
-  return RevealHandlers;
+  return RevealHooks;
 
 }));
 
-RevealHandlers.map({
+RevealHooks.map({
   'ready slideshown': 'restart',
   'slidehidden': 'kill'
 })('test', {
@@ -217,7 +217,7 @@ RevealHandlers.map({
   kill: function (element, event, options) { console.log('kill', options); }
 });
 
-// RevealHandlers.map('test', (function () {
+// RevealHooks.map('test', (function () {
 //   return {
 //     restart: function () { console.log('restart'); },
 //     reverse: function () { console.log('reverse'); }
@@ -227,7 +227,7 @@ RevealHandlers.map({
 //   'slidehidden': 'reverse'
 // });
 
-// RevealHandlers.add('test', {
+// RevealHooks.add('test', {
 //   'ready slideshown': function (element, event, options) {
 //     console.log('test shown', options);
 //   },
