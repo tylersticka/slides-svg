@@ -8,8 +8,8 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #fff;
-  background-color: #fff; }
+  background: #f0f0f0;
+  background-color: #f0f0f0; }
 
 .reveal {
   font-family: "freight-sans-pro", sans-serif;
@@ -332,10 +332,10 @@ body {
 
 .reveal *:not(pre) > code {
   background-color: #ddd;
-  border-radius: 0.1111111111em;
-  font-size: 0.8888888889em;
-  padding-left: 0.1111111111em;
-  padding-right: 0.1111111111em; }
+  border-radius: 0.11111em;
+  font-size: 0.88889em;
+  padding-left: 0.11111em;
+  padding-right: 0.11111em; }
 
 .reveal .slides section .fragment.grow-4x {
   opacity: 1;

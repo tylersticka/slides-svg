@@ -7,8 +7,8 @@
 
 // Default mixins and settings
 
-@import "../template/mixins";
-@import "../template/settings";
+@import "mixins";
+@import "settings";
 
 // Setting overrides
 
@@ -28,7 +28,7 @@ $mainFontSize: 30px;
 
 // Theme template
 
-@import "../template/theme";
+@import "theme";
 
 // Base overrides (not possible via settings)
 
