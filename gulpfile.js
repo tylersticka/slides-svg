@@ -20,6 +20,7 @@ gulp.task('serve', ['css'], function () {
     server: {
       baseDir: './'
     },
+    port: 8000,
     logPrefix: npmPackage.name,
     logConnections: true,
     notify: false,
