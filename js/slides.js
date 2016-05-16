@@ -93,7 +93,9 @@ fragmentTimeline('interests', (function () {
   }, 0);
 
   return timeline;
-}()));
+}()), {
+  args: []
+});
 
 var makePieChartTimeline = function (elementId, ratio) {
   var timeline = {};
