@@ -105,19 +105,19 @@
   };
   var options = assign({}, defaults, Reveal.getConfig().hooks);
 
-  function getElementHooks (element) {
+  function getElementHook (element) {
     if (isNil(element)) {
       return;
     }
 
     var name = element.getAttribute(options.hookAttr);
-    var hooks;
+    var hook;
 
     if (!isNil(name) && has(cache, name)) {
-      hooks = cache[name];
+      hook = cache[name];
     }
 
-    return hooks;
+    return hook;
   }
 
   function getElementOptions (element) {
@@ -135,7 +135,7 @@
   }
 
   function triggerHooks (element, events, event) {
-    var hooks = getElementHooks(element);
+    var hooks = getElementHook(element);
     var opts = getElementOptions(element);
     var index, index2, hook;
 
@@ -154,21 +154,22 @@
     }
   }
 
-  function addHook (name, events, action) {
+  function addHook (name, events, action, options) {
     if (!has(cache, name)) {
       cache[name] = [];
     }
 
     cache[name].push({
       events: events,
-      action: action
+      action: action,
+      options: options || {}
     });
   }
 
-  function addHooks (name, hooks) {
+  function addHooks (name, hooks, options) {
     for (var key in hooks) {
       if (has(hooks, key)) {
-        addHook(name, key.split(' '), hooks[key]);
+        addHook(name, key.split(' '), hooks[key], options);
       }
     }
   }
@@ -215,7 +216,8 @@
 
   RevealHooks = {
     add: addHooks,
-    map: curryMapHooks
+    map: curryMapHooks,
+    options: options
   };
 
   return RevealHooks;

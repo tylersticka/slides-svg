@@ -67,7 +67,7 @@ slideTimeline('titleText', (function () {
   return timeline;
 }()));
 
-timelines.interests = (function () {
+fragmentTimeline('interests', (function () {
   var timeline = new TimelineMax({
     paused: true
   });
@@ -93,7 +93,7 @@ timelines.interests = (function () {
   }, 0);
 
   return timeline;
-})();
+}()));
 
 var makePieChartTimeline = function (elementId, ratio) {
   var timeline = {};
