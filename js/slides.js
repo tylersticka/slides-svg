@@ -12,6 +12,8 @@ var slideTimeline = RevealHooks.map({
 var fragmentTimeline = RevealHooks.map({
   'fragmentshown': 'play',
   'fragmenthidden': 'reverse'
+}, {
+  args: []
 });
 
 /**
@@ -93,9 +95,7 @@ fragmentTimeline('interests', (function () {
   }, 0);
 
   return timeline;
-}()), {
-  args: []
-});
+}()));
 
 var makePieChartTimeline = function (elementId, ratio) {
   var timeline = {};
