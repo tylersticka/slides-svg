@@ -7,14 +7,12 @@ var timelines = {};
 var slideTimeline = RevealHooks.map({
   'ready slideshown': 'restart',
   'slidehidden': 'kill'
-});
+}, { args: [] });
 
 var fragmentTimeline = RevealHooks.map({
   'fragmentshown': 'play',
   'fragmenthidden': 'reverse'
-}, {
-  args: []
-});
+}, { args: [] });
 
 /**
  * Timelines
@@ -111,7 +109,7 @@ RevealHooks.addEach('pie', {
   }
 });
 
-timelines.blackBox = (function () {
+fragmentTimeline('blackBox', (function () {
   var timeline = new TimelineMax({
     paused: true
   });
@@ -149,24 +147,20 @@ timelines.blackBox = (function () {
   }, '-=1');
 
   return timeline;
-})();
+})());
 
-timelines.search3d = (function () {
-  var timeline = {};
-  var container = document.getElementById('search-3d');
+RevealHooks.addEach('toggleClass', {
+  'fragmentshown': function (element, event, options) {
+    var target = document.querySelector(options.target);
+    target.classList.add(options.className || 'is-active');
+  },
+  'fragmenthidden': function (element, event, options) {
+    var target = document.querySelector(options.target);
+    target.classList.remove(options.className || 'is-active');
+  }
+});
 
-  timeline.play = function () {
-    container.classList.add('is-active');
-  };
-
-  timeline.reverse = function () {
-    container.classList.remove('is-active');
-  };
-
-  return timeline;
-})();
-
-timelines.sfxType = (function () {
+fragmentTimeline('sfxType', (function () {
   var timeline = new TimelineMax({
     paused: true
   });
@@ -207,9 +201,9 @@ timelines.sfxType = (function () {
   });
 
   return timeline;
-})();
+})());
 
-timelines.chart = (function () {
+slideTimeline('chart', (function () {
   var timeline = new TimelineMax({
     repeat: -1,
     yoyo: true,
@@ -272,9 +266,9 @@ timelines.chart = (function () {
   });
 
   return timeline;
-})();
+})());
 
-timelines.favePress = (function () {
+fragmentTimeline('favePress', (function () {
   var timeline = new TimelineMax({
     paused: true
   });
@@ -296,9 +290,9 @@ timelines.favePress = (function () {
   });
 
   return timeline;
-})();
+})());
 
-timelines.morphButton = (function () {
+fragmentTimeline('morphButton', (function () {
   var timeline = new TimelineMax({
     paused: true
   });
@@ -350,27 +344,9 @@ timelines.morphButton = (function () {
   });
 
   return timeline;
-})();
+})());
 
-var makeToggleClassTimeline = function (elementId, className) {
-  var timeline = {};
-  var device = document.getElementById(elementId);
-
-  timeline.play = function () {
-    device.classList.add(className);
-  };
-
-  timeline.reverse = function () {
-    device.classList.remove(className);
-  };
-
-  return timeline;
-};
-
-timelines.rotateDevice1 = makeToggleClassTimeline('backabit-device-1', 'is-rotated');
-timelines.rotateDevice2 = makeToggleClassTimeline('backabit-device-2', 'is-rotated');
-
-timelines.navExpand = (function () {
+fragmentTimeline('navExpand', (function () {
   var timeline = new TimelineMax({
     paused: true
   });
@@ -471,9 +447,9 @@ timelines.navExpand = (function () {
   }, 'pressed+=0.2');
 
   return timeline;
-})();
+})());
 
-timelines.lovefest = (function () {
+slideTimeline('lovefest', (function () {
   var timeline = new TimelineMax({
     paused: true,
     repeat: -1
@@ -506,49 +482,39 @@ timelines.lovefest = (function () {
   }, 0);
 
   return timeline;
-})();
+})());
 
-timelines.cloudMasks = (function () {
-  var timeline = {};
-  var images = document.querySelectorAll('.cloud-mask-image');
-
-  timeline.play = function () {
+RevealHooks.addEach('cloudMasks', {
+  'fragmentshown': function (element, event, options) {
+    var images = document.querySelectorAll('.cloud-mask-image');
     for (var i = 0; i < images.length; i++) {
       images[i].setAttribute('mask', 'url(#cloud-mask)');
-      console.log(images[i]);
     }
-  };
-
-  timeline.reverse = function () {
+  },
+  'fragmenthidden': function (element, event, options) {
+    var images = document.querySelectorAll('.cloud-mask-image');
     for (var i = 0; i < images.length; i++) {
       images[i].setAttribute('mask', '');
     }
-  };
+  }
+});
 
-  return timeline;
-})();
-
-timelines.halfTones = (function () {
-  var timeline = {};
-  var images = document.querySelectorAll('.half-tone-image');
-
-  timeline.play = function () {
+RevealHooks.addEach('halfTones', {
+  'fragmentshown': function (element, event, options) {
+    var images = document.querySelectorAll('.half-tone-image');
     for (var i = 0; i < images.length; i++) {
       images[i].setAttribute('filter', 'url(#half-tone)');
-      console.log(images[i]);
     }
-  };
-
-  timeline.reverse = function () {
+  },
+  'fragmenthidden': function (element, event, options) {
+    var images = document.querySelectorAll('.half-tone-image');
     for (var i = 0; i < images.length; i++) {
       images[i].setAttribute('filter', '');
     }
-  };
+  }
+});
 
-  return timeline;
-})();
-
-timelines.spinner = (function () {
+slideTimeline('spinner', (function () {
   var spinner = document.getElementById('spinner-gsap');
 
   return TweenMax.to(spinner, 1.3, {
@@ -558,9 +524,9 @@ timelines.spinner = (function () {
     rotation: 180,
     ease: Back.easeOut.config(1.8)
   });
-})();
+})());
 
-timelines.fun = (function () {
+fragmentTimeline('fun', (function () {
   var timeline = new TimelineMax({
     paused: true
   });
@@ -602,56 +568,4 @@ timelines.fun = (function () {
   });
 
   return timeline;
-})();
-
-/**
- * Initialization
- */
-
-function timelineElementAction (element, action) {
-  var key;
-  var timeline;
-
-  if (!element || !action) {
-    return;
-  }
-
-  key = element.getAttribute('data-timeline');
-
-  if (!key || key === '' || !timelines.hasOwnProperty(key)) {
-    return;
-  }
-
-  timeline = timelines[key];
-
-  timeline[action]();
-
-  return timeline;
-}
-
-function timelineEventHandler () {
-  var pairs = {};
-  var i = 0;
-
-  for (; i < arguments.length; i+=2) {
-    pairs[arguments[i]] = arguments[i + 1];
-  }
-
-  return function (event) {
-    var key;
-    for (key in pairs) {
-      if (pairs.hasOwnProperty(key)) {
-        timelineElementAction(event[key], pairs[key]);
-      }
-    }
-  };
-};
-
-Reveal.addEventListener('fragmentshown',
-  timelineEventHandler('fragment', 'play'));
-Reveal.addEventListener('fragmenthidden',
-  timelineEventHandler('fragment', 'reverse'));
-Reveal.addEventListener('slidechanged',
-  timelineEventHandler('previousSlide', 'kill', 'currentSlide', 'restart'));
-Reveal.addEventListener('ready',
-  timelineEventHandler('currentSlide', 'restart'));
+})());
