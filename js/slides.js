@@ -97,25 +97,19 @@ fragmentTimeline('interests', (function () {
   return timeline;
 }()));
 
-var makePieChartTimeline = function (elementId, ratio) {
-  var timeline = {};
-  var pie = document.getElementById(elementId);
-  var total = 158;
-  var target = total * ratio;
-
-  timeline.play = function () {
+RevealHooks.addEach('pie', {
+  'fragmentshown': function (element, event, options) {
+    var pie = document.querySelector(options.circle);
+    var total = 158;
+    var target = total * options.ratio;
+    
     pie.style.strokeDasharray = [target, total].join(', ');
-  };
-
-  timeline.reverse = function () {
+  },
+  'fragmenthidden': function (element, event, options) {
+    var pie = document.querySelector(options.circle);
     pie.style.strokeDasharray = '';
-  };
-
-  return timeline;
-};
-
-timelines.supportChart = makePieChartTimeline('pie-support', 0.9463);
-timelines.fontFaceChart = makePieChartTimeline('pie-font-face', 0.9052);
+  }
+});
 
 timelines.blackBox = (function () {
   var timeline = new TimelineMax({
