@@ -1,8 +1,6 @@
 /**
- * Variables
+ * Hook maps
  */
-
-var timelines = {};
 
 var slideTimeline = RevealHooks.map({
   'ready slideshown': 'restart',
