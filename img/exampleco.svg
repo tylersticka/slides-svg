@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Exampleco</title>
+  <desc>Fictitious company logo for responsive SVG logo demonstration on cloudfour.com</desc>
+  <defs>
+    <style>
+      #emblem {
+        fill: #39cccc;
+      }
+      #word {
+        fill: #225b6d;
+      }
+      #wide {
+        visibility: hidden;
+      }
+      @media all and (min-aspect-ratio: 3/1) {
+        #wide {
+          visibility: visible;
+        }
+        #tall {
+          visibility: hidden;
+        }
+      }
+    </style>
+  </defs>
+  <symbol id="emblem" viewBox="0 0 51 60">
+    <polygon points="31 38.43 46 29.52 46 35.23 31 44.13 31 51.02 51 39.5 51 20.7 31 32.21 31 38.43"/>
+    <polygon points="50.88 15 25.44 0 0 15 0 45 25 60 25 30 50.88 15"/>
+  </symbol>
+  <symbol id="word" viewBox="0 0 200 26">
+    <path d="M16.72,0.14V5H5.11v5.25h9.41v4.83H5.11v5.82H16.72V25.7H0V0.14H16.72Z"/>
+    <path d="M24.21,25.7H18.64l7.67-13.1L18.85,0.14h6L29.57,8.2l4.72-8.06h5.57L32.45,12.92,40.08,25.7h-6l-5-8.45Z"/>
+    <path d="M46.43,25.7H41.14L49.38,0.14h6L63.58,25.7h-5.5L56.41,20H48.14Zm3.12-10.58H55l-2.7-9.37Z"/>
+    <path d="M91.38,25.7H86.55v-17L81,21.62H77.32l-5.54-13v17H66.95V0.14h5.61l6.6,15,6.6-15h5.61V25.7Z"/>
+    <path d="M110,0.14a4.81,4.81,0,0,1,5,5v6.46a4.81,4.81,0,0,1-5,5h-8v9H97V0.14H110Zm-1.28,11.72A1.09,1.09,0,0,0,110,10.65V6.18A1.09,1.09,0,0,0,108.77,5h-6.67v6.89h6.67Z"/>
+    <path d="M124.32,0.14V20.88H135V25.7H119.2V0.14h5.11Z"/>
+    <path d="M155.63,0.14V5H144v5.25h9.41v4.83H144v5.82h11.61V25.7H138.91V0.14h16.72Z"/>
+    <path d="M172.31,6a1.09,1.09,0,0,0-1.21-1.21h-5.54A1.09,1.09,0,0,0,164.36,6V19.81A1.09,1.09,0,0,0,165.57,21h5.54a1.09,1.09,0,0,0,1.21-1.21V16.69h5.11V20.8a4.81,4.81,0,0,1-5,5h-8.09a4.81,4.81,0,0,1-5-5V5a4.81,4.81,0,0,1,5-5h8.09a4.81,4.81,0,0,1,5,5V9.16h-5.11V6Z"/>
+    <path d="M195,0a4.81,4.81,0,0,1,5,5V20.8a4.81,4.81,0,0,1-5,5H186.4a4.81,4.81,0,0,1-5-5V5a4.81,4.81,0,0,1,5-5H195Zm-0.07,6a1.09,1.09,0,0,0-1.21-1.21h-6A1.09,1.09,0,0,0,186.47,6V19.81A1.09,1.09,0,0,0,187.68,21h6a1.09,1.09,0,0,0,1.21-1.21V6Z"/>
+  </symbol>
+  <svg id="wide" viewBox="0 0 260 60">
+    <use xlink:href="#emblem" width="51"/>
+    <use xlink:href="#word" width="200" x="60"/>
+  </svg>
+  <svg id="tall" viewBox="0 0 200 130">
+    <use xlink:href="#emblem" x="60" width="80" height="92"/>
+    <use xlink:href="#word" y="104" width="200" height="26"/>
+  </svg>
+</svg>
