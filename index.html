@@ -1086,9 +1086,8 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
           </code></pre>
           <pre><code class="css h3" data-trim>
 .logo {
-  height: 192px;
-  max-height: 40%;
-  width: 100%;
+  height: 30%;
+  width: 90%;
 }
           </code></pre>
           <aside class="notes">
@@ -1101,16 +1100,13 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
 
         <section data-background="#222">
           <pre class="inline-block width-auto"><code class="html h3" data-trim>
-&lt;svg &hellip; width="140" height="192" viewBox="0 0 140 192"&gt;
+&lt;svg&gt;
   &lt;style&gt;
-    #wide { visibility: hidden; }
-    @media (min-width: 370px) {
-      #wide { visibility: visible; }
-      #tall { visibility: hidden; }
+    /* defaults */
+    @media all and (min-aspect-ratio: 3/1) {
+      /* wide aspect ratio */
     }
   &lt;/style&gt;
-  &lt;g id=&quot;wide&quot;&gt; &lt;!-- wide composition --&gt; &lt;/g&gt;
-  &lt;g id=&quot;tall&quot;&gt; &lt;!-- tall composition --&gt; &lt;/g&gt;
 &lt;/svg&gt;
           </code></pre>
           <aside class="notes">
