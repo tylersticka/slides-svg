@@ -25,22 +25,34 @@ slideTimeline('titleText', (function () {
   var so = document.getElementById('title-so');
   var very = document.getElementById('title-very');
   var good = document.getElementById('title-good');
+  var zero = 0.001; // Because Edge explodes if this is zero
 
   timeline.set([so, very, good], {
-    scale: 0,
-    visibility: 'visible',
+    scale: zero,
     transformOrigin: '50% 50%'
   });
+
+  timeline.set(so, {
+    visibility: 'visible'
+  }, 1);
 
   timeline.to(so, 1, {
     scale: 1,
     ease: Elastic.easeOut.config(1.2, 0.5)
-  }, 1);
+  });
 
   timeline.to(so, 0.5, {
-    scale: 0,
+    scale: zero,
     ease: Back.easeIn.config(1.7)
   });
+
+  timeline.set(so, {
+    visibility: 'hidden'
+  });
+
+  timeline.set(very, {
+    visibility: 'visible'
+  }, '-=0.2');
 
   timeline.to(very, 1, {
     scale: 1,
@@ -48,9 +60,17 @@ slideTimeline('titleText', (function () {
   }, '-=0.2');
 
   timeline.to(very, 0.5, {
-    scale: 0,
+    scale: zero,
     ease: Back.easeIn.config(1.7)
   });
+
+  timeline.set(very, {
+    visibility: 'hidden'
+  });
+
+  timeline.set(good, {
+    visibility: 'visible'
+  }, '-=0.2');
 
   timeline.to(good, 1, {
     scale: 1,
@@ -58,8 +78,12 @@ slideTimeline('titleText', (function () {
   }, '-=0.2');
 
   timeline.to(good, 0.5, {
-    scale: 0,
+    scale: zero,
     ease: Back.easeIn.config(1.7)
+  });
+
+  timeline.set(good, {
+    visibility: 'hidden'
   });
 
   return timeline;
