@@ -793,3 +793,17 @@ body {
   .wiggle:nth-child(even) {
     -webkit-animation-name: wiggleAlt;
             animation-name: wiggleAlt; }
+
+@-webkit-keyframes slowRotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes slowRotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.rotate-slow {
+  -webkit-animation: slowRotate 10s linear infinite;
+          animation: slowRotate 10s linear infinite; }

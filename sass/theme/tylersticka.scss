@@ -581,3 +581,13 @@ $mainFontSize: 30px;
     animation-name: wiggleAlt;
   }
 }
+
+@keyframes slowRotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-slow {
+  animation: slowRotate 10s linear infinite;
+}

@@ -84,7 +84,7 @@
           </aside>
         </section>
 
-        <section>
+        <!--<section>
           <svg width="800" height="600" viewBox="0 0 640 480">
             <circle class="blend-multiply" id="interests-art" cx="22%" cy="50%" r="22%" fill="cyan"/>
             <circle class="blend-multiply" id="interests-tech" cx="78%" cy="50%" r="22%" fill="magenta"/>
@@ -96,15 +96,16 @@
           <aside class="notes">
             Intersection of interests brought me to the web
           </aside>
-        </section>
+        </section>-->
 
         <section data-background="#222">
           <svg width="800" height="600" viewBox="-80 -60 800 600">
-            <g class="fragment">
+            <g class="fragment" data-fragment-index="0">
               <text x="320" y="-30" dy="0.5em" text-anchor="middle" font-weight="bold" fill="currentColor">640</text>
               <text x="-40" y="240" dy="0.5em" text-anchor="middle" font-weight="bold" fill="currentColor">480</text>
             </g>
             <rect x="0" y="0" rx="4" width="640" height="480" fill="#fff"/>
+            <text class="fragment fade-out" data-fragment-index="0" x="320" y="240" font-weight="bold" fill="#222" text-anchor="middle" font-size="60">Then</text>
             <g class="fragment">
               <image class="wiggle" xlink:href="img/ieget.gif" width="264" height="93" x="188" y="77"/>
               <image class="wiggle" xlink:href="img/netnow3.gif" width="264" height="93" x="188" y="190"/>
@@ -117,6 +118,40 @@
               <li>And the browser wars were still in their last throes</li>
             </ul>
           </aside>
+        </section>
+
+        <section>
+          <h2>Now</h2>
+          <div class="row row-around">
+            <img src="img/HTML5_Badge.svg" alt="" width="256" height="160" class="fragment">
+            <svg width="256" height="256" viewBox="0 -40 256 256" class="fragment">
+              <defs>
+                <g id="rwd-tablet">
+                  <rect x="0" y="0" width="90" height="120" fill="#12a1e9" rx="6"/>
+                  <rect x="6" y="12" width="78" height="96" fill="#fff"/>
+                </g>
+                <g id="rwd-mobile">
+                  <rect x="0" y="0" width="45" height="90" fill="#E041B0" rx="4"/>
+                  <rect x="3" y="10" width="39" height="70" fill="#fff"/>
+                </g>
+              </defs>
+              <rect x="0" y="0" width="256" height="144" fill="#111" rx="3"/>
+              <rect x="4" y="4" width="248" height="132" fill="#eee"/>
+              <rect x="96" y="144" width="64" height="24" fill="#111"/>
+              <rect x="64" y="168" width="128" height="8" rx="2" fill="#111"/>
+              <use xlink:href="#rwd-tablet" x="20" y="40" transform="rotate(-5)"/>
+              <use xlink:href="#rwd-mobile" x="180" y="50" transform="rotate(5)"/>
+            </svg>
+            <svg width="256" height="220" viewBox="0 0 256 256" class="fragment rotate-slow">
+              <circle cx="128" cy="128" r="90" fill="none" stroke="#111" stroke-width="8"/>
+              <circle cx="128" cy="128" r="45" fill="#12a1e9"/>
+              <circle cx="128" cy="38" r="22.5" fill="#12a1e9"/>
+            </svg>
+          </div>
+        </section>
+
+        <section data-background="#FBF3E3">
+          <img src="img/fancy.gif" alt="" width="600">
         </section>
 
         <!--
@@ -234,6 +269,8 @@
           </aside>
         </section>
 
+        -->
+
         <section data-background="#093c75">
           <h2 class="align-right" style="color: #71C7F2;">And yet&hellip;</h2>
           <aside class="notes">
@@ -258,8 +295,6 @@
             </ul>
           </aside>
         </section>
-
-        -->
 
         <section>
           <div class="fragment grow-4x">
@@ -2975,7 +3010,7 @@ TweenMax.to(element, 1.3, {
         transition: 'none', // none/fade/slide/convex/concave/zoom
         backgroundTransition: 'none',
         maxScale: 1,
-        margin: 0,
+        // margin: 0,
 
         dependencies: [
           // Optional reveal.js plugins
