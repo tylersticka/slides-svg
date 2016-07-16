@@ -752,3 +752,44 @@ body {
     font-size: 1.5em;
     margin: -0.25em 0.25em 0;
     vertical-align: middle; }
+
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(2.5deg);
+            transform: rotate(2.5deg); }
+  100% {
+    -webkit-transform: rotate(-2.5deg);
+            transform: rotate(-2.5deg); } }
+
+@keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(2.5deg);
+            transform: rotate(2.5deg); }
+  100% {
+    -webkit-transform: rotate(-2.5deg);
+            transform: rotate(-2.5deg); } }
+
+@-webkit-keyframes wiggleAlt {
+  0% {
+    -webkit-transform: rotate(-2.5deg);
+            transform: rotate(-2.5deg); }
+  100% {
+    -webkit-transform: rotate(2.5deg);
+            transform: rotate(2.5deg); } }
+
+@keyframes wiggleAlt {
+  0% {
+    -webkit-transform: rotate(-2.5deg);
+            transform: rotate(-2.5deg); }
+  100% {
+    -webkit-transform: rotate(2.5deg);
+            transform: rotate(2.5deg); } }
+
+.wiggle {
+  -webkit-animation: wiggle 0.2s linear 0s infinite alternate;
+          animation: wiggle 0.2s linear 0s infinite alternate;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%; }
+  .wiggle:nth-child(even) {
+    -webkit-animation-name: wiggleAlt;
+            animation-name: wiggleAlt; }

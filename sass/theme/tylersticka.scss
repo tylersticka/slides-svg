@@ -554,3 +554,30 @@ $mainFontSize: 30px;
     vertical-align: middle;
   }
 }
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(2.5deg);
+  }
+  100% {
+    transform: rotate(-2.5deg);
+  }
+}
+
+@keyframes wiggleAlt {
+  0% {
+    transform: rotate(-2.5deg);
+  }
+  100% {
+    transform: rotate(2.5deg);
+  }
+}
+
+.wiggle {
+  animation: wiggle 0.2s linear 0s infinite alternate;
+  transform-origin: 50% 50%;
+
+  &:nth-child(even) {
+    animation-name: wiggleAlt;
+  }
+}
