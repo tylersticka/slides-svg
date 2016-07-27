@@ -506,47 +506,47 @@ slideTimeline('lovefest', (function () {
   return timeline;
 })());
 
-RevealHooks.addEach('cloudMasks', {
-  'fragmentshown': function (element, event, options) {
-    var images = document.querySelectorAll('.cloud-mask-image');
-    for (var i = 0; i < images.length; i++) {
-      images[i].setAttribute('mask', 'url(#cloud-mask)');
-    }
-  },
-  'fragmenthidden': function (element, event, options) {
-    var images = document.querySelectorAll('.cloud-mask-image');
-    for (var i = 0; i < images.length; i++) {
-      images[i].setAttribute('mask', '');
-    }
-  }
-});
+// RevealHooks.addEach('cloudMasks', {
+//   'fragmentshown': function (element, event, options) {
+//     var images = document.querySelectorAll('.cloud-mask-image');
+//     for (var i = 0; i < images.length; i++) {
+//       images[i].setAttribute('mask', 'url(#cloud-mask)');
+//     }
+//   },
+//   'fragmenthidden': function (element, event, options) {
+//     var images = document.querySelectorAll('.cloud-mask-image');
+//     for (var i = 0; i < images.length; i++) {
+//       images[i].setAttribute('mask', '');
+//     }
+//   }
+// });
 
-RevealHooks.addEach('halfTones', {
-  'fragmentshown': function (element, event, options) {
-    var images = document.querySelectorAll('.half-tone-image');
-    for (var i = 0; i < images.length; i++) {
-      images[i].setAttribute('filter', 'url(#half-tone)');
-    }
-  },
-  'fragmenthidden': function (element, event, options) {
-    var images = document.querySelectorAll('.half-tone-image');
-    for (var i = 0; i < images.length; i++) {
-      images[i].setAttribute('filter', '');
-    }
-  }
-});
+// RevealHooks.addEach('halfTones', {
+//   'fragmentshown': function (element, event, options) {
+//     var images = document.querySelectorAll('.half-tone-image');
+//     for (var i = 0; i < images.length; i++) {
+//       images[i].setAttribute('filter', 'url(#half-tone)');
+//     }
+//   },
+//   'fragmenthidden': function (element, event, options) {
+//     var images = document.querySelectorAll('.half-tone-image');
+//     for (var i = 0; i < images.length; i++) {
+//       images[i].setAttribute('filter', '');
+//     }
+//   }
+// });
 
-slideTimeline('spinner', (function () {
-  var spinner = document.getElementById('spinner-gsap');
+// slideTimeline('spinner', (function () {
+//   var spinner = document.getElementById('spinner-gsap');
 
-  return TweenMax.to(spinner, 1.3, {
-    paused: true,
-    repeat: -1,
-    transformOrigin: '50% 50%',
-    rotation: 180,
-    ease: Back.easeOut.config(1.8)
-  });
-})());
+//   return TweenMax.to(spinner, 1.3, {
+//     paused: true,
+//     repeat: -1,
+//     transformOrigin: '50% 50%',
+//     rotation: 180,
+//     ease: Back.easeOut.config(1.8)
+//   });
+// })());
 
 fragmentTimeline('fun', (function () {
   var timeline = new TimelineMax({
