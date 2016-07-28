@@ -444,6 +444,9 @@ body {
 .margin-none {
   margin: 0 !important; }
 
+.margin-bottom {
+  margin-bottom: 1em !important; }
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
