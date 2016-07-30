@@ -530,35 +530,35 @@ slideTimeline('lovefest', (function () {
   return timeline;
 })());
 
-// RevealHooks.addEach('cloudMasks', {
-//   'fragmentshown': function (element, event, options) {
-//     var images = document.querySelectorAll('.cloud-mask-image');
-//     for (var i = 0; i < images.length; i++) {
-//       images[i].setAttribute('mask', 'url(#cloud-mask)');
-//     }
-//   },
-//   'fragmenthidden': function (element, event, options) {
-//     var images = document.querySelectorAll('.cloud-mask-image');
-//     for (var i = 0; i < images.length; i++) {
-//       images[i].setAttribute('mask', '');
-//     }
-//   }
-// });
+RevealHooks.addEach('cloudMasks', {
+  'fragmentshown': function (element, event, options) {
+    var images = document.querySelectorAll('.cloud-mask-image');
+    for (var i = 0; i < images.length; i++) {
+      images[i].setAttribute('clip-path', 'url(#cloud-mask)');
+    }
+  },
+  'fragmenthidden': function (element, event, options) {
+    var images = document.querySelectorAll('.cloud-mask-image');
+    for (var i = 0; i < images.length; i++) {
+      images[i].setAttribute('clip-path', '');
+    }
+  }
+});
 
-// RevealHooks.addEach('halfTones', {
-//   'fragmentshown': function (element, event, options) {
-//     var images = document.querySelectorAll('.half-tone-image');
-//     for (var i = 0; i < images.length; i++) {
-//       images[i].setAttribute('filter', 'url(#half-tone)');
-//     }
-//   },
-//   'fragmenthidden': function (element, event, options) {
-//     var images = document.querySelectorAll('.half-tone-image');
-//     for (var i = 0; i < images.length; i++) {
-//       images[i].setAttribute('filter', '');
-//     }
-//   }
-// });
+RevealHooks.addEach('halfTones', {
+  'fragmentshown': function (element, event, options) {
+    var images = document.querySelectorAll('.half-tone-image');
+    for (var i = 0; i < images.length; i++) {
+      images[i].setAttribute('filter', 'url(#half-tone)');
+    }
+  },
+  'fragmenthidden': function (element, event, options) {
+    var images = document.querySelectorAll('.half-tone-image');
+    for (var i = 0; i < images.length; i++) {
+      images[i].setAttribute('filter', '');
+    }
+  }
+});
 
 // slideTimeline('spinner', (function () {
 //   var spinner = document.getElementById('spinner-gsap');

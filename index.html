@@ -1591,6 +1591,134 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
           </aside>
         </section>
 
+        <section>
+          <svg width="800" height="200" viewBox="0 0 1600 400">
+            <defs>
+              <clipPath id="cloud-mask">
+                <path d="M400,210.3c0-91.4-80.2-101.2-80.2-101.2c-8.6-16.8-20.9-30.9-35.7-40.9c0,0-22.5-17.5-54.2-22.3c-10.4-1.9-20.8-2.9-31.3-3
+                	c-116.7,0-127.8,93-127.8,93S0,160.1,0,232.3c0,103.3,114,108.3,114,108.3c0.2,0,0.4,0,0.6,0c15.8,10.4,35.5,16.6,56.8,16.6
+                	c30.6,0,57.9-12.8,75.2-32.5c10.2,4.5,21.3,6.6,32.4,6.1c20.6,1.1,40.7-7.2,55.8-22.9C402.3,295.2,400,210.3,400,210.3z"/>
+              </clipPath>
+            </defs>
+            <image xlink:href="img/sara.jpg" class="cloud-mask-image" width="400" height="400"/>
+            <image xlink:href="img/gerardo.jpg" class="cloud-mask-image" transform="translate(600 0)" width="400" height="400"/>
+            <image xlink:href="img/megan.jpg" class="cloud-mask-image" transform="translate(1200 0)" width="400" height="400"/>
+          </svg>
+          <pre class="fragment" data-hook="cloudMasks"><code class="html h3" data-trim>
+&lt;svg&gt;
+  &lt;defs&gt;
+    &lt;clipPath id=&quot;cloud&quot;&gt;
+      &lt;path d=&quot;&hellip;&quot;/&gt;
+    &lt;/clipPath&gt;
+  &lt;/defs&gt;
+  &lt;image xlink:href=&quot;foo.jpg&quot; clip-path=&quot;url(#cloud)&quot;
+    width=&quot;200&quot; height=&quot;200&quot;/&gt;
+&lt;/svg&gt;
+          </code></pre>
+          <aside class="notes">
+            <ul>
+              <li>You can also define and use shapes as masks</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <svg width="800" height="200" viewBox="0 0 800 200">
+            <defs>
+              <circle id="two" cx="3" cy="3" r="0.5"/>
+              <circle id="three" cx="3" cy="3" r="1"/>
+              <circle id="four" cx="3" cy="3" r="1.5"/>
+              <circle id="five" cx="3" cy="3" r="2"/>
+              <circle id="six" cx="3" cy="3" r="2.5"/>
+              <circle id="seven" cx="3" cy="3" r="3"/>
+              <circle id="seven" cx="3" cy="3" r="3.5"/>
+              <circle id="eight" cx="3" cy="3" r="4"/>
+              <filter id="half-tone" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                <feImage width="3" height="3" xlink:href="#two"/>
+                <feTile result="2dot"/>
+                <feImage width="3" height="3" xlink:href="#three"/>
+                <feTile result="3dot"/>
+                <feImage width="3" height="3" xlink:href="#four"/>
+                <feTile result="4dot"/>
+                <feImage width="3" height="3" xlink:href="#five"/>
+                <feTile result="5dot"/>
+                <feImage width="3" height="3" xlink:href="#six"/>
+                <feTile result="6dot"/>
+                <feImage width="3" height="3" xlink:href="#seven"/>
+                <feTile result="7dot"/>
+                <feImage width="3" height="3" xlink:href="#eight"/>
+                <feTile result="8dot"/>
+                <feColorMatrix in="SourceGraphic" type="luminanceToAlpha" result="neg-lum-map"/>
+                <feComponentTransfer result="lum-map">
+                  <feFuncA type="table" tableValues="1 0"/>
+                </feComponentTransfer>
+                <feComponentTransfer in="lum-map" result="2r-thresh">
+                  <feFuncA type="discrete" tableValues="0 1 0 0 0 0 0 0" />
+                </feComponentTransfer>
+                 <feComponentTransfer in="lum-map" result="3r-thresh">
+                   <feFuncA type="discrete" tableValues="0 0 1 0 0 0 0 0" />
+                 </feComponentTransfer>
+                 <feComponentTransfer in="lum-map" result="4r-thresh">
+                   <feFuncA type="discrete" tableValues="0 0 0 1 0 0 0 0" />
+                 </feComponentTransfer>
+                 <feComponentTransfer in="lum-map" result="5r-thresh">
+                   <feFuncA type="discrete" tableValues="0 0 0 0 1 0 0 0" />
+                 </feComponentTransfer>
+                 <feComponentTransfer in="lum-map" result="6r-thresh">
+                   <feFuncA type="discrete" tableValues="0 0 0 0 0 1 0 0" />
+                 </feComponentTransfer>
+                 <feComponentTransfer in="lum-map" result="7r-thresh">
+                   <feFuncA type="discrete" tableValues="0 0 0 0 0 0 1 0" />
+                 </feComponentTransfer>
+                 <feComponentTransfer in="lum-map" result="8r-thresh">
+                   <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 1" />
+                 </feComponentTransfer>
+                <feComposite operator="in" in="2r-thresh" in2="2dot" result="lev2"/>
+                <feComposite operator="in" in="3r-thresh" in2="3dot" result="lev3"/>
+                <feComposite operator="in" in="4r-thresh" in2="4dot" result="lev4"/>
+                <feComposite operator="in" in="5r-thresh" in2="5dot" result="lev5"/>
+                <feComposite operator="in" in="6r-thresh" in2="6dot" result="lev6"/>
+                <feComposite operator="in" in="7r-thresh" in2="7dot" result="lev7"/>
+                <feComposite operator="in" in="8r-thresh" in2="8dot" result="lev8"/>
+                <feMerge>
+                  <feMergeNode in="lev8"/>
+                  <feMergeNode in="lev7"/>
+                  <feMergeNode in="lev6"/>
+                  <feMergeNode in="lev5"/>
+                  <feMergeNode in="lev4"/>
+                  <feMergeNode in="lev3"/>
+                  <feMergeNode in="lev2"/>
+                </feMerge>
+                <feComposite operator="in" in2="SourceGraphic"/>
+              </filter>
+            </defs>
+            <image xlink:href="img/nicole.jpg" class="half-tone-image" width="200" height="200"/>
+            <image xlink:href="img/erik.jpg" class="half-tone-image" x="300" width="200" height="200"/>
+            <image xlink:href="img/aileen.jpg" class="half-tone-image" x="600" width="200" height="200"/>
+          </svg>
+          <div class="fragment" data-hook="halfTones">
+            <pre><code class="html h3" data-trim>
+&lt;svg&gt;
+  &lt;defs&gt;
+    &lt;filter id=&quot;half-tone&quot;&gt;
+      &lt;!-- effects, composites, etc. --&gt;
+    &lt;/filter&gt;
+  &lt;/defs&gt;
+  &lt;image xlink:href=&quot;foo.jpg&quot; filter=&quot;url(#half-tone)&quot;
+    width=&quot;200&quot; height=&quot;200&quot;/&gt;
+&lt;/svg&gt;
+            </code></pre>
+            <p>
+              <small>Half-tone filter by <a href="http://codepen.io/mullany/">Michael Mullany</a></small>
+            </p>
+          </div>
+          <aside class="notes">
+            <ul>
+              <li>Or even complex transformations using the "filter" tag</li>
+            </ul>
+          </aside>
+        </section>
+
         <section data-background="#E041B0" data-hook="lovefest">
           <svg width="960" height="600" viewBox="0 0 960 600">
             <!--<circle fill="none" stroke="white" cx="480" cy="300" r="180"/>-->
