@@ -333,7 +333,7 @@ body {
   padding: 1em; }
 
 .reveal *:not(pre) > code {
-  background-color: #ddd;
+  background-color: rgba(0, 0, 0, 0.13);
   border-radius: 0.11111em;
   font-size: 0.88889em;
   padding-left: 0.11111em;

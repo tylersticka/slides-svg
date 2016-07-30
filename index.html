@@ -1249,6 +1249,56 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
           </aside>
 				</section>
 
+        <section data-background="#222">
+          <p class="h2"><code>&lt;svg&gt;</code></p>
+          <div class="row-around" style="margin-top: 2.5em; margin-bottom: 1.5em;">
+            <div class="fragment">
+              <svg width="200" height="200" viewBox="0 0 100 100">
+                <rect fill="#12a1e9" x="0" y="0" width="100" height="100"/>
+              </svg>
+              <p><code>&lt;rect/&gt;</code></p>
+            </div>
+            <div class="fragment">
+              <svg width="200" height="200" viewBox="0 0 100 100">
+                <circle fill="#12a1e9" cx="50" cy="50" r="50"/>
+              </svg>
+              <p><code>&lt;circle/&gt;</code></p>
+            </div>
+            <div class="fragment">
+              <svg width="200" height="200" viewBox="0 0 100 100">
+                <line x1="10" y1="90" x2="90" y2="10" stroke="#12a1e9" stroke-width="10" stroke-linecap="round"/>
+              </svg>
+              <p><code>&lt;line/&gt;</code></p>
+            </div>
+          </div>
+          <p class="h2"><code>&lt;/svg&gt;</code></p>
+        </section>
+
+        <section data-background="#222">
+          <p class="h2"><code>&lt;svg&gt;</code></p>
+          <div class="row-around" style="margin-top: 2.5em; margin-bottom: 1.5em;">
+            <div>
+              <svg width="200" height="200" viewBox="0 0 100 100">
+                <polyline points="50 5 25 50 75 50 50 95" fill="none" stroke="#12a1e9" stroke-width="10" stroke-linecap="round"/>
+              </svg>
+              <p><code>&lt;polyline/&gt;</code></p>
+            </div>
+            <div class="fragment">
+              <svg width="200" height="200" viewBox="150 0 100 100">
+                <polygon points="200 0 245 25 245 75 200 100 155 75 155 25" fill="#12a1e9"/>
+              </svg>
+              <p><code>&lt;polygon/&gt;</code></p>
+            </div>
+            <div class="fragment">
+              <svg width="200" height="200" viewBox="295 0 100 100">
+                <path d="M 295 85 c 0 -100 100 -100 100 0 z" fill="#12a1e9"/>
+              </svg>
+              <p><code>&lt;path/&gt;</code></p>
+            </div>
+          </div>
+          <p class="h2"><code>&lt;/svg&gt;</code></p>
+        </section>
+
 				<section>
 					<div id="search-3d">
 						<div id="search-3d-backdrop"></div>
@@ -1626,37 +1676,55 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
           </aside>
         </section>
 
-        <!-- <section>
-          <pre class="inline-block width-auto h3"><code class="html" data-trim>
-&lt;a href=&quot;foo.html&quot;&gt;
-  &lt;svg&gt;
-    &lt;!-- etc. --&gt;
-  &lt;/svg&gt;
-&lt;/a&gt;
+        <section data-background="#222">
+          <svg width="200" height="200" viewBox="0 0 100 100">
+            <circle class="spinner spinner-animated" cx="50" cy="50" r="40"/>
+          </svg>
+          <pre><code class="css h3" data-trim>
+@keyframes spin {
+  to { transform: rotate(180deg); }
+}
+
+.spinner {
+  transform-origin: 50px 50px;
+  animation: spin 1.3s
+    cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+}
           </code></pre>
           <aside class="notes">
             <ul>
-              <li>This assumes the SVG is simply complimenting our interactions</li>
-              <li>Which may be what we want most of the time</li>
+              <li>You can animate SVGs using CSS</li>
             </ul>
           </aside>
         </section>
 
-        <section>
-          <pre class="inline-block width-auto h3"><code class="html" data-trim>
-&lt;svg&gt;
-  &lt;a xlink:href=&quot;foo.html&quot;&gt;
-    &lt;!-- etc. --&gt;
-  &lt;/a&gt;
-&lt;/svg&gt;
+        <section data-background="#222" data-hook="spinner">
+          <svg width="200" height="200" viewBox="0 0 100 100">
+            <circle class="spinner" id="spinner-gsap" cx="50" cy="50" r="40"/>
+          </svg>
+          <pre><code class="javascript h3" data-trim>
+// Using GreenSock GSAP (https://greensock.com)
+TweenMax.to(element, 1.3, {
+  repeat: -1,
+  transformOrigin: '50% 50%',
+  rotation: 180,
+  ease: Back.easeOut.config(1.8)
+});
           </code></pre>
+          <p>
+            Alternatives:
+            <a href="http://anime-js.com/">Anime</a>,
+            <a href="http://julian.com/research/velocity/">Velocity.js</a>,
+            <a href="http://snapsvg.io/">Snap.svg</a>,
+            <a href="http://thednp.github.io/kute.js">KUTE.js</a>
+          </p>
           <aside class="notes">
             <ul>
-              <li>But SVGs can be interactive, too</li>
-              <li>What can we accomplish when we flip the script?</li>
+              <li>Or JavaScript, which may be better for complex animations</li>
+              <li>Growing number of SVG-friendly animation libraries to choose from</li>
             </ul>
           </aside>
-        </section> -->
+        </section>
 
         <section>
           <svg width="640" height="480" viewBox="0 0 640 480">
@@ -1855,14 +1923,14 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
           </aside>
         </section>
 
-        <section data-background="#093c75">
+        <!--<section data-background="#093c75">
           <h1 style="color: #71C7F2;">Essentials</h1>
           <aside class="notes">
             <ul>
               <li>Here's the stuff you need to learn</li>
             </ul>
           </aside>
-        </section>
+        </section>-->
 
         <!-- <section>
           <h3>
@@ -1878,7 +1946,7 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
           </code></pre>
         </section> -->
 
-        <section>
+        <!--<section>
           <h3 class="margin-bottom">
             Simple Shapes
           </h3>
@@ -1907,9 +1975,9 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
               <li>There are tags for simple shapes</li>
             </ul>
           </aside>
-        </section>
+        </section>-->
 
-        <section>
+        <!--<section>
           <h3 class="margin-bottom">
             Complex Shapes
           </h3>
@@ -1938,9 +2006,9 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
               <li>And complex ones</li>
             </ul>
           </aside>
-        </section>
+        </section>-->
 
-        <section>
+        <!--<section>
           <h3 class="margin-bottom">
             Grouping + Cloning
           </h3>
@@ -1974,9 +2042,9 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
               <li>If you give an element an ID, the "use" element will let you repeat it</li>
             </ul>
           </aside>
-        </section>
+        </section>-->
 
-        <section>
+        <!--<section>
           <h3>
             Fancy Elements
           </h3>
@@ -1995,7 +2063,7 @@ gCF+0TaqZRfqEPfwwidjiHyZkAAAAASUVORK5CYII=
               <li>Images with the image element</li>
             </ul>
           </aside>
-        </section>
+        </section>-->
 
         <!--
 

@@ -86,7 +86,7 @@ $mainFontSize: 30px;
 }
 
 .reveal *:not(pre) > code {
-  background-color: #ddd;
+  background-color: rgba(0,0,0,.13);
   border-radius: (4em / 36);
   font-size: (32em / 36);
   padding-left: (4em / 36);
