@@ -390,6 +390,156 @@
           </aside>
         </section>
 
+        <section>
+          <div class="row-between">
+            <div>
+              <img data-src="img/file-stack.svg" width="275" height="275"/>
+              <p>Source Images<br>&nbsp;</p>
+            </div>
+            <svg class="fragment" data-fragment-index="1" width="60" height="60" viewBox="0 0 24 24">
+              <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 5 22 12 15 19"/>
+                <line x1="20" y1="12" x2="2" y2="12"/>
+              </g>
+            </svg>
+            <div class="fragment" data-fragment-index="1">
+              <p>Unicode<br>Characters</p>
+            </div>
+            <svg class="fragment" data-fragment-index="2" width="60" height="60" viewBox="0 0 24 24">
+              <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 5 22 12 15 19"/>
+                <line x1="20" y1="12" x2="2" y2="12"/>
+              </g>
+            </svg>
+            <div class="fragment" data-fragment-index="2">
+              <img data-src="img/file-stack.svg" width="275" height="275"/>
+              <p>WOFF, WOFF2, EOT,<br>TTF, OTF and/or SVG</p>
+            </div>
+          </div>
+          <aside class="notes">
+            <ul>
+              <li>Start with some SVG files (already weird)</li>
+              <li>Assign these to unicode characters (private-use, fallbacks, or let a robot decide)</li>
+              <li>A tool compiles into files, most based on PostScript (34 years old)</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <pre><code class="css h3" data-trim>
+@font-face {
+  font-family: "IconFont";
+  src: url("iconfont.eot");
+  src: url("iconfont.eot#iefix") format("embedded-opentype"),
+    url("iconfont.woff2") format("woff2"),
+    url("iconfont.woff") format("woff"),
+    url("iconfont.ttf") format("truetype"),
+    url("iconfont.svg#iconfontregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+          </code></pre>
+          <aside class="notes">
+            <ul>
+              <li>We define this font using a chunk of CSS we don't understand</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <pre><code class="css h3" data-trim>
+.icon {
+  display: inline-block;
+  font: normal normal normal 16px/1 IconFont;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+          </code></pre>
+          <aside class="notes">
+            <ul>
+              <li>We style the eventual icon element, being sure to include whatever proprietary font styles we can to make them display less like fonts and more like icons</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <div class="row">
+            <pre><code class="css" data-trim>
+.icon-add:before {
+  content: "\f000";
+}
+.icon-arrow-up:before {
+  content: "\f001";
+}
+.icon-arrow-down:before {
+  content: "\f002";
+}
+.icon-arrow-right:before {
+  content: "\f003";
+}
+.icon-arrow-left:before {
+  content: "\f004";
+}
+            </code></pre>
+            <pre><code class="css" data-trim>
+.icon-bookmark:before {
+  content: "\f005";
+}
+.icon-caret:before {
+  content: "\f006";
+}
+.icon-cog:before {
+  content: "\f007";
+}
+.icon-envelope:before {
+  content: "\f008";
+}
+.icon-headphones:before {
+  content: "\f009";
+}
+            </code></pre>
+            <pre><code class="css" data-trim>
+.icon-heart:before {
+  content: "\f00a";
+}
+.icon-home:before {
+  content: "\f00b";
+}
+.icon-power:before {
+  content: "\f00c";
+}
+.icon-search:before {
+  content: "\f00d";
+}
+.icon-x:before {
+  content: "\f00e";
+}
+            </code></pre>
+          </div>
+          <aside class="notes">
+            <ul>
+              <li>We then define additional classes</li>
+              <li>Human-readable class names (since characters are not)</li>
+              <li>Inject unicode characters via a pseudo element</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <pre class="inline-block width-auto"><code class="html h3" data-trim>
+&lt;span class=&quot;icon icon-foo&quot;&gt;&lt;/span&gt;
+          </code></pre>
+          <aside class="notes">
+            <ul>
+              <li>Only then can we reference said icon in our HTML from a meaningless element</li>
+              <li>But at this point, what we've written is still not accessible</li>
+              <li>I won't go into those steps now...</li>
+            </ul>
+          </aside>
+        </section>
+
         <section data-background="img/hackers.jpg">
           <aside class="notes">
             <ul>
@@ -402,78 +552,6 @@
           <aside class="notes">
             <ul>
               <li>Tends to age rather poorly</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="img/slide-ninjanails-death-title.jpg" data-background-size="contain" data-background-color="#000">
-          <aside class="notes">
-            <ul>
-              <li>I was emboldened to ditch icon fonts by Seren Davies' talk</li>
-              <li>Challenges for dyslexic users</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="img/slide-ninjanails-death-gh-1.jpg" data-background-size="contain">
-          <aside class="notes">
-            <ul>
-              <li>Interfaces that relied on icon fonts to communicate important info</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="img/slide-ninjanails-death-gh-2.jpg" data-background-size="contain">
-          <aside class="notes">
-            <ul>
-              <li>Would break when software was used to improve readability</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="img/slide-ninjanails-death-gh-3.jpg" data-background-size="contain">
-          <aside class="notes">
-            <ul>
-              <li>Any part of the UI that relied on icon fonts is now unintelligible</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="#222">
-          <img data-src="img/safari-seriously.png" alt="Screenshot of 'Seriously, Don't Use Icon Fonts'">
-          <aside class="notes">
-            <ul>
-              <li>I wrote about the issues Seren described in a blog post back in November</li>
-              <li>As well as several other issues</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="#222">
-          <svg width="640" height="480" viewBox="0 0 640 480">
-            <g fill="white">
-              <path d="M600,240c0,88.37-103.27,160-280,160S40,328.37,40,240,143.27,80,320,80,600,151.63,600,240Z"/>
-              <polygon points="67.72 430.37 95.02 373.59 126.56 388.76 149.53 341 188.28 359.63 143.95 424.13 102.45 401.21 67.72 430.37"/>
-            </g>
-            <text class="weight-bold" x="50%" y="50%" dy="4%" text-anchor="middle" fill="#12A1E9" font-size="48">
-              Unpronounceable.
-            </text>
-          </svg>
-          <aside class="notes">
-            <ul>
-              <li>In certain situations, assistive devices may read certain characters aloud</li>
-              <li>Icon fonts can fail poorly, showing "missing character" blocks or even emojis</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section>
-          <img data-src="img/etsy-rating.png" alt="Mockup of classic Etsy icon font fail">
-          <img class="fragment" data-src="img/etsy-bug.png" alt="Screenshot of user complaint" width="800">
-          <aside class="notes">
-            <ul>
-              <li>Your users could conceivable see horse emojis littering their star ratings...</li>
-              <li>Which is what happened to Etsy back in 2014</li>
             </ul>
           </aside>
         </section>
@@ -502,6 +580,70 @@
           <aside class="notes">
             <ul>
               <li>For me, the most compelling argument against icon fonts</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section data-background="img/slide-ninjanails-death-title.jpg" data-background-size="contain" data-background-color="#000">
+          <aside class="notes">
+            <ul>
+              <li>I was emboldened to ditch icon fonts by Seren Davies' talk</li>
+              <li>Challenges for dyslexic users</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section data-background="img/slide-ninjanails-death-gh-1.jpg" data-background-size="contain">
+          <aside class="notes">
+            <ul>
+              <li>Interfaces that relied on icon fonts to communicate important info</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section data-background="img/slide-ninjanails-death-gh-3.jpg" data-background-size="contain">
+          <aside class="notes">
+            <ul>
+              <li>Any part of the UI that relied on icon fonts is now unintelligible</li>
+            </ul>
+          </aside>
+        </section>
+
+        <!--<section data-background="#222">
+          <img data-src="img/safari-seriously.png" alt="Screenshot of 'Seriously, Don't Use Icon Fonts'">
+          <aside class="notes">
+            <ul>
+              <li>I wrote about the issues Seren described in a blog post back in November</li>
+              <li>As well as several other issues</li>
+            </ul>
+          </aside>
+        </section>-->
+
+        <section data-background="#222">
+          <svg width="640" height="480" viewBox="0 0 640 480">
+            <g fill="white">
+              <path d="M600,240c0,88.37-103.27,160-280,160S40,328.37,40,240,143.27,80,320,80,600,151.63,600,240Z"/>
+              <polygon points="67.72 430.37 95.02 373.59 126.56 388.76 149.53 341 188.28 359.63 143.95 424.13 102.45 401.21 67.72 430.37"/>
+            </g>
+            <text class="weight-bold" x="50%" y="50%" dy="4%" text-anchor="middle" fill="#12A1E9" font-size="48">
+              Unpronounceable.
+            </text>
+          </svg>
+          <aside class="notes">
+            <ul>
+              <li>In certain situations, assistive devices may read certain characters aloud</li>
+              <li>Icon fonts can fail poorly, showing "missing character" blocks or even emojis</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <img data-src="img/etsy-rating.png" alt="Mockup of classic Etsy icon font fail">
+          <img class="fragment" data-src="img/etsy-bug.png" alt="Screenshot of user complaint" width="800">
+          <aside class="notes">
+            <ul>
+              <li>Your users could conceivable see horse emojis littering their star ratings...</li>
+              <li>Which is what happened to Etsy back in 2014</li>
             </ul>
           </aside>
         </section>
@@ -622,6 +764,46 @@
               <li>GIF had limited color palette, limited alpha</li>
               <li>PNG existed but support was years away</li>
               <li>Even PNG assets are unnecessarily large</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <div class="row row-around">
+            <div>
+              <svg width="242" height="242" viewBox="0 0 242 242">
+                <image xlink:href="img/icon-search-bitmap-base.png" x="1" y="1" width="240" height="240"/>
+                <image class="fragment" xlink:href="img/icon-search-bitmap-grid.png" x="0" y="0" width="242" height="242"/>
+              </svg>
+              <p>Bitmap</p>
+            </div>
+            <div class="fragment">
+              <svg width="242" height="242" viewBox="-0.1 -0.1 24.2 24.2">
+                <g fill="none" stroke="#000" stroke-linecap="round">
+                  <circle cx="9.5" cy="9.5" r="7.5" stroke-width="3"/>
+                  <line x1="16" y1="16" x2="21" y2="21" stroke-width="4"/>
+                </g>
+                <g class="fragment">
+                  <g fill="none" stroke="#12a1e9" stroke-linecap="round"  stroke-width=".2">
+                    <rect x="0" y="0" width="24" height="24"/>
+                    <circle cx="9.5" cy="9.5" r="7.5"/>
+                    <line x1="16" y1="16" x2="21" y2="21"/>
+                  </g>
+                  <g fill="#12a1e9">
+                    <rect x="9" y="9" width="1" height="1"/>
+                    <rect x="15.5" y="15.5" width="1" height="1"/>
+                    <rect x="20.5" y="20.5" width="1" height="1"/>
+                  </g>
+                </g>
+              </svg>
+              <p>Vector</p>
+            </div>
+          </div>
+          <aside class="notes">
+            <ul>
+              <li>The problem was our bitmap imagery</li>
+              <li>Defined using a grid of pixels</li>
+              <li>Instead of vector imagery, which</li>
             </ul>
           </aside>
         </section>
@@ -844,46 +1026,6 @@
         </section>
 
         <section>
-          <div class="row row-around">
-            <div>
-              <svg width="242" height="242" viewBox="0 0 242 242">
-                <image xlink:href="img/icon-search-bitmap-base.png" x="1" y="1" width="240" height="240"/>
-                <image class="fragment" xlink:href="img/icon-search-bitmap-grid.png" x="0" y="0" width="242" height="242"/>
-              </svg>
-              <p>Bitmap</p>
-            </div>
-            <div>
-              <svg width="242" height="242" viewBox="-0.1 -0.1 24.2 24.2">
-                <g fill="none" stroke="#000" stroke-linecap="round">
-                  <circle cx="9.5" cy="9.5" r="7.5" stroke-width="3"/>
-                  <line x1="16" y1="16" x2="21" y2="21" stroke-width="4"/>
-                </g>
-                <g class="fragment">
-                  <g fill="none" stroke="#12a1e9" stroke-linecap="round"  stroke-width=".2">
-                    <rect x="0" y="0" width="24" height="24"/>
-                    <circle cx="9.5" cy="9.5" r="7.5"/>
-                    <line x1="16" y1="16" x2="21" y2="21"/>
-                  </g>
-                  <g fill="#12a1e9">
-                    <rect x="9" y="9" width="1" height="1"/>
-                    <rect x="15.5" y="15.5" width="1" height="1"/>
-                    <rect x="20.5" y="20.5" width="1" height="1"/>
-                  </g>
-                </g>
-              </svg>
-              <p>Vector</p>
-            </div>
-          </div>
-          <aside class="notes">
-            <ul>
-              <li>The problem was our bitmap imagery</li>
-              <li>Defined using a grid of pixels</li>
-              <li>Instead of vector imagery, which</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section>
           <div class="row-around">
             <img data-src="img/icon-ai.png" alt="Adobe Illustrator" width="200">
             <img data-src="img/icon-sketch.png" alt="Sketch" width="200">
@@ -959,22 +1101,39 @@
           </aside>
 				</section>
 
-				<section>
-					<svg class="pie" width="400" height="400" viewBox="0 0 100 100" style="margin: 1em;">
-						<circle id="pie-support" cx="50" cy="50" r="25"/>
-					</svg>
-          <p>SVG Support</p>
-					<p><small>Global (July 2016) <a href="http://caniuse.com/#feat=svg">caniuse.com</a></small></p>
-					<div class="fragment"
-            data-hook="pie"
-            data-hook-options='{
-              "circle": "#pie-support",
-              "ratio": 0.9725
-            }'></div>
+        <section>
+          <div class="row-around">
+            <div>
+    					<h4>SVG</h4>
+    					<svg class="pie" width="400" height="400" viewBox="0 0 100 100" style="margin: 1em 1em 0.5em;">
+    						<circle cx="50" cy="50" r="25" id="pie-svg"/>
+    					</svg>
+              <p class="fragment"
+                data-hook="pie"
+                data-hook-options='{
+                  "circle": "#pie-svg",
+                  "ratio": 0.9725
+                }'>97.25% <small style="vertical-align: baseline;">(<a href="http://caniuse.com/#feat=svg">July 2016</a>)</small></p>
+            </div>
+            <div>
+    					<h4>@font-face</h4>
+    					<svg class="pie" width="400" height="400" viewBox="0 0 100 100" style="margin: 1em 1em 0.5em;">
+    						<circle cx="50" cy="50" r="25" id="pie-font-face"/>
+    					</svg>
+              <p class="fragment"
+                data-hook="pie"
+                data-hook-options='{
+                  "circle": "#pie-font-face",
+                  "ratio": 0.9321
+                }'>93.21% <small style="vertical-align: baseline;">(<a href="http://caniuse.com/#feat=fontface">July 2016</a>)</small></p>
+            </div>
+          </div>
           <aside class="notes">
             <ul>
-              <li>Support for SVG images is great</li>
-              <li>Over 97% globally according to caniuse.com</li>
+              <li>I already mentioned earlier that basic browser support is really high</li>
+              <li>What I didn't mention is that it's higher than @font-face</li>
+              <li>(Or fixed-position, FWIW)</li>
+              <li>SVG support is lower for some features, like external references</li>
             </ul>
           </aside>
 				</section>
@@ -2648,7 +2807,7 @@ TweenMax.to(element, 1.3, {
           </aside>
         </section>
 
-        <section>
+        <!--<section>
           <h2>Icon Fonts</h2>
           <div class="row-between">
             <div class="fragment" data-fragment-index="0">
@@ -2853,9 +3012,9 @@ TweenMax.to(element, 1.3, {
               <li>No compilation. No unicode maps. Just images being images</li>
             </ul>
           </aside>
-        </section>
+        </section>-->
 
-        <section data-background-color="#222">
+        <!--<section data-background-color="#222">
           <div class="align-left">
             <svg width="480" height="480" viewBox="0 0 480 480">
               <path fill="white" d="M240,0C91.39,0,0,104.2,0,232.73c0,62.34,21.5,119,60.61,160.74-9.42,11-26.08,28.67-42.42,37.81,0,0,31.4,10.46,70.66-12.55,39.28,29.34,90.44,46.73,151.15,46.73,148.61,0,240-104.2,240-232.73S388.61,0,240,0Z"/>
@@ -2901,9 +3060,9 @@ TweenMax.to(element, 1.3, {
               <li>SVG support is lower for some features, like external references</li>
             </ul>
           </aside>
-				</section>
+				</section>-->
 
-        <section>
+        <!--<section>
           <pre><code class="html h3" data-trim>
 &lt;picture&gt;
   &lt;source type=&quot;image/svg+xml&quot; srcset=&quot;example.svg&quot;&gt;
@@ -2926,7 +3085,7 @@ TweenMax.to(element, 1.3, {
               <li>No unpronounceable characters, no unintentional emojis. Predictable.</li>
             </ul>
           </aside>
-        </section>
+        </section>-->
 
         <section data-background="#222">
           <img data-src="img/safari-fg-bulletproof.png" alt="Screenshot of Filament Group's 'Bulletproof Icon Fonts' post">
