@@ -279,25 +279,24 @@
         </section>
 
         <section>
-          <svg width="640" height="480" viewBox="0 0 640 480">
+          <svg width="800" height="600" viewBox="0 0 640 480" id="photo-frame">
+            <defs>
+              <clipPath id="photo-frame-contents">
+                <rect x="108" y="77" width="428" height="326"/>
+              </clipPath>
+            </defs>
             <image xlink:href="img/frame.jpg" width="640" height="480"/>
             <rect x="108" y="77" width="428" height="326" fill="#222"/>
             <text style="font-family: 'fira-mono', monospace; font-size: 60px;" dy="0.25em" x="320" y="240" text-anchor="middle" fill="#fff">&lt;img/&gt;</text>
+            <g class="fragment" clip-path="url(#photo-frame-contents)">
+              <image id="photo-frame-inner" xlink:href="img/obama-chrysler.jpg" x="76" y="77" width="488" height="326"/>
+            </g>
           </svg>
-          <p style="margin-bottom: -1em;"><small>Photo by <a href="https://www.flickr.com/photos/34651674@N07/7258061584/in/datetaken/">Stephen Clulow</a></small></p>
+          <div class="fragment" data-hook="photoFrameShrink"></div>
+          <div class="fragment" data-hook="photoFrameGrowInner"></div>
+          <p style=" margin-bottom: -1em;"><small>Art direction example via <a href="https://cloudfour.com/thinks/a-framework-for-discussing-responsive-images-solutions/">Jason Grigsby</a>, frame photo by <a href="https://www.flickr.com/photos/34651674@N07/7258061584/in/datetaken/">Stephen Clulow</a></small></p>
           <aside class="notes">
             Images! These inflexible boxes have vexed many a web developer
-          </aside>
-        </section>
-
-        <section data-background-color="black">
-          <img data-src="img/slide-grigs-art_direction.jpg" alt="Art direction slide from Jason's talk">
-          <p style="margin-top: 1em;"><small>Source: <a href="https://speakerdeck.com/grigs/why-responsive-images">Jason Grigsby</a></small></p>
-          <aside class="notes">
-            <ul>
-              <li>Jason has written and given talks extensively on the subject</li>
-              <li>For designers one problem was particularly frustrating</li>
-            </ul>
           </aside>
         </section>
 
