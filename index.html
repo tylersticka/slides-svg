@@ -2728,15 +2728,15 @@ TweenMax.to(element, 1.3, {
 
         -->
 
-        <section data-background="img/beginning.gif" data-background-color="#000" data-background-size="contain">
+        <!--<section data-background="img/beginning.gif" data-background-color="#000" data-background-size="contain">
           <aside class="notes">
             <ul>
               <li>This is just the beginning</li>
             </ul>
           </aside>
-        </section>
+        </section>-->
 
-        <section data-background="#222">
+        <!--<section data-background="#222">
           <img data-src="img/safari-mdn-svg.png" alt="Screenshot of Mozilla Developer Network's SVG reference">
           <aside class="notes">
             <ul>
@@ -2744,9 +2744,9 @@ TweenMax.to(element, 1.3, {
               <li>Just as with HTML, every element has its own attributes, behavior, etc.</li>
             </ul>
           </aside>
-        </section>
+        </section>-->
 
-        <section data-background="img/iceberg.svg">
+        <!--<section data-background="img/iceberg.svg">
           <aside class="notes">
             <ul>
               <li>So what I just breezed through is really the tip of the iceberg</li>
@@ -2761,7 +2761,7 @@ TweenMax.to(element, 1.3, {
               <li>You'll have everything you need to make the most of the format today</li>
             </ul>
           </aside>
-        </section>
+        </section>-->
 
         <section class="dark" data-background="img/roads.gif">
           <h1 class="text-shadow">The Future</h1>
@@ -2770,43 +2770,6 @@ TweenMax.to(element, 1.3, {
               <li>But what about tomorrow?</li>
               <li>SVG is pretty cool now, but does it have a future?</li>
               <li>While it's impossible to say with certainty, signs point to yes.</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="#222">
-          <img data-src="img/safari-evil_icons.png" alt="">
-          <aside class="notes">
-            <ul>
-              <li>We're seeing a growing number of beautiful SVG icon frameworks</li>
-              <li>Like Evil Icons</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="#222">
-          <img data-src="img/safari-iconic.png" alt="">
-          <aside class="notes">
-            <ul>
-              <li>Iconic</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="#222">
-          <img data-src="img/safari-glyph.png" alt="">
-          <aside class="notes">
-            <ul>
-              <li>Glyph</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="#222">
-          <img data-src="img/safari-material_icons.png" alt="">
-          <aside class="notes">
-            <ul>
-              <li>And Google's own Material Icons</li>
             </ul>
           </aside>
         </section>
@@ -2832,27 +2795,7 @@ TweenMax.to(element, 1.3, {
           </aside>
         </section>
 
-        <section data-background="#222">
-          <img data-src="img/safari-bodymovin.png" alt="Screenshot of Gravit design tool">
-          <aside class="notes">
-            <ul>
-              <li>In the animation world, plugins have emerged to export from After Effects and Animate CC (formerly Flash) to SVG</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="#222">
-          <img data-src="img/safari-gravit.png" alt="Screenshot of Gravit design tool">
-          <aside class="notes">
-            <ul>
-              <li>New tools are emerging for SVG creation</li>
-              <li>Gravit is an entirely browser-based vector design tool</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="#222">
-          <img data-src="img/firefox-dev-animation.png" alt="Screenshot of Mozilla's Dev Tools Challenger">
+        <section data-background="img/firefox-dev-animation.png" data-background-size="contain">
           <aside class="notes">
             <ul>
               <li>Firefox and Chrome introducing more and more animation-related tools (bezier curve adjustments, timeline control, etc.) to their developer tools</li>
@@ -2860,94 +2803,46 @@ TweenMax.to(element, 1.3, {
           </aside>
         </section>
 
-        <section>
-          <h3>CSS Shapes</h3>
-          <p>W3C Candidate Recommendation (<a href="https://www.w3.org/TR/css-shapes-1/">March 2014</a>)</p>
-          <pre><code class="css h3" data-trim>
-.float {
-  shape-outside: polygon(10px 10px, 90px 50px, 40px 50px, 90px 90px, 10px 90px);
-  shape-margin: 10px;
-}
-          </code></pre>
-          <ul>
-            <li>
-               <a href="http://caniuse.com/#feat=css-shapes">Supported</a> in Chrome, Safari and Opera
-            </li>
-            <li>
-              <a href="http://status.modern.ie/shapes">Under Consideration</a> for Edge
-            </li>
-          </ul>
-          <aside class="notes">
-            <ul>
-              <li>SVG is heavily influencing the future of CSS</li>
-              <li>Many specs borrowing directly or partially from SVG</li>
-              <li>Including shapes...</li>
-            </ul>
-          </aside>
+        <section data-background="img/iconic-detail.png" data-background-size="75%">
         </section>
 
         <section>
-          <h3>CSS Masking</h3>
-          <p>W3C Candidate Recommendation (<a href="https://www.w3.org/TR/css-masking/">August 2014</a>)</p>
-          <pre><code class="css h3" data-trim>
-.masked {
-  clip-path: polygon(15px 99px, 30px 87px, 65px 99px, 85px 55px, 122px 57px, 184px 73px, 198px 105px, 199px 150px, 145px 159px, 155px 139px, 126px 120px, 112px 138px, 80px 128px, 39px 126px, 24px 104px);
-}
-          </code></pre>
-          <ul>
-            <li>
-              <a href="http://caniuse.com/#feat=css-masks">Partially supported</a> in Firefox, Chrome, Safari and Opera
-            </li>
-            <li>
-              <a href="http://status.modern.ie/masks">Under Consideration</a> for Edge
-            </li>
-          </ul>
-          <aside class="notes">
-            <ul>
-              <li>Masking...</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section>
-          <h3>CSS Filter Effects</h3>
-          <p>W3C Working Draft (<a href="https://www.w3.org/TR/filter-effects/">November 2014</a>)</p>
-          <pre><code class="css h3" data-trim>
-.filtered {
-  filter: contrast(175%) brightness(3%);
-}
-          </code></pre>
-          <ul>
-            <li>
-              <a href="http://caniuse.com/#feat=css-filters">Varying support</a> in Edge, Firefox, Chrome, Safari and Opera
-            </li>
-          </ul>
-          <aside class="notes">
-            <ul>
-              <li>And even filters.</li>
-              <li>Similarly, whole new specs look to improve SVG tremendously...</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="#222">
-          <img data-src="img/safari-w3c-web_animations.png" alt="Screenshot of W3C Web Animations Working Draft">
-          <aside class="notes">
-            <ul>
-              <li>The Web Animations API promises to unify CSS and JavaScript animations, improving performance for SVG (and everything else)</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section data-background="#222">
-          <img data-src="img/safari-w3c-svg2.png" alt="Screenshot of W3C SVG 2 Working Draft">
-          <aside class="notes">
-            <ul>
-              <li>And the SVG 2 spec is coming along nicely</li>
-              <li>Blurs the line even further between SVG, HTML and CSS</li>
-              <li>Improvements for composition and interactivity</li>
-            </ul>
-          </aside>
+          <table>
+            <tbody>
+              <tr>
+                <td><a href="https://www.w3.org/TR/css-shapes-1/"><b>CSS Shapes</b></a><small style="display: block;">Candidate Recommendation</small></td>
+                <td></td>
+                <td></td>
+                <td><img src="img/browser-icon-chrome.png" alt="Chrome" width="48" height="48" style="margin: 0; max-width: none;"></td>
+                <td><img src="img/browser-icon-safari.png" alt="Safari" width="54" height="54" style="margin: 0; max-width: none;"></td>
+                <td><img src="img/browser-icon-opera.png" alt="Opera" width="48" height="48" style="margin: 0; max-width: none;"></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.w3.org/TR/css-masking-1/"><b>CSS Masking</b></a><small style="display: block;">Candidate Recommendation</small></td>
+                <td></td>
+                <td><img src="img/browser-icon-firefox.jpg" alt="Firefox" width="52" height="52" style="margin: 0 0 -1px 0; max-width: none;"></td>
+                <td><img src="img/browser-icon-chrome.png" alt="Chrome" width="48" height="48" style="margin: 0; max-width: none;"></td>
+                <td><img src="img/browser-icon-safari.png" alt="Safari" width="54" height="54" style="margin: 0; max-width: none;"></td>
+                <td><img src="img/browser-icon-opera.png" alt="Opera" width="48" height="48" style="margin: 0; max-width: none;"></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.w3.org/TR/filter-effects-1/"><b>CSS Filter Effects</b></a><small style="display: block;">Working Draft</small></td>
+                <td><img src="img/browser-icon-edge.svg" alt="Edge" width="46" height="46" style="margin: 0; max-width: none;"></td>
+                <td><img src="img/browser-icon-firefox.jpg" alt="Firefox" width="52" height="52" style="margin: 0 0 -1px 0; max-width: none;"></td>
+                <td><img src="img/browser-icon-chrome.png" alt="Chrome" width="48" height="48" style="margin: 0; max-width: none;"></td>
+                <td><img src="img/browser-icon-safari.png" alt="Safari" width="54" height="54" style="margin: 0; max-width: none;"></td>
+                <td><img src="img/browser-icon-opera.png" alt="Opera" width="48" height="48" style="margin: 0; max-width: none;"></td>
+              </tr>
+              <tr>
+                <td><a href="http://w3c.github.io/web-animations/"><b>Web Animations</b></a><small style="display: block;">Working Draft</small></td>
+                <td></td>
+                <td><img src="img/browser-icon-firefox.jpg" alt="Firefox" width="52" height="52" style="margin: 0 0 -1px 0; max-width: none;"></td>
+                <td><img src="img/browser-icon-chrome.png" alt="Chrome" width="48" height="48" style="margin: 0; max-width: none;"></td>
+                <td></td>
+                <td><img src="img/browser-icon-opera.png" alt="Opera" width="48" height="48" style="margin: 0; max-width: none;"></td>
+              </tr>
+            </tbody>
+          </table>
         </section>
 
         <section class="dark" data-background="img/point.gif">
