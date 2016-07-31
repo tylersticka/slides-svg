@@ -810,3 +810,9 @@ body {
 .rotate-slow {
   -webkit-animation: slowRotate 10s linear infinite;
           animation: slowRotate 10s linear infinite; }
+
+.twitter-tweet-rendered {
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transform: scale(1.5) !important;
+          transform: scale(1.5) !important; }

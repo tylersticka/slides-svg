@@ -615,3 +615,15 @@ fragmentTimeline('fun', (function () {
 
   return timeline;
 })());
+
+fragmentTimeline('fgScroll', (function(){
+  var element = document.getElementById('safari-fg-inner');
+  var height = element.getAttribute('height');
+  var tween = new TweenMax(element, 4, {
+    paused: true,
+    y: '-=' + (height - 720),
+    ease: Sine.easeInOut
+  });
+
+  return tween;
+})());

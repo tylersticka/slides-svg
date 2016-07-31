@@ -3284,7 +3284,19 @@ TweenMax.to(element, 1.3, {
         </section>-->
 
         <section data-background="#222">
-          <img data-src="img/safari-fg-bulletproof.png" alt="Screenshot of Filament Group's 'Bulletproof Icon Fonts' post">
+          <svg width="912" height="664" viewBox="0 0 1195 870" style="margin: 15px 0; max-width: 95%; max-height: 95%;">
+            <defs>
+              <clipPath id="safari-fg-viewport">
+                <path d="M56 70 L1139 70 Q1139 70 1139 70 L1139 786 Q1139 790 1135 790 L60 790 Q56 790 56 786 L56 70 Q56 70 56 70 Z"/>
+              </clipPath>
+            </defs>
+            <image xlink:href="img/safari-fg-bulletproof.png" x="0" y="0" width="1195" height="870"/>
+            <g clip-path="url(#safari-fg-viewport)">
+              <rect x="0" y="0" width="100%" height="100%" fill="#fff"/>
+              <image id="safari-fg-inner" xlink:href="img/safari-fg-bulletproof-inner.png" x="56" y="70" width="1083" height="13581"/>
+            </g>
+          </svg>
+          <div class="fragment" data-hook="fgScroll"></div>
           <aside class="notes">
             <ul>
               <li>Compare that to icon fonts. Filament Group's seminal blog post outlined the steps necessary to make icon fonts accessible</li>
@@ -3295,7 +3307,9 @@ TweenMax.to(element, 1.3, {
         </section>
 
         <section data-background="#222">
-          <img data-src="img/safari-twitter-zachleat-svg.png" alt="Screenshot of @zachleat's tweet of a certain blog post">
+          <!--<img data-src="img/safari-twitter-zachleat-svg.png" alt="Screenshot of @zachleat's tweet of a certain blog post">-->
+          <blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><div><p lang="en" dir="ltr">You can follow <a href="https://twitter.com/filamentgroup">@filamentgroup</a>’s guide to Bulletproof Icon Fonts OR you can use SVG and go home early <a href="https://t.co/YWpvUN9JBA">https://t.co/YWpvUN9JBA</a> by <a href="https://twitter.com/tylersticka">@tylersticka</a></p><p>&mdash; Zach Leatherman (@zachleat) <a href="https://twitter.com/zachleat/status/668851586722955264">November 23, 2015</a></p></div></blockquote>
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
           <aside class="notes">
             <ul>
               <li>"You can follow [our] guide to Bulletproof Icon Fonts OR you can use SVG and go home early"</li>
