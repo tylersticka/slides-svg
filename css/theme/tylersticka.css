@@ -596,6 +596,16 @@ body {
 .source-alt {
   background: rgba(9, 60, 117, 0.9); }
 
+.link-subtle {
+  color: inherit !important;
+  text-decoration: underline !important; }
+
+.link-subtler {
+  color: inherit !important;
+  text-decoration: none !important; }
+  .link-subtler:hover, .link-subtler:focus, .link-subtler:active {
+    text-decoration: underline !important; }
+
 .pie {
   background: #ddd;
   border-radius: 50%;

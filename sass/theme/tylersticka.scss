@@ -391,6 +391,22 @@ $mainFontSize: 30px;
   background: rgba(9, 60, 117, 0.9);
 }
 
+.link-subtle {
+  color: inherit !important;
+  text-decoration: underline !important;
+}
+
+.link-subtler {
+  color: inherit !important;
+  text-decoration: none !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline !important;
+  }
+}
+
 // For specific slides (mostly)
 
 .pie {
