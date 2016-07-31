@@ -161,6 +161,37 @@ $mainFontSize: 30px;
   }
 }
 
+.reveal .controls {
+  .navigate-left,
+  .navigate-right,
+  .navigate-up,
+  .navigate-down {
+    &.enabled {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin reveal-fullscreen {
+  .progress,
+  .controls {
+    display: none !important;
+  }
+}
+
+*:-moz-full-screen {
+  @include reveal-fullscreen;
+}
+*:-ms-fullscreen {
+  @include reveal-fullscreen;
+}
+*:-webkit-full-screen {
+  @include reveal-fullscreen;
+}
+*:fullscreen {
+  @include reveal-fullscreen;
+}
+
 // Utilities
 
 .bg-white {
