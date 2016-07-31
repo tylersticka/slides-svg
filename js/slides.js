@@ -627,3 +627,33 @@ fragmentTimeline('fgScroll', (function(){
 
   return tween;
 })());
+
+RevealHooks.addEach('insertObject', {
+  'ready slideshown': function (slide, event, options) {
+    var id = 'insertedObject-' + event.indexh + 'x' + event.indexv;
+    var element = document.getElementById(id);
+    options = options || {};
+
+    if (!element) {
+      element = document.createElement('object');
+      element.setAttribute('id', id);
+
+      for (var key in options) {
+        if (options.hasOwnProperty(key)) {
+          element.setAttribute(key, options[key]);
+        }
+      }
+
+      slide.insertBefore(element, slide.firstChild);
+    } else if (options.data) {
+      element.setAttribute('data', options.data);
+    }
+  },
+  'slidehidden': function (slide, event, options) {
+    var element = slide.querySelector('[id^="insertedObject-"]');
+
+    if (element) {
+      element.setAttribute('data', '');
+    }
+  }
+});
