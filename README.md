@@ -2,6 +2,8 @@
 
 Slides and other materials built using [reveal.js](http://lab.hakim.se/reveal-js/) and other nifty things.
 
+The most iteration [is publicly accessible](http://tylersticka.github.io/slides-svg/), with previous iterations entombed as protected branches. 
+
 ## Talk Description
 
 Icon fonts! CSS-only illustrations! High-resolution GIF animations! Today's web designers still regularly and enthusiastically employ these techniques... yet they're all a better fit for SVG, a powerful vector image format that's already old enough to drive a car.
