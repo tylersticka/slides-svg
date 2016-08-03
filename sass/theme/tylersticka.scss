@@ -648,3 +648,14 @@ $mainFontSize: 30px;
   margin-right: auto;
   transform: scale(1.5) !important;
 }
+
+.reveal .slides section .fragment.matrix {
+  opacity: 1;
+  visibility: visible;
+
+  &.visible {
+    background-image: url("../../img/matrix.gif") !important;
+    background-size: auto 150% !important;
+    color: rgba(0,0,0,0) !important;
+  }
+}

@@ -848,3 +848,11 @@ body {
   margin-right: auto;
   -webkit-transform: scale(1.5) !important;
           transform: scale(1.5) !important; }
+
+.reveal .slides section .fragment.matrix {
+  opacity: 1;
+  visibility: visible; }
+  .reveal .slides section .fragment.matrix.visible {
+    background-image: url("../../img/matrix.gif") !important;
+    background-size: auto 150% !important;
+    color: transparent !important; }
