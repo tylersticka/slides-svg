@@ -1,0 +1,8 @@
+{
+  "version": "1.0",
+  "type": "rich",
+  "width": 480,
+  "height": 350,
+  "title": "SVG: So Very Good",
+  "html": "<iframe frameborder=\"0\" width=\"480\" height=\"350\" src=\"http://tylersticka.github.io/slides-svg/\"></iframe>"
+}
