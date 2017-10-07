@@ -392,6 +392,148 @@ fragmentTimeline('morphButton', (function () {
   return timeline;
 })());
 
+fragmentTimeline('gStart', (function () {
+  var timeline = new TimelineMax({
+    paused: true
+  });
+  
+  var clipShape = document.getElementById('g-highlight-clip-shape');
+  var clipPointsEar = clipShape.getAttribute('points');
+  var clipPointsBowl = clipShape.getAttribute('data-points-bowl');
+  var clipPointsLink = clipShape.getAttribute('data-points-link');
+  var clipPointsLoop = clipShape.getAttribute('data-points-loop');
+  
+  var highlightContainer = document.getElementById('g-highlights');
+  var highlightEar = document.getElementById('g-highlight-ear');
+  var highlightBowl = document.getElementById('g-highlight-bowl');
+  var highlightLink = document.getElementById('g-highlight-link');
+  var highlightLoop = document.getElementById('g-highlight-loop');
+  
+  var labelEar = document.getElementById('g-label-ear');
+  var labelBowl = document.getElementById('g-label-bowl');
+  var labelLink = document.getElementById('g-label-link');
+  var labelLoop = document.getElementById('g-label-loop');
+  
+  var labelFillFrom = labelEar.getAttribute('fill');
+  var labelFillTo = '#4c5f56';
+  
+  var duration = 0.8;
+  var delay = 1.2;
+  
+  var clipEase = Back.easeInOut.config(1.4);
+  
+  timeline.set(highlightContainer, {
+    'visibility': 'visible'
+  });
+  
+  timeline.addLabel('toEar');
+  
+  timeline.to(labelEar, duration / 2, {
+    fill: labelFillTo
+  }, 'toEar');
+  
+  timeline.fromTo(clipShape, duration / 1.5, {
+    scale: 0,
+    transformOrigin: '50% 50%'
+  }, {
+    scale: 1,
+    ease: Back.easeOut.config(1.4)
+  }, 'toEar');
+  
+  timeline.fromTo(highlightEar, duration, {
+    opacity: 0
+  }, {
+    opacity: 1
+  }, 'toEar');
+  
+  timeline.addLabel('earToBowl', '+=' + delay);
+  
+  timeline.to(labelBowl, duration / 2, {
+    fill: labelFillTo
+  }, 'earToBowl');
+  
+  timeline.fromTo(clipShape, duration, {
+    attr: {
+      points: clipPointsEar
+    }
+  }, {
+    attr: {
+      points: clipPointsBowl
+    },
+    ease: clipEase
+  }, 'earToBowl');
+  
+  timeline.fromTo(highlightBowl, duration, {
+    opacity: 0
+  }, {
+    opacity: 1
+  }, 'earToBowl');
+  
+  timeline.to(highlightEar, duration / 2, {
+    opacity: 0
+  }, 'earToBowl');
+  
+  timeline.to(labelEar, duration / 2, {
+    fill: labelFillFrom
+  }, 'earToBowl');
+  
+  timeline.addLabel('bowlToLink', '+=' + delay);
+  
+  timeline.to(labelLink, duration / 2, {
+    fill: labelFillTo
+  }, 'bowlToLink');
+  
+  timeline.to(clipShape, duration, {
+    attr: {
+      points: clipPointsLink
+    },
+    ease: clipEase
+  }, 'bowlToLink');
+  
+  timeline.fromTo(highlightLink, duration, {
+    opacity: 0
+  }, {
+    opacity: 1
+  }, 'bowlToLink');
+  
+  timeline.to(highlightBowl, duration / 2, {
+    opacity: 0
+  }, 'bowlToLink');
+  
+  timeline.to(labelBowl, duration / 2, {
+    fill: labelFillFrom
+  }, 'bowlToLink');
+  
+  timeline.addLabel('linkToLoop', '+=' + delay);
+  
+  timeline.to(labelLoop, duration / 2, {
+    fill: labelFillTo
+  }, 'linkToLoop');
+  
+  timeline.to(clipShape, duration, {
+    attr: {
+      points: clipPointsLoop
+    },
+    ease: clipEase
+  }, 'linkToLoop');
+  
+  timeline.fromTo(highlightLoop, duration, {
+    opacity: 0
+  }, {
+    opacity: 1
+  }, 'linkToLoop');
+  
+  timeline.to(highlightLink, duration / 2, {
+    opacity: 0
+  }, 'linkToLoop');
+  
+  timeline.to(labelLink, duration / 2, {
+    fill: labelFillFrom
+  }, 'linkToLoop');
+  
+  return timeline;
+})());
+
 fragmentTimeline('navExpand', (function () {
   var timeline = new TimelineMax({
     paused: true
