@@ -22,6 +22,7 @@ April 12, 2016 | [Front End PDX](http://www.meetup.com/Front-End-PDX/events/2287
 ## Running Locally
 
 1. Clone repo
+1. `git submodule update --init`
 1. `npm install`
 1. `npm start`
 

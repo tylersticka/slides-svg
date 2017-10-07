@@ -208,7 +208,6 @@ body {
 .reveal a {
   color: #12a1e9;
   text-decoration: none;
-  -webkit-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
@@ -234,7 +233,6 @@ body {
   box-shadow: none; }
 
 .reveal a img {
-  -webkit-transition: all .15s linear;
   transition: all .15s linear; }
 
 .reveal a:hover img {
@@ -281,7 +279,6 @@ body {
 
 .reveal .progress span {
   background: #12a1e9;
-  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
 .reveal {
@@ -341,7 +338,6 @@ body {
 
 .reveal .slides section .fragment.grow-4x {
   opacity: 1;
-  -webkit-transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
   visibility: visible; }
   .reveal .slides section .fragment.grow-4x.visible {
@@ -437,7 +433,6 @@ body {
   margin: 0 !important;
   max-width: none !important;
   max-height: none !important;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
   .device.is-rotated {
     border-width: 0.5em 1em !important; }
@@ -550,25 +545,21 @@ body {
   outline: 0.25em solid rgba(0, 0, 0, 0.5); }
 
 .showGrid-20 {
-  background-image: -webkit-linear-gradient(left, transparent 19px, rgba(0, 0, 0, 0.5) 19px, transparent 20px), -webkit-linear-gradient(top, transparent 19px, rgba(0, 0, 0, 0.5) 19px, transparent 20px);
   background-image: linear-gradient(to right, transparent 19px, rgba(0, 0, 0, 0.5) 19px, transparent 20px), linear-gradient(to bottom, transparent 19px, rgba(0, 0, 0, 0.5) 19px, transparent 20px);
   background-size: 20px 20px;
   background-repeat: repeat; }
 
 .showGrid-20-40 {
-  background-image: -webkit-linear-gradient(left, transparent 19px, rgba(0, 0, 0, 0.5) 19px, transparent 20px), -webkit-linear-gradient(top, transparent 39px, rgba(0, 0, 0, 0.5) 39px, transparent 40px);
   background-image: linear-gradient(to right, transparent 19px, rgba(0, 0, 0, 0.5) 19px, transparent 20px), linear-gradient(to bottom, transparent 39px, rgba(0, 0, 0, 0.5) 39px, transparent 40px);
   background-size: 20px 40px;
   background-repeat: repeat; }
 
 .showGrid-40 {
-  background-image: -webkit-linear-gradient(left, transparent 39px, rgba(0, 0, 0, 0.5) 39px, transparent 40px), -webkit-linear-gradient(top, transparent 39px, rgba(0, 0, 0, 0.5) 39px, transparent 40px);
   background-image: linear-gradient(to right, transparent 39px, rgba(0, 0, 0, 0.5) 39px, transparent 40px), linear-gradient(to bottom, transparent 39px, rgba(0, 0, 0, 0.5) 39px, transparent 40px);
   background-size: 40px 40px;
   background-repeat: repeat; }
 
 .showGrid-80 {
-  background-image: -webkit-linear-gradient(left, transparent 79px, rgba(0, 0, 0, 0.5) 79px, transparent 80px), -webkit-linear-gradient(top, transparent 79px, rgba(0, 0, 0, 0.5) 79px, transparent 80px);
   background-image: linear-gradient(to right, transparent 79px, rgba(0, 0, 0, 0.5) 79px, transparent 80px), linear-gradient(to bottom, transparent 79px, rgba(0, 0, 0, 0.5) 79px, transparent 80px);
   background-size: 80px 80px;
   background-repeat: repeat; }
@@ -617,12 +608,10 @@ body {
   stroke: #12a1e9;
   stroke-dasharray: 0, 158;
   stroke-width: 50;
-  -webkit-transition: stroke-dasharray 1s cubic-bezier(0.77, 0, 0.175, 1);
   transition: stroke-dasharray 1s cubic-bezier(0.77, 0, 0.175, 1); }
 
 #search-3d,
 #search-3d > * {
-  -webkit-transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
 
 #search-3d {
