@@ -845,3 +845,40 @@ body {
     background-image: url("../../img/matrix.gif") !important;
     background-size: auto 150% !important;
     color: transparent !important; }
+
+.FileIcon {
+  fill: currentColor;
+  height: 6em;
+  width: 5.25em; }
+
+.FileIcon-base {
+  fill: #626262; }
+
+.FileIcon-front {
+  fill: #fff; }
+
+.FileIcon-label {
+  font-family: "freight-sans-pro", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.FileIcon--pdf {
+  color: #e91236; }
+
+.FileIcon--doc,
+.FileIcon--docx {
+  color: #12a1e9; }
+
+.FileIcon--xls,
+.FileIcon--xlsx {
+  color: #29b739; }
+
+.FileIcon--png {
+  color: color(#2ECC40 blend(#12a1e9 25%)); }
+
+.FileIcon--jpg {
+  color: color(#2ECC40 blend(#12a1e9 75%)); }
+
+.FileIcon--ppt,
+.FileIcon--pptx {
+  color: #e97e12; }

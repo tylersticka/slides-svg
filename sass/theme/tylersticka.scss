@@ -659,3 +659,57 @@ $mainFontSize: 30px;
     color: rgba(0,0,0,0) !important;
   }
 }
+
+$FileIcon-fill-dark: lighten($mainColor, 25%);
+$FileIcon-fill-mid: #fff;//lighten($mainColor, 75%);
+$FileIcon-font-family: $mainFont;
+$FileIcon-font-weight: bold;
+$FileIcon-height: (48 / 16 * 1em * 2);
+$FileIcon-width: (42 / 16 * 1em * 2);
+
+.FileIcon {
+  fill: currentColor;
+  height: $FileIcon-height;
+  width: $FileIcon-width;
+}
+
+.FileIcon-base {
+  fill: $FileIcon-fill-dark;
+}
+
+.FileIcon-front {
+  fill: $FileIcon-fill-mid;
+}
+
+.FileIcon-label {
+  font-family: $FileIcon-font-family;
+  font-weight: $FileIcon-font-weight;
+  text-transform: uppercase;
+}
+
+.FileIcon--pdf {
+  color: adjust-color($linkColor, $hue: 150);
+}
+
+.FileIcon--doc,
+.FileIcon--docx {
+  color: $linkColor;
+}
+
+.FileIcon--xls,
+.FileIcon--xlsx {
+  color: darken(#2ECC40, 5%);
+}
+
+.FileIcon--png {
+  color: color(#2ECC40 blend($linkColor 25%));
+}
+
+.FileIcon--jpg {
+  color: color(#2ECC40 blend($linkColor 75%));
+}
+
+.FileIcon--ppt,
+.FileIcon--pptx {
+  color: adjust-color($linkColor, $hue: 190);
+}
