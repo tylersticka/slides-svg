@@ -111,6 +111,15 @@ $mainFontSize: 30px;
   color: #2ECC40;
 }
 
+.reveal .slides section .fragment.fade-slightly {
+  opacity: 1;
+	visibility: visible;
+  
+  &.visible {
+    opacity: 0.25;
+  }
+}
+
 .reveal table th,
 .reveal table td {
   border-bottom-color: rgba(0,0,0,0.1);

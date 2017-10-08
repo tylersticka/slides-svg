@@ -350,6 +350,12 @@ body {
 .reveal .slides section .fragment.highlight-green.visible {
   color: #2ECC40; }
 
+.reveal .slides section .fragment.fade-slightly {
+  opacity: 1;
+  visibility: visible; }
+  .reveal .slides section .fragment.fade-slightly.visible {
+    opacity: 0.25; }
+
 .reveal table th,
 .reveal table td {
   border-bottom-color: rgba(0, 0, 0, 0.1);
