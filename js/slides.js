@@ -418,7 +418,8 @@ fragmentTimeline('gStart', (function () {
   var labelFillTo = '#4c5f56';
   
   var duration = 0.8;
-  var delay = 1.2;
+  var durationShort = duration / 4;
+  var delay = duration * 1.25;
   
   var clipEase = Back.easeInOut.config(1.4);
   
@@ -428,7 +429,7 @@ fragmentTimeline('gStart', (function () {
   
   timeline.addLabel('toEar');
   
-  timeline.to(labelEar, duration / 2, {
+  timeline.to(labelEar, durationShort, {
     fill: labelFillTo
   }, 'toEar');
   
@@ -440,15 +441,9 @@ fragmentTimeline('gStart', (function () {
     ease: Back.easeOut.config(1.4)
   }, 'toEar');
   
-  timeline.fromTo(highlightEar, duration, {
-    opacity: 0
-  }, {
-    opacity: 1
-  }, 'toEar');
-  
   timeline.addLabel('earToBowl', '+=' + delay);
   
-  timeline.to(labelBowl, duration / 2, {
+  timeline.to(labelBowl, durationShort, {
     fill: labelFillTo
   }, 'earToBowl');
   
@@ -469,17 +464,17 @@ fragmentTimeline('gStart', (function () {
     opacity: 1
   }, 'earToBowl');
   
-  timeline.to(highlightEar, duration / 2, {
+  timeline.to(highlightEar, durationShort, {
     opacity: 0
   }, 'earToBowl');
   
-  timeline.to(labelEar, duration / 2, {
+  timeline.to(labelEar, durationShort, {
     fill: labelFillFrom
   }, 'earToBowl');
   
   timeline.addLabel('bowlToLink', '+=' + delay);
   
-  timeline.to(labelLink, duration / 2, {
+  timeline.to(labelLink, durationShort, {
     fill: labelFillTo
   }, 'bowlToLink');
   
@@ -496,17 +491,17 @@ fragmentTimeline('gStart', (function () {
     opacity: 1
   }, 'bowlToLink');
   
-  timeline.to(highlightBowl, duration / 2, {
+  timeline.to(highlightBowl, durationShort, {
     opacity: 0
   }, 'bowlToLink');
   
-  timeline.to(labelBowl, duration / 2, {
+  timeline.to(labelBowl, durationShort, {
     fill: labelFillFrom
   }, 'bowlToLink');
   
   timeline.addLabel('linkToLoop', '+=' + delay);
   
-  timeline.to(labelLoop, duration / 2, {
+  timeline.to(labelLoop, durationShort, {
     fill: labelFillTo
   }, 'linkToLoop');
   
@@ -523,11 +518,11 @@ fragmentTimeline('gStart', (function () {
     opacity: 1
   }, 'linkToLoop');
   
-  timeline.to(highlightLink, duration / 2, {
+  timeline.to(highlightLink, durationShort, {
     opacity: 0
   }, 'linkToLoop');
   
-  timeline.to(labelLink, duration / 2, {
+  timeline.to(labelLink, durationShort, {
     fill: labelFillFrom
   }, 'linkToLoop');
   
