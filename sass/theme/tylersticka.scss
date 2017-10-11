@@ -693,8 +693,8 @@ $FileIcon-fill-dark: lighten($mainColor, 25%);
 $FileIcon-fill-mid: #fff;//lighten($mainColor, 75%);
 $FileIcon-font-family: $mainFont;
 $FileIcon-font-weight: bold;
-$FileIcon-height: (48 / 16 * 1em * 2);
-$FileIcon-width: (42 / 16 * 1em * 2);
+$FileIcon-height: (48 / 16 * 1em * 1.5);
+$FileIcon-width: (42 / 16 * 1em * 1.5);
 
 .FileIcon {
   fill: currentColor;

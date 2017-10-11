@@ -417,7 +417,7 @@ fragmentTimeline('gStart', (function () {
   var labelFillFrom = labelEar.getAttribute('fill');
   var labelFillTo = '#4c5f56';
   
-  var duration = 0.8;
+  var duration = 0.6;
   var durationShort = duration / 4;
   var delay = duration * 1.25;
   
