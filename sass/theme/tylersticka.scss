@@ -120,6 +120,26 @@ $mainFontSize: 30px;
   }
 }
 
+.reveal .slides section .fragment.shift-up {
+  // display: inline-block;
+  opacity: 1;
+  visibility: visible;
+  
+  &:not(.visible) {
+    transform: translateY(100%);
+  }
+}
+
+.reveal .slides section .fragment.shift-down {
+  // display: inline-block;
+  opacity: 1;
+  visibility: visible;
+  
+  &:not(.visible) {
+    transform: translateY(-100%);
+  }
+}
+
 .reveal table th,
 .reveal table td {
   border-bottom-color: rgba(0,0,0,0.1);

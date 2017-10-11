@@ -356,6 +356,20 @@ body {
   .reveal .slides section .fragment.fade-slightly.visible {
     opacity: 0.25; }
 
+.reveal .slides section .fragment.shift-up {
+  opacity: 1;
+  visibility: visible; }
+  .reveal .slides section .fragment.shift-up:not(.visible) {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%); }
+
+.reveal .slides section .fragment.shift-down {
+  opacity: 1;
+  visibility: visible; }
+  .reveal .slides section .fragment.shift-down:not(.visible) {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
+
 .reveal table th,
 .reveal table td {
   border-bottom-color: rgba(0, 0, 0, 0.1);
