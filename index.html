@@ -627,29 +627,36 @@
             </ul>
           </aside>
         </section>
-
+        
         <section data-background="#222">
           <div class="row-around">
             <div>
               <svg width="225" height="300" viewBox="0 0 300 400">
+                <defs>
+                  <clipPath id="doge-clip">
+                    <polygon points="10,10 220,10 290,80 290,270 10,270"/>
+                  </clipPath>
+                </defs>
                 <polygon points="0,0 220,0 300,80 300,400 0,400" fill="white"/>
+                <image href="/img/doge.jpg" x="-170" y="0" width="640" height="480" clip-path="url(#doge-clip)"/>
                 <polygon points="220,0 300,80 220,80" fill="#12A1E9"/>
-                <text class="weight-bold" x="50%" y="75%" text-anchor="middle" fill="#222" font-size="96">jpg</text>
+                <text class="weight-bold" x="50%" y="85%" text-anchor="middle" fill="#222" font-size="60">jpg</text>
               </svg>
               <p>Large size, no alpha</p>
             </div>
             <div class="fragment">
               <svg width="225" height="300" viewBox="0 0 300 400">
                 <polygon points="0,0 220,0 300,80 300,400 0,400" fill="white"/>
+                <image href="/img/guitar.gif" x="10" y="20" width="300" height="260"/>
                 <polygon points="220,0 300,80 220,80" fill="#12A1E9"/>
-                <text class="weight-bold" x="50%" y="75%" text-anchor="middle" fill="#222" font-size="96">gif</text>
+                <text class="weight-bold" x="50%" y="85%" text-anchor="middle" fill="#222" font-size="60">gif</text>
               </svg>
               <p>Few colors, poor alpha</p>
             </div>
             <div class="fragment">
               <svg width="225" height="300" viewBox="0 0 300 400">
                 <polygon points="5,5 220,5 295,80 295,395 5,395" fill="none" stroke="white" stroke-width="10" stroke-dasharray="25, 25"/>
-                <text class="weight-bold" x="50%" y="75%" text-anchor="middle" fill="white" font-size="96">png</text>
+                <text class="weight-bold" x="50%" y="85%" text-anchor="middle" fill="white" font-size="60">png</text>
               </svg>
               <p>Poor support</p>
             </div>
