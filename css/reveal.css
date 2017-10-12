@@ -48,10 +48,10 @@ body {
   color: #000; }
 
 html:-webkit-full-screen-ancestor {
-  background-color: inherit; }
+  background-color: #fff; }
 
 html:-moz-full-screen-ancestor {
-  background-color: inherit; }
+  background-color: #fff; }
 
 /*********************************************
  * VIEW FRAGMENTS
