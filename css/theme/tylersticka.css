@@ -863,8 +863,8 @@ body {
 .twitter-tweet-rendered {
   margin-left: auto;
   margin-right: auto;
-  -webkit-transform: scale(1.5) !important;
-          transform: scale(1.5) !important; }
+  -webkit-transform: scale(1.25) !important;
+          transform: scale(1.25) !important; }
 
 .reveal .slides section .fragment.matrix {
   opacity: 1;
@@ -873,6 +873,23 @@ body {
     background-image: url("../../img/matrix.gif") !important;
     background-size: auto 150% !important;
     color: transparent !important; }
+
+.reveal .slides section .fragment.santa {
+  position: fixed;
+  top: 15%;
+  left: calc(50% + 50vw);
+  visibility: visible;
+  opacity: 0;
+  /* style="position: absolute; top:15%; left: 75%; transform: scale(2);" */
+  transition: opacity 0.2s ease, -webkit-transform 5s linear;
+  transition: transform 5s linear, opacity 0.2s ease;
+  transition: transform 5s linear, opacity 0.2s ease, -webkit-transform 5s linear;
+  width: 700px;
+  height: 240px; }
+  .reveal .slides section .fragment.santa.visible {
+    opacity: 1;
+    -webkit-transform: translateX(-200vw);
+            transform: translateX(-200vw); }
 
 .FileIcon {
   fill: currentColor;

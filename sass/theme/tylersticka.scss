@@ -685,7 +685,7 @@ $mainFontSize: 30px;
 .twitter-tweet-rendered {
   margin-left: auto;
   margin-right: auto;
-  transform: scale(1.5) !important;
+  transform: scale(1.25) !important;
 }
 
 .reveal .slides section .fragment.matrix {
@@ -696,6 +696,24 @@ $mainFontSize: 30px;
     background-image: url("../../img/matrix.gif") !important;
     background-size: auto 150% !important;
     color: rgba(0,0,0,0) !important;
+  }
+}
+
+.reveal .slides section .fragment.santa {
+  position: fixed;
+  top: 15%;
+  left: calc(50% + 50vw);
+  visibility: visible;
+  opacity: 0;
+  /* style="position: absolute; top:15%; left: 75%; transform: scale(2);" */
+  // transform: scale(2);
+  transition: transform 5s linear, opacity 0.2s ease;
+  width: 350px * 2;
+  height: 120px * 2;
+  
+  &.visible {
+    opacity: 1;
+    transform: translateX(-200vw);
   }
 }
 
