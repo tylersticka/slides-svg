@@ -770,3 +770,89 @@ $FileIcon-width: (42 / 16 * 1em * 1.5);
 .FileIcon--pptx {
   color: adjust-color($linkColor, $hue: 190);
 }
+
+.StackOctocat-backdrop,
+.StackOctocat-reflection,
+.StackOctocat-main,
+.StackOctocat-features,
+.StackOctocat-face,
+.StackOctocat-white {
+  transition: fill 0.2s ease, transform 1s ease;
+  transform-origin: center;
+}
+
+.StackOctocat-backdrop,
+.StackOctocat-reflection {
+  fill: none;
+}
+
+.StackOctocat-main,
+.StackOctocat-features {
+  fill: #151515;
+}
+
+.StackOctocat-face,
+.StackOctocat-white {
+  fill: #eee;
+}
+
+svg.is-color {
+  .StackOctocat-backdrop {
+    fill: #9ce4fb;
+  }
+
+  .StackOctocat-reflection {
+    fill: #70b7ce;
+  }
+
+  .StackOctocat-main {
+    fill: #151515;
+  }
+
+  .StackOctocat-white {
+    fill: #fff;
+  }
+
+  .StackOctocat-face {
+    fill: #f2cab2;
+  }
+
+  .StackOctocat-features {
+    fill: #af433e;
+  }
+}
+
+svg.is-spread {
+  .StackOctocat-backdrop {
+    transform: translateX(-300px);
+  }
+
+  .StackOctocat-reflection {
+    transform: translateX(-180px);
+  }
+
+  .StackOctocat-main {
+    transform: translateX(-60px);
+  }
+
+  .StackOctocat-white {
+    transform: translateX(60px);
+  }
+
+  .StackOctocat-face {
+    transform: translateX(180px);
+  }
+
+  .StackOctocat-features {
+    transform: translateX(300px);
+  }
+}
+
+.is-wiggly#StackOctocat {
+  & *:nth-child(even) {
+    animation: wiggle 0.4s alternate infinite linear;
+  }
+  & *:nth-child(odd) {
+    animation: wiggle 0.4s alternate-reverse infinite linear;
+  }
+}

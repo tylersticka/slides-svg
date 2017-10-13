@@ -206,6 +206,17 @@ RevealHooks.addEach('toggleClass', {
   }
 });
 
+RevealHooks.addEach('removeClass', {
+  'fragmentshown': function (element, event, options) {
+    var target = document.querySelector(options.target);
+    target.classList.remove(options.className || 'is-active');
+  },
+  'fragmenthidden': function (element, event, options) {
+    var target = document.querySelector(options.target);
+    target.classList.add(options.className || 'is-active');
+  }
+});
+
 fragmentTimeline('sfxType', (function () {
   var timeline = new TimelineMax({
     paused: true

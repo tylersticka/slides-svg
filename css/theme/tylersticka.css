@@ -927,3 +927,77 @@ body {
 .FileIcon--ppt,
 .FileIcon--pptx {
   color: #e97e12; }
+
+.StackOctocat-backdrop,
+.StackOctocat-reflection,
+.StackOctocat-main,
+.StackOctocat-features,
+.StackOctocat-face,
+.StackOctocat-white {
+  transition: fill 0.2s ease, -webkit-transform 1s ease;
+  transition: fill 0.2s ease, transform 1s ease;
+  transition: fill 0.2s ease, transform 1s ease, -webkit-transform 1s ease;
+  -webkit-transform-origin: center;
+          transform-origin: center; }
+
+.StackOctocat-backdrop,
+.StackOctocat-reflection {
+  fill: none; }
+
+.StackOctocat-main,
+.StackOctocat-features {
+  fill: #151515; }
+
+.StackOctocat-face,
+.StackOctocat-white {
+  fill: #eee; }
+
+svg.is-color .StackOctocat-backdrop {
+  fill: #9ce4fb; }
+
+svg.is-color .StackOctocat-reflection {
+  fill: #70b7ce; }
+
+svg.is-color .StackOctocat-main {
+  fill: #151515; }
+
+svg.is-color .StackOctocat-white {
+  fill: #fff; }
+
+svg.is-color .StackOctocat-face {
+  fill: #f2cab2; }
+
+svg.is-color .StackOctocat-features {
+  fill: #af433e; }
+
+svg.is-spread .StackOctocat-backdrop {
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px); }
+
+svg.is-spread .StackOctocat-reflection {
+  -webkit-transform: translateX(-180px);
+          transform: translateX(-180px); }
+
+svg.is-spread .StackOctocat-main {
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px); }
+
+svg.is-spread .StackOctocat-white {
+  -webkit-transform: translateX(60px);
+          transform: translateX(60px); }
+
+svg.is-spread .StackOctocat-face {
+  -webkit-transform: translateX(180px);
+          transform: translateX(180px); }
+
+svg.is-spread .StackOctocat-features {
+  -webkit-transform: translateX(300px);
+          transform: translateX(300px); }
+
+.is-wiggly#StackOctocat *:nth-child(even) {
+  -webkit-animation: wiggle 0.4s alternate infinite linear;
+          animation: wiggle 0.4s alternate infinite linear; }
+
+.is-wiggly#StackOctocat *:nth-child(odd) {
+  -webkit-animation: wiggle 0.4s alternate-reverse infinite linear;
+          animation: wiggle 0.4s alternate-reverse infinite linear; }
