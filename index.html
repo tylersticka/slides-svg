@@ -618,7 +618,7 @@
         </section>
 
         <section data-background="#222">
-          <img data-src="img/ie5.png" alt="Screenshot of Internet Explorer 5">
+          <img data-src="img/ie5-apple.png" alt="Screenshot of Internet Explorer 5">
           <aside class="notes">
             <ul>
               <li>And we were designing these things called webpages</li>
@@ -642,7 +642,7 @@
                 <polygon points="220,0 300,80 220,80" fill="#12A1E9"/>
                 <text class="weight-bold" x="50%" y="85%" text-anchor="middle" fill="#222" font-size="60">jpg</text>
               </svg>
-              <p>Large size, no alpha</p>
+              <!-- <p>Large size, no alpha</p> -->
             </div>
             <div class="fragment">
               <svg width="225" height="300" viewBox="0 0 300 400">
@@ -651,14 +651,14 @@
                 <polygon points="220,0 300,80 220,80" fill="#12A1E9"/>
                 <text class="weight-bold" x="50%" y="85%" text-anchor="middle" fill="#222" font-size="60">gif</text>
               </svg>
-              <p>Few colors, poor alpha</p>
+              <!-- <p>Few colors, poor alpha</p> -->
             </div>
             <div class="fragment">
               <svg width="225" height="300" viewBox="0 0 300 400">
                 <polygon points="5,5 220,5 295,80 295,395 5,395" fill="none" stroke="white" stroke-width="10" stroke-dasharray="25, 25"/>
                 <text class="weight-bold" x="50%" y="85%" text-anchor="middle" fill="white" font-size="60">png</text>
               </svg>
-              <p>Poor support</p>
+              <!-- <p>Poor support</p> -->
             </div>
           </div>
           <aside class="notes">
@@ -712,22 +712,22 @@
         </section>
 
         <section>
-          <h2>PostScript</h2>
+          <h2>PostScript?</h2>
           <div class="inline-block">
-            <p class="fragment align-left">
+            <p class="fragment align-left" data-fragment-index="0">
               <svg width="36" height="36" viewBox="-6 -6 36 36" style="margin-bottom: -0.125em;">
                 <polyline fill="none" stroke="#2ECC40" stroke-width="6" points="0,15 9,24 24,6" stroke-linecap="round"/>
               </svg>
               Already supported by browsers
             </p>
-            <p class="fragment align-left">
+            <p class="fragment align-left" data-fragment-index="1">
               <svg width="36" height="36" viewBox="-6 -6 36 36" style="margin-bottom: -0.3em;">
                 <line x1="2" y1="2" x2="22" y2="22" stroke="#FF4136" stroke-width="6" stroke-linecap="round"/>
                 <line x1="2" y1="22" x2="22" y2="2" stroke="#FF4136" stroke-width="6" stroke-linecap="round"/>
               </svg>
               Developed for print
             </p>
-            <p class="fragment align-left">
+            <p class="fragment align-left" data-fragment-index="1">
               <svg width="36" height="36" viewBox="-6 -6 36 36" style="margin-bottom: -0.3em;">
                 <line x1="2" y1="2" x2="22" y2="22" stroke="#FF4136" stroke-width="6" stroke-linecap="round"/>
                 <line x1="2" y1="22" x2="22" y2="2" stroke="#FF4136" stroke-width="6" stroke-linecap="round"/>
@@ -958,10 +958,10 @@
   background-image: url("example.svg");
 }
           </code></pre>
-          <pre class="fragment"><code class="html h3" data-trim>
+          <pre class="fragment" data-fragment-index="0"><code class="html h3" data-trim>
 &lt;svg&gt; ... &lt;/svg&gt;
           </code></pre>
-          <pre class="fragment"><code class="html h3" data-trim>
+          <pre class="fragment" data-fragment-index="0"><code class="html h3" data-trim>
 &lt;object data="example.svg" type="image/svg+xml"&gt;
   &lt;img src="fallback.png" alt="..."/&gt;
 &lt;/object&gt;
