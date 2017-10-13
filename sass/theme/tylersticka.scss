@@ -93,6 +93,16 @@ $mainFontSize: 30px;
   padding-right: (4em / 36);
 }
 
+.reveal .slides section .fragment.grow-2x {
+	opacity: 1;
+  transition: all .4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+	visibility: visible;
+
+	&.visible {
+		transform: scale( 2 );
+	}
+}
+
 .reveal .slides section .fragment.grow-4x {
 	opacity: 1;
   transition: all .4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;

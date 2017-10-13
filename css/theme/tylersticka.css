@@ -336,6 +336,14 @@ body {
   padding-left: 0.11111em;
   padding-right: 0.11111em; }
 
+.reveal .slides section .fragment.grow-2x {
+  opacity: 1;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+  visibility: visible; }
+  .reveal .slides section .fragment.grow-2x.visible {
+    -webkit-transform: scale(2);
+            transform: scale(2); }
+
 .reveal .slides section .fragment.grow-4x {
   opacity: 1;
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
