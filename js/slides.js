@@ -117,29 +117,29 @@ fragmentTimeline('interests', (function () {
   return timeline;
 }()));
 
-fragmentTimeline('photoFrameShrink', (function () {
-  var photoFrame = document.getElementById('photo-frame');
-  var tween = TweenMax.to(photoFrame, 0.6, {
-    scale: 0.45,
-    transformOrigin: '50% 50%',
-    paused: true,
-    ease: Elastic.easeOut.config(1, 0.8)
-  });
+// fragmentTimeline('photoFrameShrink', (function () {
+//   var photoFrame = document.getElementById('photo-frame');
+//   var tween = TweenMax.to(photoFrame, 0.6, {
+//     scale: 0.45,
+//     transformOrigin: '50% 50%',
+//     paused: true,
+//     ease: Elastic.easeOut.config(1, 0.8)
+//   });
+// 
+//   return tween;
+// })());
 
-  return tween;
-})());
-
-fragmentTimeline('photoFrameGrowInner', (function () {
-  var photo = document.getElementById('photo-frame-inner');
-  var tween = TweenMax.to(photo, 0.6, {
-    scale: 1.8,
-    transformOrigin: '50% 50%',
-    paused: true,
-    ease: Elastic.easeOut.config(1, 0.8)
-  });
-
-  return tween;
-})());
+// fragmentTimeline('photoFrameGrowInner', (function () {
+//   var photo = document.getElementById('photo-frame-inner');
+//   var tween = TweenMax.to(photo, 0.6, {
+//     scale: 1.8,
+//     transformOrigin: '50% 50%',
+//     paused: true,
+//     ease: Elastic.easeOut.config(1, 0.8)
+//   });
+// 
+//   return tween;
+// })());
 
 RevealHooks.addEach('pie', {
   'fragmentshown': function (element, event, options) {
