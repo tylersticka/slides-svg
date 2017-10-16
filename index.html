@@ -628,7 +628,7 @@
         </section>
 
         <section data-background="#093c75">
-          <h1 class="align-left" style="color: #71C7F2;">There&rsquo;s already a better way&hellip;</h1>
+          <h1 class="align-left" style="color: #71C7F2; line-height: 0.9;">There&rsquo;s already a better way…</h1>
           <aside class="notes">
             <ul>
               <li>Was that there's already a better way</li>
@@ -636,7 +636,7 @@
           </aside>
         </section>
 
-        <!-- <section data-background="#093c75">
+        <section data-background="#093c75">
           <h2 class="align-right" style="color: #71C7F2;">&hellip;and it&rsquo;s not even very new</h2>
           <aside class="notes">
             <ul>
@@ -644,7 +644,7 @@
               <li>To learn more about it, let's jump back to the bygone days</li>
             </ul>
           </aside>
-        </section> -->
+        </section>
 
         <!-- <section class="dark" data-background="img/ms-pac-man-cabinet.png" data-background-color="#222" data-background-size="auto 95%" data-background-position="5% bottom">
           <h1>1982</h1>
@@ -705,7 +705,17 @@
         </section>
 
         <section data-background="#222">
-          <img data-src="img/ie5-apple.png" alt="Screenshot of Internet Explorer 5">
+          <!-- <img data-src="img/ie5-apple.png" alt="Screenshot of Internet Explorer 5"> -->
+          <svg width="800" height="573" viewBox="0 0 800 573">
+            <defs>
+              <image id="ie5-apple" xlink:href="img/ie5-apple.png" width="800" height="573"/>
+              <clipPath id="ie5-apple-highlight">
+                <rect x="20" y="120" width="260" height="140" rx="5"/>
+              </clipPath>
+            </defs>
+            <use xlink:href="#ie5-apple" class="fragment fade-slightly"/>
+            <use xlink:href="#ie5-apple" clip-path="url(#ie5-apple-highlight)"/>
+          </svg>
           <aside class="notes">
             <ul>
               <li>And we were designing these things called webpages</li>
@@ -1770,19 +1780,21 @@ TweenMax.to(element, 1.3, {
         <section data-background-iframe="http://58e57099d6865d34e0a30fdd--cloudfour-patterns.netlify.com/pages/home.html">
         </section>
         
-        <section data-background="#222">
-          <p class="h3 fragment shift-up" data-fragment-index="0" style="margin: 0;">
-            <code>&lt;svg&gt;</code>
-          </p>
-          <p class="h3 fragment shift-down" data-fragment-index="0" style="margin: 0;">
-            <code>&lt;a href="…"&gt;</code>
-          </p>
-          <img class="fragment" src="/img/mindblown2.gif" alt="Mind blown" width="300" height="300">
-          <p class="h3 fragment shift-up" data-fragment-index="0" style="margin: 0;">
-            <code>&lt;/a&gt;</code>
-          </p>
-          <p class="h3 fragment shift-down" data-fragment-index="0" style="margin: 0;">
-            <code>&lt;/svg&gt;</code>
+        <section>
+          <pre><code class="html h3" data-trim>
+&lt;form action="…">
+  <!-- etc. -->
+  &lt;label>
+    &lt;input type="submit" class="u-hiddenVisually">
+    &lt;svg>
+      <!-- etc. -->
+      &lt;text>Submit&lt;/text>
+    &lt;/svg>
+  &lt;/label>
+&lt;/form>
+          </code></pre>
+          <p>
+            <small>Source: <a href="https://chodounsky.net/2015/05/12/svg-as-a-submit-button/">Jakub Chodounský</a></small>
           </p>
         </section>
 
@@ -1802,6 +1814,22 @@ TweenMax.to(element, 1.3, {
               <li>Or something more expressive and exciting?</li>
             </ul>
           </aside>
+        </section>
+        
+        <section data-background="#222">
+          <p class="h3 fragment shift-up" data-fragment-index="0" style="margin: 0;">
+            <code>&lt;svg&gt;</code>
+          </p>
+          <p class="h3 fragment shift-down" data-fragment-index="0" style="margin: 0;">
+            <code>&lt;a href="…"&gt;</code>
+          </p>
+          <img class="fragment" src="/img/mindblown2.gif" alt="Mind blown" width="300" height="300">
+          <p class="h3 fragment shift-up" data-fragment-index="0" style="margin: 0;">
+            <code>&lt;/a&gt;</code>
+          </p>
+          <p class="h3 fragment shift-down" data-fragment-index="0" style="margin: 0;">
+            <code>&lt;/svg&gt;</code>
+          </p>
         </section>
 
         <section data-background="#f7f0de">
